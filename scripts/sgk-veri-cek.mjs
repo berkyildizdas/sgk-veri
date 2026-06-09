@@ -55,43 +55,98 @@ async function ek4aLinkiniBul() {
   return tam;
 }
 
-/* ─── Excel → ilaç JSON ─── */
+/* Türkçe başlık normalizasyonu (İ/ı/ş/ğ/ç/ö/ü + birleşik nokta) */
+function trNorm(s) {
+  return String(s)
+    .replace(/̇/g, "")
+    .replace(/İ/g, "i").replace(/I/g, "i").replace(/ı/g, "i")
+    .replace(/Ş/g, "s").replace(/ş/g, "s")
+    .replace(/Ğ/g, "g").replace(/ğ/g, "g")
+    .replace(/Ü/g, "u").replace(/ü/g, "u")
+    .replace(/Ö/g, "o").replace(/ö/g, "o")
+    .replace(/Ç/g, "c").replace(/ç/g, "c")
+    .toLowerCase().replace(/\s+/g, " ").trim();
+}
+
+/* ─── Excel → ilaç JSON (SGK EK-4/A gerçek şeması) ───
+   Kolonlar: Kamu No | Güncel Barkod | İlaç Adı | Eski Barkodlar |
+   Eşdeğer İlaç Grubu | Terapötik Referans Grubu | Listeye Giriş |
+   Aktiflenme | Pasiflenme | İndirim Esas Durumu | fiyat kademeleri...
+   NOT: EK-4/A'da etkin madde kolonu yoktur; listede olmak = bedeli ödenir.
+   Pasiflenme tarihi doluysa ilaç artık ödenmiyor demektir. */
 function excelParse(buffer) {
   const wb = XLSX.read(buffer, { type: "buffer" });
   const sheet = wb.Sheets[wb.SheetNames[0]];
   const satirlar = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: "" });
 
-  // Başlık satırını bul (barkod / ilaç adı geçen)
+  // Başlık satırını bul (barkod + ad geçen)
   let baslikIdx = satirlar.findIndex((r) =>
-    r.some((c) => /barkod/i.test(String(c))) && r.some((c) => /ad|isim/i.test(String(c)))
+    r.some((c) => /barkod/i.test(String(c))) && r.some((c) => trNorm(c).includes("ad"))
   );
   if (baslikIdx === -1) baslikIdx = 0;
-  const basliklar = satirlar[baslikIdx].map((c) => String(c).toLowerCase().trim());
+  const H = satirlar[baslikIdx].map(trNorm);
+  const kolon = (...keys) => H.findIndex((b) => keys.some((k) => b.includes(k)));
 
-  const kolon = (anahtarlar) =>
-    basliklar.findIndex((b) => anahtarlar.some((a) => b.includes(a)));
-
-  const iBarkod = kolon(["barkod"]);
-  const iAd = kolon(["ilaç adı", "ilac adi", "ürün adı", "urun adi", "ad"]);
-  const iEtken = kolon(["etkin madde", "etken madde", "etkin"]);
-  const iFiyat = kolon(["fiyat", "referans"]);
-  const iDurum = kolon(["ödeme", "odeme", "durum", "aktif"]);
+  let iBarkod = H.findIndex((b) => b.includes("guncel barkod"));
+  if (iBarkod === -1) iBarkod = H.findIndex((b) => b.includes("barkod") && !b.includes("eski"));
+  const iAd = H.findIndex((b) => b.includes("ilac ad") || b.includes("urun ad") || (b.includes("ad") && !b.includes("barkod")));
+  const iKamu = kolon("kamu no", "kamu");
+  const iEsdeger = kolon("esdeger");
+  const iTerapotik = kolon("terapotik");
+  const iAktif = kolon("aktiflenme");
+  const iPasif = kolon("pasiflenme");
 
   const ilaclar = [];
   for (let i = baslikIdx + 1; i < satirlar.length; i++) {
     const r = satirlar[i];
-    const ad = iAd >= 0 ? String(r[iAd] ?? "").trim() : "";
-    const barkod = iBarkod >= 0 ? String(r[iBarkod] ?? "").trim() : "";
+    const g = (idx) => (idx >= 0 ? String(r[idx] ?? "").trim() : "");
+    const ad = g(iAd);
+    const barkod = g(iBarkod);
     if (!ad && !barkod) continue;
+    const pasif = g(iPasif);
     ilaclar.push({
+      kamu_no: g(iKamu),
       barkod,
       ad,
-      etken_madde: iEtken >= 0 ? String(r[iEtken] ?? "").trim() : "",
-      referans_fiyat: iFiyat >= 0 ? String(r[iFiyat] ?? "").trim() : "",
-      odeme_durumu: iDurum >= 0 ? String(r[iDurum] ?? "").trim() : "",
+      esdeger_grubu: g(iEsdeger),
+      terapotik_grup: g(iTerapotik),
+      aktiflenme_tarihi: g(iAktif),
+      pasiflenme_tarihi: pasif,
+      odeme_durumu: pasif ? "Pasif (ödenmez)" : "Ödenir (EK-4/A)",
     });
   }
   return ilaclar;
+}
+
+/* ─── EK-4/D izleme (PARSE ETMEZ — sadece değişiklik tespiti) ───
+   EK-4/D PDF/DOC formatındadır; güvenlik için içeriği parse etmeyiz.
+   Sadece dosyanın/sayfanın hash'ini alıp "değişti mi" diye izleriz.
+   Değiştiğinde uygulama kullanıcıyı uyarır; kuralları kör uygulamaz. */
+async function ek4dIzle(eskiEk4d, bugun) {
+  const url = process.env.SGK_EK4D_URL;
+  // İzleme URL'i yoksa eski durumu koru
+  if (!url) {
+    log("EK-4/D izleme URL'i (SGK_EK4D_URL) yok — atlanıyor.");
+    return eskiEk4d || null;
+  }
+  try {
+    const res = await fetch(url, { headers: UA });
+    if (!res.ok) throw new Error(`EK-4/D alınamadı: ${res.status}`);
+    const buf = Buffer.from(await res.arrayBuffer());
+    const hash = createHash("sha256").update(buf).digest("hex").slice(0, 16);
+    const degisti = !eskiEk4d || eskiEk4d.hash !== hash;
+    if (degisti) log(`EK-4/D DEĞİŞTİ (yeni hash ${hash}). Uygulama kullanıcıyı uyaracak.`);
+    else log(`EK-4/D değişmedi (hash ${hash}).`);
+    return {
+      hash,
+      kaynak_url: url,
+      kontrol_tarihi: bugun,
+      degisim_tarihi: degisti ? bugun : (eskiEk4d?.degisim_tarihi || bugun),
+    };
+  } catch (e) {
+    log("EK-4/D izleme hatası:", e.message, "- eski durum korunuyor.");
+    return eskiEk4d || null;
+  }
 }
 
 /* ─── Ana akış ─── */
@@ -99,55 +154,54 @@ async function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
   const versionPath = join(OUT_DIR, "version.json");
   const ilaclarPath = join(OUT_DIR, "ilaclar.json");
+  const bugun = new Date().toISOString().split("T")[0];
 
   const eskiVersion = existsSync(versionPath)
     ? JSON.parse(readFileSync(versionPath, "utf8"))
-    : { tarih: "", hash: "", kayit_sayisi: 0 };
+    : { tarih: "", hash: "", kayit_sayisi: 0, ek4d: null };
 
-  let link, buffer;
+  // ── EK-4/A (ilaç listesi) ──
+  let link, buffer, ilaclar = null, hash = eskiVersion.hash;
   try {
     link = await ek4aLinkiniBul();
     const res = await fetch(link, { headers: UA });
     if (!res.ok) throw new Error(`xlsx indirilemedi: ${res.status}`);
     buffer = Buffer.from(await res.arrayBuffer());
-  } catch (e) {
-    log("HATA (indirme):", e.message);
-    log("Eski veri korunuyor, yayımlama yapılmadı.");
-    process.exit(0); // CI başarısız sayılmasın; sadece bu sefer güncelleme yok
-  }
-
-  let ilaclar;
-  try {
     ilaclar = excelParse(buffer);
+    if (!ilaclar.length) throw new Error("Parse sonucu 0 kayıt — şüpheli");
+    hash = createHash("sha256").update(JSON.stringify(ilaclar)).digest("hex").slice(0, 16);
   } catch (e) {
-    log("HATA (parse):", e.message);
-    log("Eski veri korunuyor.");
+    log("EK-4/A hatası:", e.message, "- eski ilaç listesi korunuyor.");
+    ilaclar = null; // yeniden yazma
+  }
+
+  // ── EK-4/D (sadece izleme) ──
+  const ek4d = await ek4dIzle(eskiVersion.ek4d, bugun);
+
+  const ilacDegisti = ilaclar !== null && hash !== eskiVersion.hash;
+  const ek4dDegisti = JSON.stringify(ek4d) !== JSON.stringify(eskiVersion.ek4d || null);
+
+  if (!ilacDegisti && !ek4dDegisti) {
+    log("Değişiklik yok (ne EK-4/A ne EK-4/D). Güncelleme gerekmiyor.");
     process.exit(0);
   }
 
-  if (!ilaclar.length) {
-    log("Parse sonucu 0 kayıt — şüpheli. Eski veri korunuyor.");
-    process.exit(0);
-  }
-
-  const hash = createHash("sha256").update(JSON.stringify(ilaclar)).digest("hex").slice(0, 16);
-  if (hash === eskiVersion.hash) {
-    log(`Değişiklik yok (${ilaclar.length} kayıt, hash ${hash}). Güncelleme gerekmiyor.`);
-    process.exit(0);
-  }
-
-  const bugun = new Date().toISOString().split("T")[0];
+  // EK-4/A değiştiyse ilaç listesini yaz; değişmediyse eski tarih/hash korunur
   const version = {
-    tarih: bugun,
-    hash,
-    kayit_sayisi: ilaclar.length,
-    kaynak_url: link,
-    onceki_tarih: eskiVersion.tarih || null,
+    tarih: ilacDegisti ? bugun : eskiVersion.tarih,
+    hash: ilacDegisti ? hash : eskiVersion.hash,
+    kayit_sayisi: ilacDegisti ? ilaclar.length : eskiVersion.kayit_sayisi,
+    kaynak_url: ilacDegisti ? link : eskiVersion.kaynak_url,
+    onceki_tarih: ilacDegisti ? (eskiVersion.tarih || null) : eskiVersion.onceki_tarih,
+    ek4d,
   };
 
-  writeFileSync(ilaclarPath, JSON.stringify(ilaclar), "utf8");
+  if (ilacDegisti) {
+    writeFileSync(ilaclarPath, JSON.stringify(ilaclar), "utf8");
+    log(`EK-4/A YAYIMLANDI: ${ilaclar.length} ilaç, hash ${hash}`);
+  }
   writeFileSync(versionPath, JSON.stringify(version, null, 2), "utf8");
-  log(`YAYIMLANDI: ${ilaclar.length} ilaç, tarih ${bugun}, hash ${hash}`);
+  log(`version.json güncellendi (EK-4/A ${ilacDegisti ? "değişti" : "aynı"}, EK-4/D ${ek4dDegisti ? "değişti" : "aynı"}).`);
 }
 
 main().catch((e) => { console.error("[sgk-veri] KRİTİK:", e); process.exit(1); });

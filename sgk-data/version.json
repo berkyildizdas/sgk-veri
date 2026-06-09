@@ -3,5 +3,11 @@
   "hash": "86f3d167547080bb",
   "kayit_sayisi": 8429,
   "kaynak_url": "https://www.sgk.gov.tr/Download/DownloadFile?f=0ec1109c-a3fb-4723-867e-20567d7a67f5.xlsx&d=fa049c02-7d15-412e-8fb8-430c4f4f8694",
-  "onceki_tarih": "2026-06-09"
+  "onceki_tarih": "2026-06-09",
+  "ek4d": {
+    "hash": "3ad00d91e361faf8",
+    "kaynak_url": "https://www.sgk.gov.tr/Download/DownloadFile?f=e71e674c-3aba-4eb5-9a19-2297ebc74221.pdf&d=1d44244a-dfbe-4348-80d2-91ddab289cfc",
+    "kontrol_tarihi": "2026-06-09",
+    "degisim_tarihi": "2026-06-09"
+  }
 }

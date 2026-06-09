@@ -32,6 +32,8 @@ jobs:
           # SGK EK-4/A xlsx linki değişirse buraya repo Secret olarak ekle: SGK_EK4A_URL
           SGK_EK4A_URL: ${{ secrets.SGK_EK4A_URL }}
           SGK_INDEX_URL: ${{ secrets.SGK_INDEX_URL }}
+          # EK-4/D izleme (değişiklik tespiti için PDF/DOC/sayfa linki). Opsiyonel.
+          SGK_EK4D_URL: ${{ secrets.SGK_EK4D_URL }}
         run: node scripts/sgk-veri-cek.mjs
 
       - name: Değişiklik varsa commit'le
