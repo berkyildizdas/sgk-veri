@@ -1,6 +1,6 @@
 {
   "tarih": "2026-06-10",
-  "hash": "7cbc9f0724f0c727",
+  "hash": "3431942d70bbe11e",
   "grup_sayisi": 16,
   "hastaliklar": [
     {
@@ -22,12 +22,6 @@
         "Aile Hekimligi"
       ],
       "kural_ozeti": "LDL kolesterol olcumune gore iki kategoride degerlendirilir. Yuksek riskli hastalarda (LDL >= 190 mg/dL) veya orta riskli hastalarda (LDL >= 160 mg/dL) EK-4/D kapsaminda statin tedavisi odenir. Idame tedavisinde hedef LDL < 100 mg/dL olmalidir. Iki ayri olcum gereklidir.",
-      "zorunlu_degerler": [
-        "LDL Kolesterol",
-        "Total Kolesterol",
-        "HDL Kolesterol",
-        "Trigliserid"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
@@ -88,11 +82,6 @@
         "Ic Hastaliklari"
       ],
       "kural_ozeti": "Standart astim/KOAH ilaclari EK-4/D kapsamindadir. Omalizumab gibi biyolojik ajanlar icin Allerji ve Immunoloji uzmani onerisi gerekir. Omalizumab icin IgE yukseltilmis alerjik astim tanisi ve 05.01.1 veya 05.01.2 kodu zorunludur.",
-      "zorunlu_degerler": [
-        "FEV1",
-        "PEF",
-        "Spirometre Degerleri"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -122,9 +111,6 @@
         "Aile Hekimligi"
       ],
       "kural_ozeti": "Hipertansiyon tedavisinde kullanilan ACE inhibitor, ARB, kalsiyum kanal bloker, diuretik ve beta blokerler EK-4/D haricinde olup katilim payi (%20) uygulanir. Uzman hekim sarti genellikle yoktur.",
-      "zorunlu_degerler": [
-        "Tansiyon Olcumleri (3 ayri olcum)"
-      ],
       "ek4d_kapsaminda": false,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
@@ -150,14 +136,6 @@
         "Ic Hastaliklari"
       ],
       "kural_ozeti": "KBH'de kullanilan ilaclarda EK-4/D uygulanir. Sinakalset (sekonder hiperparatiroidi tedavisi) icin PTH, Kalsiyum ve Fosfor degerlerinin ucunun birden raporda belirtilmesi zorunludur. Evrak eksikliginde red karari verilir.",
-      "zorunlu_degerler": [
-        "PTH",
-        "Kalsiyum",
-        "Fosfor",
-        "eGFR",
-        "Kreatinin",
-        "BUN"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -206,11 +184,6 @@
         "Ic Hastaliklari"
       ],
       "kural_ozeti": "Kardiyovaskuler hastaliklarda EK-4/D uygulanir. Tikagrelor ve Prasugrel gibi antiagreganlar icin MI (miyokard infarktusu) tarihinin raporda belirtilmesi ve recete tarihinden itibaren en fazla 30 gun icinde olmasi gerekir. MI sonrasi 30 gunu gecen raporlarda EK-4/F uygulanir.",
-      "zorunlu_degerler": [
-        "MI Tarihi (varsa)",
-        "Troponin",
-        "EKG Bulgulari"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -274,11 +247,6 @@
         "Psikiyatri"
       ],
       "kural_ozeti": "Psikiyatri hastaliklarinda (sizofreni, bipolar bozukluk, major depresyon vb.) EK-4/D uygulanir. Ancak SADECE Psikiyatri uzmani hekim tarafindan duzenlenmis raporlar gecerlidir. Psikiyatri disi brans raporlarinda RED karari verilir.",
-      "zorunlu_degerler": [
-        "Tani (DSM-5 veya ICD-10)",
-        "Hastalik Suresi",
-        "Daha Once Kullanilan Ilaclar"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -383,12 +351,6 @@
         "Aile Hekimligi"
       ],
       "kural_ozeti": "Hipotiroidizm (E03.9) tedavisinde Levotiroksin birinci seçenek olup aile hekimi dahil tüm hekimler yazabilir; katılım payı uygulanır. Hipertiroidizm (E05.9) için Tiamazol/Propiltiyourasil Endokrinoloji veya İç Hastalıkları uzmanı raporuyla ödenir. TSH, sT3, sT4 değerlerinin raporda bulunması gerekir.",
-      "zorunlu_degerler": [
-        "TSH",
-        "sT3",
-        "sT4",
-        "Anti-TPO (Hashimoto şüphesinde)"
-      ],
       "ek4d_kapsaminda": false,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
@@ -455,11 +417,6 @@
         "Noroloji"
       ],
       "kural_ozeti": "Parkinson (G20) tedavisinde Levodopa/Karbidopa ve dopamin agonistleri Nöroloji uzmanı raporuyla EK-4/D kapsamındadır. Alzheimer (G30) için Donepezil/Rivastigmin uzman raporu ve MMSE skoru gerektir. Multipl Skleroz (G35) tedavisinde interferon beta, glatiramer asetat EK-4/F kapsamındadır. Epilepsi (G40) antiepileptikleri Nöroloji veya Pediatri uzmanı raporu ister.",
-      "zorunlu_degerler": [
-        "MMSE Skoru (Alzheimer için)",
-        "EEG (Epilepsi için)",
-        "MRI Bulguları (MS için)"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -526,11 +483,6 @@
         "Dermatoloji"
       ],
       "kural_ozeti": "Psoriasis (L40) tedavisinde topikal ilaçlar ve metotreksat EK-4/D kapsamındadır. Orta-ağır psoriasis için biyolojik ajanlar (Adalimumab, Ustekinumab, Secukinumab) EK-4/F kapsamında olup PASI >= 10 skoru ve Dermatoloji uzmanı raporu zorunludur. Atopik dermatit (L20) için Dupilumab EK-4/F kapsamında, uzman raporu gerekir. Akne (L70) tedavisi genelde reçetesiz veya pratisyen yazabilir.",
-      "zorunlu_degerler": [
-        "PASI Skoru (Psoriasis için)",
-        "DLQI (Dermatoloji yaşam kalitesi)",
-        "Önceki Tedavi Bilgisi"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -611,12 +563,6 @@
         "Ic Hastaliklari"
       ],
       "kural_ozeti": "Romatoid artrit (M05) tedavisinde Metotreksat birinci seçenek olup Romatoloji uzmanı raporu gerekir. TNF blökerler (Adalimumab, Etanersept, İnfliximab) EK-4/F kapsamında; DAS28 skoru >= 5.1 ve en az 2 DMARD başarısızlığı zorunludur. Osteoporoz (M81) için Bifosfonatlar DXA T skoru <= -2.5 şartıyla EK-4/D kapsamındadır. Gut (M10) için Allopurinol uzman şartı olmaksızın yazılabilir.",
-      "zorunlu_degerler": [
-        "DAS28 Skoru (RA için)",
-        "RF / Anti-CCP (RA için)",
-        "DXA T Skoru (Osteoporoz için)",
-        "Ürik Asit (Gut için)"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
@@ -690,12 +636,6 @@
         "Ic Hastaliklari"
       ],
       "kural_ozeti": "GÖRH (K21) ve peptik ülser için PPI'lar (Omeprazol, Pantoprazol) uzman şartı olmaksızın tüm hekimler tarafından yazılabilir; ancak uzun süreli kullanım için Gastroenteroloji uzmanı raporu önerilir. İnflamatuar bağırsak hastalığı (Crohn K50, Ülseratif Kolit K51) tedavisinde biyolojik ajanlar (İnfliximab, Adalimumab, Vedolizumab) EK-4/F kapsamında olup Gastroenteroloji uzmanı raporu zorunludur. Kronik Hepatit B/C tedavisi özel protokol gerektirir.",
-      "zorunlu_degerler": [
-        "Endoskopi Raporu (ülser için)",
-        "Harvey-Bradshaw / Mayo Skoru (IBD için)",
-        "HBsAg / Anti-HCV / HBV DNA (Hepatit için)",
-        "Karaciğer Enzimleri (ALT, AST)"
-      ],
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": false,
@@ -755,11 +695,6 @@
         "Aile Hekimligi"
       ],
       "kural_ozeti": "Alerjik rinit (J30) tedavisinde antihistaminikler ve nazal steroidler (Mometazon, Flutikason) aile hekimi dahil tüm hekimler tarafından yazılabilir. Allerjik rinit için immünoterapi (aşı tedavisi) Allerji ve İmmünoloji uzmanı raporu gerektirir. Meniere hastalığı (H81.0) için KBB uzmanı raporu zorunludur. Kronik sinüzit için kortikosteroid ve antibiyotik tedavisi genelde uzman şartı gerektirmez.",
-      "zorunlu_degerler": [
-        "Allerji Testleri (İmmünoterapi için)",
-        "İşitme Testi (Kulak hastalıkları için)",
-        "Endoskopik Bulgular (Kronik sinüzit için)"
-      ],
       "ek4d_kapsaminda": false,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
@@ -801,12 +736,6 @@
         "Aile Hekimligi"
       ],
       "kural_ozeti": "BPH (N40) tedavisinde Alfa blökerler (Tamsulosin, Alfuzosin) ve 5-alfa redüktaz inhibitörleri (Finasterid, Dutasterid) uzman şartı olmaksızın aile hekimi dahil tüm hekimler tarafından yazılabilir. Aşırı aktif mesane (N32.8) için antikolinerjikler (Solifenasin, Tolterodin) uzman önerisiyle ödenir. Böbrek taşı (N20) için alfa blökerler ve sitrat preparatları Üroloji uzmanı raporu gerektirir.",
-      "zorunlu_degerler": [
-        "PSA Değeri (BPH/Prostat için)",
-        "İdrar Tahlili (İYE için)",
-        "Üriner USG (Taş için)",
-        "Ürodinami (Mesane için)"
-      ],
       "ek4d_kapsaminda": false,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
@@ -875,12 +804,6 @@
         "Radyasyon Onkolojisi"
       ],
       "kural_ozeti": "Tüm kanser ilaçları SADECE Tıbbi Onkoloji veya ilgili uzman (Hematoloji, Üro-onkoloji vb.) tarafından düzenlenen raporla ödenir. Kemoterapi ve hedefe yönelik tedaviler (monoklonal antikorlar, tirozin kinaz inhibitörleri) EK-4/F kapsamındadır. Biyolojik ajanlar için hastane raporu ve onay zorunludur. Palyatif ilaçlar (morfin türevleri) özel reçete gerektirir.",
-      "zorunlu_degerler": [
-        "Patoloji Raporu / Biyopsi Sonucu",
-        "Evreleme (TNM)",
-        "ECOG Performans Skoru",
-        "Önceki Tedavi Yanıtı"
-      ],
       "ek4d_kapsaminda": false,
       "ek4f_kapsaminda": true,
       "uzmanlik_sarti": true,
