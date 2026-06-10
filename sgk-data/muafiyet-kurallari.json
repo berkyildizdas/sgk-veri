@@ -1,6 +1,6 @@
 {
-  "tarih": "2026-06-09",
-  "hash": "3b026c8f20b4af94",
+  "tarih": "2026-06-10",
+  "hash": "7cbc9f0724f0c727",
   "grup_sayisi": 16,
   "hastaliklar": [
     {
@@ -55,18 +55,11 @@
         "Ic Hastaliklari",
         "Aile Hekimligi"
       ],
-      "kural_ozeti": "Metformin birinci secenek tedavi olup uzman hekim sarti yoktur. Insulin, GLP-1 agonist (Semaglutid), SGLT-2 inhibitor (Dapagliflozin) ve DPP-4 inhibitor (Sitagliptin) icin endokrinoloji uzmani onerisi gerekir. Ileri tedavilerde HbA1c >= 7.5% (DPP-4/SGLT-2) veya >= 8% (GLP-1) olmalidir.",
-      "zorunlu_degerler": [
-        "Aclik Kan Sekeri",
-        "HbA1c",
-        "BUN",
-        "Kreatinin",
-        "eGFR"
-      ],
+      "kural_ozeti": "SUT 4.2.38: Metformin, sülfonilüre, akarboz ve insan insülinleri tüm hekimlerce yazılabilir (uzman/kan değeri şartı yok). Analog insülin, pioglitazon, SGLT-2 (Dapagliflozin), DPP-4 (Sitagliptin), GLP-1 (Semaglutid) için endokrinoloji/iç hastalıkları uzman hekim raporu gerekir. SGLT-2 eGFR<45'te ödenmez. SUT, diyabet için zorunlu bir kan değeri SETİ şart koşmaz.",
       "ek4d_kapsaminda": true,
       "ek4f_kapsaminda": false,
       "uzmanlik_sarti": false,
-      "ozel_notlar": "Metformin: Uzman sarti yok, EK-4/D. Insulin: Uzman onerisi gerekir. GLP-1 (Semaglutid): HbA1c >= 8% ve uzman. SGLT-2/DPP-4: HbA1c >= 7.5% ve uzman.",
+      "ozel_notlar": "Metformin/sülfonilüre/insan insülini: uzman şartı yok, EK-4/D. Analog insülin/SGLT-2/DPP-4/GLP-1: endokrinoloji veya iç hastalıkları uzman raporu. SGLT-2: eGFR<45 kontrendike. HbA1c için SUT sabit sayı koymaz (uzman raporu esas).",
       "gecerlilik_suresi_ay": 24
     },
     {
