@@ -149,6 +149,64 @@ async function ek4dIzle(eskiEk4d, bugun) {
   }
 }
 
+/* ─── SKRS reçete türü (TİTCK dinamikmodul/43) ───
+   SKRS E-Reçete İlaç Listesi: barkod + RESMİ reçete türü (Kırmızı/Yeşil/Turuncu/Mor).
+   Motorun kırmızı/yeşil reçete uyarısını regex tahmininden resmi veriye taşımak için
+   NORMAL DIŞI reçete türlerini recete-turu.json'a yazar. Hata → eski veri korunur. */
+async function skrsReceteTuruCek(eskiSkrs, bugun, outDir) {
+  try {
+    const sayfa = process.env.TITCK_SKRS_INDEX || "https://www.titck.gov.tr/dinamikmodul/43";
+    log("SKRS sayfası taranıyor:", sayfa);
+    const res0 = await fetch(sayfa, { headers: UA });
+    if (!res0.ok) throw new Error(`SKRS sayfası alınamadı: ${res0.status}`);
+    const html = await res0.text();
+    // En güncel liste sayfanın en üstünde
+    const link = [...html.matchAll(/href="([^"]+\.xlsx?[^"]*)"/gi)].map((m) => m[1])[0];
+    if (!link) throw new Error("SKRS xlsx linki bulunamadı");
+    const res = await fetch(link, { headers: UA });
+    if (!res.ok) throw new Error(`SKRS xlsx indirilemedi: ${res.status}`);
+    const buf = Buffer.from(await res.arrayBuffer());
+    const wb = XLSX.read(buf, { type: "buffer" });
+    const sheetAdi = wb.SheetNames.find((s) => trNorm(s).includes("aktif")) || wb.SheetNames[0];
+    const satirlar = XLSX.utils.sheet_to_json(wb.Sheets[sheetAdi], { header: 1, defval: "" });
+    const hIdx = satirlar.findIndex((r) => r.some((c) => /barkod/i.test(String(c))));
+    if (hIdx === -1) throw new Error("SKRS başlık satırı bulunamadı");
+    const H = satirlar[hIdx].map(trNorm);
+    const iAd = H.findIndex((b) => b.includes("ilac ad"));
+    const iBarkod = H.findIndex((b) => b.includes("barkod"));
+    const iTur = H.findIndex((b) => b.includes("recete tur"));
+    if (iAd === -1 || iBarkod === -1 || iTur === -1) throw new Error("SKRS kolonları bulunamadı: " + H.slice(0, 8).join("|"));
+
+    const kayitlar = [];
+    for (let i = hIdx + 1; i < satirlar.length; i++) {
+      const r = satirlar[i];
+      const tur = String(r[iTur] ?? "").trim();
+      if (!tur || /normal/i.test(tur)) continue; // yalnızca özel reçete türleri (kırmızı/yeşil/turuncu/mor)
+      const ad = String(r[iAd] ?? "").trim();
+      const barkod = String(r[iBarkod] ?? "").trim();
+      if (!ad && !barkod) continue;
+      kayitlar.push({ ad, barkod, tur });
+    }
+    if (kayitlar.length === 0) throw new Error("SKRS özel reçete kaydı 0 — şüpheli, eski veri korunur");
+    const hash = createHash("sha256").update(JSON.stringify(kayitlar)).digest("hex").slice(0, 16);
+    const degisti = !eskiSkrs || eskiSkrs.hash !== hash;
+    if (degisti) {
+      writeFileSync(join(outDir, "recete-turu.json"),
+        JSON.stringify({ tarih: bugun, kaynak_url: link, kayit_sayisi: kayitlar.length, kayitlar }), "utf8");
+      log(`SKRS reçete türü YAYIMLANDI: ${kayitlar.length} özel reçeteli ilaç, hash ${hash}`);
+    } else {
+      log(`SKRS reçete türü değişmedi (hash ${hash}).`);
+    }
+    return {
+      hash, kaynak_url: link, kontrol_tarihi: bugun, kayit_sayisi: kayitlar.length,
+      degisim_tarihi: degisti ? bugun : (eskiSkrs?.degisim_tarihi || bugun), _degisti: degisti,
+    };
+  } catch (e) {
+    log("SKRS hatası:", e.message, "- eski reçete türü verisi korunuyor.");
+    return eskiSkrs ? { ...eskiSkrs, _degisti: false } : null;
+  }
+}
+
 /* ─── Ana akış ─── */
 async function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
@@ -178,11 +236,16 @@ async function main() {
   // ── EK-4/D (sadece izleme) ──
   const ek4d = await ek4dIzle(eskiVersion.ek4d, bugun);
 
+  // ── SKRS reçete türü (resmî kırmızı/yeşil/turuncu/mor) ──
+  const skrs = await skrsReceteTuruCek(eskiVersion.skrs, bugun, OUT_DIR);
+  const skrsDegisti = !!(skrs && skrs._degisti);
+  if (skrs) delete skrs._degisti;
+
   const ilacDegisti = ilaclar !== null && hash !== eskiVersion.hash;
   const ek4dDegisti = JSON.stringify(ek4d) !== JSON.stringify(eskiVersion.ek4d || null);
 
-  if (!ilacDegisti && !ek4dDegisti) {
-    log("Değişiklik yok (ne EK-4/A ne EK-4/D). Güncelleme gerekmiyor.");
+  if (!ilacDegisti && !ek4dDegisti && !skrsDegisti) {
+    log("Değişiklik yok (EK-4/A, EK-4/D, SKRS). Güncelleme gerekmiyor.");
     process.exit(0);
   }
 
@@ -194,6 +257,7 @@ async function main() {
     kaynak_url: ilacDegisti ? link : eskiVersion.kaynak_url,
     onceki_tarih: ilacDegisti ? (eskiVersion.tarih || null) : eskiVersion.onceki_tarih,
     ek4d,
+    skrs,
   };
 
   if (ilacDegisti) {
@@ -201,7 +265,7 @@ async function main() {
     log(`EK-4/A YAYIMLANDI: ${ilaclar.length} ilaç, hash ${hash}`);
   }
   writeFileSync(versionPath, JSON.stringify(version, null, 2), "utf8");
-  log(`version.json güncellendi (EK-4/A ${ilacDegisti ? "değişti" : "aynı"}, EK-4/D ${ek4dDegisti ? "değişti" : "aynı"}).`);
+  log(`version.json güncellendi (EK-4/A ${ilacDegisti ? "değişti" : "aynı"}, EK-4/D ${ek4dDegisti ? "değişti" : "aynı"}, SKRS ${skrsDegisti ? "değişti" : "aynı"}).`);
 }
 
 main().catch((e) => { console.error("[sgk-veri] KRİTİK:", e); process.exit(1); });
