@@ -9,5 +9,12 @@
     "kaynak_url": "https://www.sgk.gov.tr/Download/DownloadFile?f=e71e674c-3aba-4eb5-9a19-2297ebc74221.pdf&d=1d44244a-dfbe-4348-80d2-91ddab289cfc",
     "kontrol_tarihi": "2026-06-09",
     "degisim_tarihi": "2026-06-09"
+  },
+  "skrs": {
+    "hash": "77b15aef454d24d8",
+    "kaynak_url": "https://titck.gov.tr/storage/Archive/2026/dynamicModulesAttachment/AKLST0209.06.2026skrserecetilacvedigerfarmasotikurunler_c357f928-ed55-4946-8814-de4fd6745625.xlsx",
+    "kontrol_tarihi": "2026-06-11",
+    "kayit_sayisi": 241,
+    "degisim_tarihi": "2026-06-11"
   }
 }
