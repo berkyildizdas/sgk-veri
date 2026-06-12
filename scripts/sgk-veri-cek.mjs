@@ -296,6 +296,23 @@ async function main() {
   const sutDegisti = !!(sut && sut._degisti);
   if (sut) delete sut._degisti;
 
+  // GERÇEK değişiklik = öncesinde kayıtlı bir SUT tarihi VARDI ve YENİSİYLE FARKLI.
+  // (İlk çalıştırmada eskiVersion.sut null olur; bu "yeni tebliğ çıktı" değildir,
+  //  bildirim göndermeyiz.) Workflow bu çıktıyı okuyup GitHub Issue açar → e-posta.
+  const sutGercektenDegisti = !!(
+    sutDegisti && eskiVersion.sut?.degisiklik_tarihi &&
+    sut.degisiklik_tarihi !== eskiVersion.sut.degisiklik_tarihi
+  );
+  if (process.env.GITHUB_OUTPUT) {
+    const cikti = [
+      `sut_degisti=${sutGercektenDegisti ? "true" : "false"}`,
+      `sut_yeni_tarih=${sut?.degisiklik_tarihi || ""}`,
+      `sut_eski_tarih=${eskiVersion.sut?.degisiklik_tarihi || ""}`,
+    ].join("\n") + "\n";
+    try { writeFileSync(process.env.GITHUB_OUTPUT, cikti, { flag: "a" }); } catch {}
+    if (sutGercektenDegisti) log(`BİLDİRİM: SUT ${eskiVersion.sut.degisiklik_tarihi} → ${sut.degisiklik_tarihi}. Issue açılacak.`);
+  }
+
   const ilacDegisti = ilaclar !== null && hash !== eskiVersion.hash;
   const ek4dDegisti = JSON.stringify(ek4d) !== JSON.stringify(eskiVersion.ek4d || null);
 

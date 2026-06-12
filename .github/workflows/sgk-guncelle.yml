@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write           # JSON'u repoya commit edebilmek için
+  issues: write             # SUT değişince bildirim Issue'su açmak için
 
 jobs:
   guncelle:
@@ -28,6 +29,7 @@ jobs:
         run: npm install xlsx@0.18.5 --no-save
 
       - name: SGK verisini çek ve parse et
+        id: cek
         env:
           # SGK EK-4/A xlsx linki değişirse buraya repo Secret olarak ekle: SGK_EK4A_URL
           SGK_EK4A_URL: ${{ secrets.SGK_EK4A_URL }}
@@ -48,3 +50,27 @@ jobs:
           else
             echo "Değişiklik yok."
           fi
+
+      - name: SUT değiştiyse bildirim Issue'su aç
+        if: steps.cek.outputs.sut_degisti == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YENI: ${{ steps.cek.outputs.sut_yeni_tarih }}
+          ESKI: ${{ steps.cek.outputs.sut_eski_tarih }}
+        run: |
+          gh issue create \
+            --title "🔔 SGK yeni SUT tebliği yayımladı: $YENI" \
+            --body "SGK Sağlık Uygulama Tebliği güncellendi.
+
+          - Önceki sürüm: **$ESKI**
+          - Yeni sürüm: **$YENI**
+          - Kaynak: https://www.sgk.gov.tr/Duyuru
+
+          **Yapılacaklar:**
+          1. Lokal SUT metnini tazele (ZIP indir → Word COM → UTF-8, C:\\sut-guncel).
+          2. Eşik/kural değişikliklerini gözden geçir (lipid, enteral, biyolojik vb.).
+          3. Uygulamada \`SUT_DOGRULAMA_SURUMU\` değerini \`$YENI\` yap, yeni exe yayımla.
+
+          Bu Issue otomatik açıldı (günlük SUT izleme). İşlem bitince kapat." \
+            --assignee berkyildizdas \
+          || echo "Issue açılamadı (izin?), workflow loguna bak."
