@@ -207,6 +207,56 @@ async function skrsReceteTuruCek(eskiSkrs, bugun, outDir) {
   }
 }
 
+/* ─── SUT değişiklik izleme (SGK duyuru sayfası) ───
+   SGK her SUT değişikliğini "GG/AA/YYYY SUT Değişiklik Tebliği İşlenmiş Güncel 2013
+   SUT" başlığıyla duyurur. Sayfayı tarayıp EN YENİ böyle duyurunun tarihini bulur;
+   önceki kontrolden farklıysa "SUT değişti" işaretler. Uygulama bunu version.json'dan
+   okuyup eczacıya/geliştiriciye "SUT güncellendi, kurallar gözden geçirilmeli" uyarısı
+   gösterir. Sadece İZLEME — kural değiştirmez (kurallar elle, doğrulanarak güncellenir). */
+async function sutDegisikligiIzle(eskiSut, bugun) {
+  const sayfalar = [
+    process.env.SGK_SUT_DUYURU_URL || "https://www.sgk.gov.tr/Duyuru/Index?page=1",
+    "https://www.sgk.gov.tr/Duyuru/Index?page=2",
+  ];
+  try {
+    let enYeniISO = "";
+    let enYeniBaslik = "";
+    for (const sayfa of sayfalar) {
+      const res = await fetch(sayfa, { headers: UA });
+      if (!res.ok) continue;
+      const html = await res.text();
+      // SGK duyuru linkleri: /duyuru/detay/GGAAYYYY-SUT-Degisiklik-Tebligi-Islenmis-Guncel-...
+      // Tarih, başlık metninde değil URL slug'ında GGAAYYYY (ayraçsız) olarak gömülü.
+      const re = /\/duyuru\/detay\/(\d{2})(\d{2})(\d{4})-SUT-De[ğg]i[şs]iklik-Tebli[ğg]i/gi;
+      let m;
+      while ((m = re.exec(html)) !== null) {
+        const iso = `${m[3]}-${m[2]}-${m[1]}`;
+        if (/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(iso) && iso > enYeniISO) {
+          enYeniISO = iso;
+          enYeniBaslik = `${m[1]}/${m[2]}/${m[3]} SUT Değişiklik Tebliği`;
+        }
+      }
+    }
+    if (!enYeniISO) {
+      log("SUT duyuru tarihi sayfada bulunamadı — eski durum korunuyor.");
+      return eskiSut || null;
+    }
+    const degisti = !eskiSut || eskiSut.degisiklik_tarihi !== enYeniISO;
+    if (degisti) log(`SUT DEĞİŞTİ → en yeni tebliğ ${enYeniISO}. Kurallar gözden geçirilmeli.`);
+    else log(`SUT değişmedi (en yeni tebliğ ${enYeniISO}).`);
+    return {
+      degisiklik_tarihi: enYeniISO,      // SGK'daki en yeni SUT tebliği tarihi
+      baslik: enYeniBaslik,
+      kontrol_tarihi: bugun,
+      kaynak_url: "https://www.sgk.gov.tr/Duyuru",
+      _degisti: degisti,
+    };
+  } catch (e) {
+    log("SUT izleme hatası:", e.message, "- eski durum korunuyor.");
+    return eskiSut ? { ...eskiSut, _degisti: false } : null;
+  }
+}
+
 /* ─── Ana akış ─── */
 async function main() {
   if (!existsSync(OUT_DIR)) mkdirSync(OUT_DIR, { recursive: true });
@@ -241,11 +291,18 @@ async function main() {
   const skrsDegisti = !!(skrs && skrs._degisti);
   if (skrs) delete skrs._degisti;
 
+  // ── SUT değişiklik izleme (sadece izleme; kuralları elle güncelliyoruz) ──
+  const sut = await sutDegisikligiIzle(eskiVersion.sut, bugun);
+  const sutDegisti = !!(sut && sut._degisti);
+  if (sut) delete sut._degisti;
+
   const ilacDegisti = ilaclar !== null && hash !== eskiVersion.hash;
   const ek4dDegisti = JSON.stringify(ek4d) !== JSON.stringify(eskiVersion.ek4d || null);
 
-  if (!ilacDegisti && !ek4dDegisti && !skrsDegisti) {
-    log("Değişiklik yok (EK-4/A, EK-4/D, SKRS). Güncelleme gerekmiyor.");
+  // SUT kontrol_tarihi her gün değişir; bu tek başına "yayımla" sebebi olmasın —
+  // yalnızca gerçek SUT değişikliği (sutDegisti) veya diğer veriler değişince yaz.
+  if (!ilacDegisti && !ek4dDegisti && !skrsDegisti && !sutDegisti) {
+    log("Değişiklik yok (EK-4/A, EK-4/D, SKRS, SUT). Güncelleme gerekmiyor.");
     process.exit(0);
   }
 
@@ -258,6 +315,7 @@ async function main() {
     onceki_tarih: ilacDegisti ? (eskiVersion.tarih || null) : eskiVersion.onceki_tarih,
     ek4d,
     skrs,
+    sut,
   };
 
   if (ilacDegisti) {
@@ -265,7 +323,7 @@ async function main() {
     log(`EK-4/A YAYIMLANDI: ${ilaclar.length} ilaç, hash ${hash}`);
   }
   writeFileSync(versionPath, JSON.stringify(version, null, 2), "utf8");
-  log(`version.json güncellendi (EK-4/A ${ilacDegisti ? "değişti" : "aynı"}, EK-4/D ${ek4dDegisti ? "değişti" : "aynı"}, SKRS ${skrsDegisti ? "değişti" : "aynı"}).`);
+  log(`version.json güncellendi (EK-4/A ${ilacDegisti ? "değişti" : "aynı"}, EK-4/D ${ek4dDegisti ? "değişti" : "aynı"}, SKRS ${skrsDegisti ? "değişti" : "aynı"}, SUT ${sutDegisti ? "DEĞİŞTİ" : "aynı"}).`);
 }
 
 main().catch((e) => { console.error("[sgk-veri] KRİTİK:", e); process.exit(1); });
