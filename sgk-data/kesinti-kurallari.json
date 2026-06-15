@@ -1,7 +1,7 @@
 {
   "tarih": "2026-06-15",
-  "hash": "697fd2111439608b",
-  "kayit_sayisi": 92,
+  "hash": "e6d5897cf72c7bae",
+  "kayit_sayisi": 97,
   "kurallar": [
     {
       "id": "lmwh-hemodiyaliz",
@@ -28,9 +28,9 @@
       "id": "enteral-malnutrisyon-309",
       "baslik": "Enteral mama — malnütrisyon (309 kodu) VKİ/kilo şartı",
       "ilacRe": "\\bmama\\b|enteral|ensure|resource|fresubin|nutridrink|nutrison|fortimel|fortini|peptamen|glucerna|diason|diasip|nepro|isosource|novasource|nutricomp|survimed|supportan|reconvan|cubitan|pulmocare|osmolite|jevity|pediasure|infatrini|frebini|sondalis|nutrini",
-      "uyari": "⚠️ KESİNTİ RİSKİ — Enteral mama MALNÜTRİSYON endikasyonunda (MEDULA 309 uyarı kodu): raporda malnütrisyon kanıtı belgelenmeli (SUT 4.2.8.A) — ERİŞKİN: son 3 ayda ağırlığında ≥ %10 İSTEMSİZ kilo kaybı VEYA 'Subjektif Global Değerlendirme' kategorisi C/D. ÇOCUK: yaşına göre boy ve/veya kilo gelişimi < -2 SD. (Kanser, kistik fibrozis, Crohn, yanık, sonda/PEG ile beslenen vb. hastalarda bu malnütrisyon koşulu ARANMAZ.) Tutmuyorsa kesinti. (309 kodu YOKSA bu şart aranmaz.)",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Enteral mama MALNÜTRİSYON endikasyonunda (MEDULA 309 uyarı kodu; SUT 4.2.8.A): ERİŞKİN malnütrisyon tanımı ÜÇ koşulun BİRLİKTE olmasıdır — (1) son 6 ayda >%5 (6 aydan uzun sürede >%10) İSTEMSİZ kilo kaybı VEYA VKİ 70 yaş ve üzeri <22 / 70 yaş altı <20, VE (2) malnütrisyona neden olan eşlik eden hastalık/travma, VE (3) besin alımında azalma. 3 ay süreli SAĞLIK KURULU raporu + günlük en fazla 1200 kcal dozda ödenir. ÇOCUK: 5 yaş altı yaşa göre ağırlık <-2SD; 5 yaş ve üstü VKİ <-2SD (veya yaşa göre boy/ağırlık <-2SD); çocuk hastalıkları/çocuk cerrahi 6 ay rapor, 30 günlük doz. (Yatan hasta, kanser, kistik fibrozis, Crohn, yanık, sonda/PEG ile beslenenlerde malnütrisyon koşulu ARANMAZ.) Diyet/obezite cerrahisi kaynaklı kilo kaybı malnütrisyon SAYILMAZ. Tutmuyorsa kesinti.",
       "dogrulandi": true,
-      "kaynak": "SUT 4.2.8.A birebir metin (23.05.2026, RG-10/05/2018-30417 erişkin eşiği) + TEB enteral uyarı kodları + Şanlıurfa EO",
+      "kaynak": "SUT 4.2.8.A birebir metin (resmî 23.05.2026 SUT docx, RG-25/03/2025-32852/6-b VKİ eşikleri) + TEB enteral uyarı kodları",
       "baglamRe": "\\b309\\b|malnutrisyon|malnutrisyonu",
       "not": "12.06.2026 DÜZELTME: önceki eşik 'son 6 ayda >%5' YANLIŞTI; resmi SUT 'son 3 ayda ≥%10 istemsiz kilo kaybı' (erişkin) + çocukta <-2SD. 309 uyarı kodu malnütrisyon şartını tetikler."
     },
@@ -787,6 +787,48 @@
       "uyari": "⚠️ KESİNTİ RİSKİ — Rasburicase (Fasturtec; SUT 4.2.4): YALNIZCA YATAN hastada, en fazla 5 GÜNLÜK tedavi ödenir. Şartlar: myeloablatif çoklu ajanlı kemoterapi alan, tümör yükü olan hematolojik malignite/akut lösemi + beyaz küre > 100.000/mm³ + allopurinol ve hidrasyona rağmen böbrek bozuk (kreatinin > 2 mg/dl veya kreatinin klerensi < 50 ml/dk) VEYA allopurinolün kontrendike olduğu durum. Hematoloji, tıbbi onkoloji veya nefroloji uzmanınca düzenlenen, laboratuvar sonuçlarını içeren uzman hekim raporuyla, bu uzmanlarca reçete edilir. Ayakta/5 günü aşan/branş dışı reçete → kesilir.",
       "dogrulandi": true,
       "kaynak": "SUT 4.2.4 birebir metin (resmî 23.05.2026 SUT docx)"
+    },
+    {
+      "id": "lmwh-farkli-birlikte-yasak",
+      "baslik": "Düşük molekül ağırlıklı heparin — farklı etken madde birlikte + rapor süresi (SUT 4.2.7)",
+      "ilacRe": "enoksaparin|enoxaparin|oksapar|kleksan|clexane|nadroparin|fraksiparin|fraxiparine|dalteparin|fragmin|tinzaparin|bemiparin|hibor|parnaparin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Düşük molekül ağırlıklı heparin (SUT 4.2.7): (1) FARKLI etken maddeli iki LMWH'nin BİRLİKTE kullanımı ödenmez. (2) En fazla 6 ay süreli uzman hekim raporuyla başlanır, rapora istinaden tüm hekimler reçete eder; 6 AYDAN UZUN kullanım için onkoloji/hematoloji/KVC/kardiyoloji/göğüs/iç hastalıkları/genel cerrahi/nöroloji uzmanından birinin bulunduğu sağlık kurulu raporu gerekir. (3) GEBELİKTE: kadın hastalıkları ve doğum uzmanınca 10 ay süreli uzman hekim raporu. (4) Yatan hasta/acilde rapor aranmaz. (5) Hemodiyalizde işlem puanına dahil olduğundan reçete edilse de ödenmez. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.7 birebir metin (resmî 23.05.2026 SUT docx; RG-25/11/2025-33088/4)",
+      "not": "Diyaliz günü ayrıntısı için lmwh-hemodiyaliz, gebelik için lmwh-gebelik-rapor kuralları ayrıca var; bu kural farklı-LMWH-birlikte yasağı + rapor süresi/branş katmanını ekler."
+    },
+    {
+      "id": "sevelamer-lantanyum-baslama",
+      "baslik": "Fosfor bağlayıcılar (sevelamer/lantanyum/alüminyum) — başlama kriterleri + kombinasyon (SUT 4.2.9.B)",
+      "ilacRe": "sevelamer|sevaren|lameris|renagel|renvela|lantanyum|lanthanum|fosrenol|aluminyum klorur|alüminyum klorür",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Fosfor bağlayıcı (sevelamer/lantanyum karbonat/alüminyum klorür hidroksit; SUT 4.2.9.B): BAŞLAMA — önce diğer fosfor düşürücüler en az 3 AY kullanılmış olmalı (raporda belirtilir) + şunlardan biri: Ca×P ≥ 72; VEYA PTH < 100 pg/ml (adinamik kemik hastalığı); VEYA Kt/V > 1,4 iken düzeltilmiş Ca×P > 55; VEYA Kt/V > 1,4 + PTH ≥ 300. Hemodiyaliz/periton diyalizi + nefroloji/iç hastalıkları/çocuk uzmanı (veya diyaliz sertifikalı) raporu. Her reçetede son 1 ayın FOSFOR değeri belirtilir; en fazla 1 aylık doz. Fosfor < 3,5 mg/dl olunca KESİLİR (>4 olunca başlama kriterleriyle tekrar). SEVELAMER ve LANTANYUM KARBONAT KOMBİNE kullanılamaz. Kriter/değer/kombinasyon dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.9.B birebir metin (resmî 23.05.2026 SUT docx; RG-07/10/2016-29850)",
+      "not": "Ara verme ayrıntısı için sevelamer-ara-verme kuralı ayrıca var; bu kural başlama biyokimya eşikleri + sevelamer/lantanyum kombinasyon yasağını ekler."
+    },
+    {
+      "id": "parikalsitol-kullanim",
+      "baslik": "Parikalsitol — PTH/Ca/P eşikleri (SUT 4.2.9.C)",
+      "ilacRe": "parikalsitol|paricalcitol|zemplar",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Parikalsitol (Zemplar; SUT 4.2.9.C): BAŞLAMA — düzeltilmiş serum Ca < 10,2 mg/dl VE serum P < 5,5 mg/dl koşuluyla; PTH > 600 pg/ml VEYA (PTH > 300 + bir önceki ölçüme göre %25'ten fazla artış). SONLANDIRMA — PTH < 150 pg/ml VEYA düzeltilmiş Ca > 10,5 VEYA serum P > 6 olunca kesilir. PARENTERAL form yalnız HEMODİYALİZ, ORAL form yalnız PERİTON diyalizi hastasına; nefroloji/iç hastalıkları/çocuk (veya diyaliz sertifikalı, oralde nefroloji) 6 ay rapor, en fazla 1 aylık doz. En fazla 3 ay öncesine ait Ca/P/PTH her reçete/raporda belirtilir. Eşik/form/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.9.C birebir metin (resmî 23.05.2026 SUT docx; RG-28/04/2021-31468 / RG-19/10/2023-32344)"
+    },
+    {
+      "id": "oral-esansiyel-aminoasit-keto",
+      "baslik": "Oral esansiyel aminoasit / keto analogları — KBH + albümin (SUT 4.2.9.D)",
+      "ilacRe": "keto\\s*analog|ketoanalog|ketosteril|esansiyel aminoasit|esansiyel amino asit|alfa.?keto|aminoasit preparat",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Oral esansiyel aminoasit / keto analogları (Ketosteril; SUT 4.2.9.D): BAŞLAMA — serum albümin < 3,5 g/dL olan Evre 4 KBH (GFR < 30) veya Evre 5 KBH (diyaliz dahil) hastalarında + (son 3 ayda ≥%10 kilo kaybı VEYA VKİ < 19). KESME — ilk 6 ayda başlangıç albümininde %25 artış sağlanamazsa VEYA albümin > 4 g/dL'ye çıkarsa (tedavinin ilk 3 ayı/devamında) kesilir; tekrar başlarken başlangıç kriterleri aranır. Nefroloji/iç hastalıkları/çocuk uzmanı 1 yıl rapor, 3 aylık doz; her reçetede albümin değeri belirtilir. Eşik/değer dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.9.D birebir metin (resmî 23.05.2026 SUT docx; RG-28/04/2021-31468)"
+    },
+    {
+      "id": "sodyum-zirkonyum-siklosilikat",
+      "baslik": "Sodyum zirkonyum siklosilikat (Lokelma) — hiperkalemi (SUT 4.2.9.F)",
+      "ilacRe": "sodyum zirkonyum|zirkonyum siklosilikat|sodium zirconium|lokelma",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sodyum zirkonyum siklosilikat (Lokelma; SUT 4.2.9.F): RAAS inhibitörü veya MRA kullanan, DİYALİZ ALMAYAN Evre 4 veya Evre 5 KBH hastasında; son 1 ayda sodyum/kalsiyum polistiren sülfonat kullanımına rağmen en az bir ŞİDDETLİ hiperkalemi atağı + serum potasyum ≥ 6,0 mmol/L olması şart. En az bir NEFROLOJİ uzmanı 3 ay süreli sağlık kurulu raporu; reçete nefroloji/iç hastalıkları uzmanınca. Yılda en fazla 2 atak için TOPLAM en fazla 6 KUTU ödenir. Şart/atak/kutu dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.9.F birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852/7)"
     }
   ]
 }
