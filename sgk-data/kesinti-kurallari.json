@@ -1,0 +1,784 @@
+{
+  "tarih": "2026-06-15",
+  "hash": "d6a0e6c1f48a1d56",
+  "kayit_sayisi": 91,
+  "kurallar": [
+    {
+      "id": "lmwh-hemodiyaliz",
+      "baslik": "Düşük molekül ağırlıklı heparin + hemodiyaliz",
+      "ilacRe": "enoksaparin|enoxaparin|oksapar|kleksan|clexane|nadroparin|fraksiparin|fraxiparine|dalteparin|fragmin|tinzaparin|bemiparin|hibor|parnaparin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Hemodiyaliz hastasında düşük molekül ağırlıklı heparin (Oksapar/Clexane/Hibor grubu) SADECE diyalize GİRMEDİĞİ günlerde ödenir. Diyaliz günlerini reçeteden düşün (örn. haftada 3 gün diyaliz → o günler hariç yaz); aksi halde diyaliz günlerine denk gelen kutular kesilir (sahada ~45.000 TL kesinti örneği).",
+      "dogrulandi": true,
+      "kaynak": "eczane.kesintileri (kullanıcının gönderdiği saha vakası)",
+      "baglamRe": "diyaliz|hemodiyaliz|hemodializ",
+      "taniKoduRe": "^(Z99\\.?2|N18\\.[56])",
+      "uyariGenel": "⚠️ KESİNTİ RİSKİ — Düşük molekül ağırlıklı heparin: hasta HEMODİYALİZ hastasıysa diyalize girdiği günlerde ödenmez (diyalizde zaten heparin verilir). Diyaliz günlerini reçeteden düşün.",
+      "not": "Kullanıcı tarafından sağlanan gerçek vaka. Yine de resmi SUT maddesiyle çapraz teyit önerilir."
+    },
+    {
+      "id": "enteral-mama-toplam-doz",
+      "baslik": "Enteral beslenme (mama) — çok aromalı toplam doz",
+      "ilacRe": "\\bmama\\b|enteral|ensure|resource|fresubin|nutridrink|nutrison|fortimel|fortini|peptamen|glucerna|diason|diasip|nepro|isosource|novasource|nutricomp|survimed|supportan|reconvan|cubitan|pulmocare|osmolite|jevity|pediasure|infatrini|frebini|sondalis|nutrini",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Enteral beslenme ürünü (mama): Birden fazla AROMA/ürün veriliyorsa hepsinin TOPLAM dozu ve günlük kalorisi, rapordaki günlük dozu/kaloriyi AŞMAMALIDIR (SUT 4.2.8.A). Örn. rapor 2x1 ise iki aromadan 2x1+2x1 = 4x1 DEĞİL; her aromadan 1x1 = toplam 2x1 yazın. Aşımda kesinti olur (~23.000 TL örneği).",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.8.A + eczacı odaları (Şanlıurfa/Samsun/Kayseri/Antalya EO), 15.07.2022 aroma düzenlemesi; vaka: eczane.kesintileri",
+      "not": "Çapraz doğrulandı: aynı eşdeğer grupta farklı aromalar aynı reçetede verilebilir ANCAK toplam günlük kalori/doz rapor dozunu aşamaz."
+    },
+    {
+      "id": "enteral-malnutrisyon-309",
+      "baslik": "Enteral mama — malnütrisyon (309 kodu) VKİ/kilo şartı",
+      "ilacRe": "\\bmama\\b|enteral|ensure|resource|fresubin|nutridrink|nutrison|fortimel|fortini|peptamen|glucerna|diason|diasip|nepro|isosource|novasource|nutricomp|survimed|supportan|reconvan|cubitan|pulmocare|osmolite|jevity|pediasure|infatrini|frebini|sondalis|nutrini",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Enteral mama MALNÜTRİSYON endikasyonunda (MEDULA 309 uyarı kodu): raporda malnütrisyon kanıtı belgelenmeli (SUT 4.2.8.A) — ERİŞKİN: son 3 ayda ağırlığında ≥ %10 İSTEMSİZ kilo kaybı VEYA 'Subjektif Global Değerlendirme' kategorisi C/D. ÇOCUK: yaşına göre boy ve/veya kilo gelişimi < -2 SD. (Kanser, kistik fibrozis, Crohn, yanık, sonda/PEG ile beslenen vb. hastalarda bu malnütrisyon koşulu ARANMAZ.) Tutmuyorsa kesinti. (309 kodu YOKSA bu şart aranmaz.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.8.A birebir metin (23.05.2026, RG-10/05/2018-30417 erişkin eşiği) + TEB enteral uyarı kodları + Şanlıurfa EO",
+      "baglamRe": "\\b309\\b|malnutrisyon|malnutrisyonu",
+      "not": "12.06.2026 DÜZELTME: önceki eşik 'son 6 ayda >%5' YANLIŞTI; resmi SUT 'son 3 ayda ≥%10 istemsiz kilo kaybı' (erişkin) + çocukta <-2SD. 309 uyarı kodu malnütrisyon şartını tetikler."
+    },
+    {
+      "id": "omalizumab-ara-verme-gecmis",
+      "baslik": "Omalizumab (Xolair) — ara verme / ilaç geçmişi",
+      "ilacRe": "omalizumab|xolair",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Omalizumab (Xolair): Yeni rapor 'ara verme sonrası nüks' gerekçesiyle çıktıysa, hastanın GERÇEKTEN ara verdiğini (önceki ilaç bitmiş, hekimin belirlediği ara dönem geçmiş) İLAÇ GEÇMİŞİNDEN teyit edin. Hastanın elinde ilaç bitmeden / ara vermeden çıkan rapor geçersiz sayılır → o raporla verilen TÜM reçetelerde kesinti olur.",
+      "dogrulandi": true,
+      "kaynak": "Kayseri/Ankara/Konya Eczacı Odası + SUT omalizumab (6 doz sonrası ara verme, 24 haftalık rapor)",
+      "not": "Çapraz doğrulandı: SGK, ara vermeden nüks beyan edilen raporlarda kesinti yapıyor. Vaka: eczane.kesintileri."
+    },
+    {
+      "id": "epo-hemoglobin",
+      "baslik": "Eritropoietin / darbepoetin Hb şartı (SUT 4.2.9.A)",
+      "ilacRe": "eritropoietin|epoetin|darbepoetin|aranesp|eprex|epogen|retacrit|eporatio|mircera|metoksipolietilen",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Eritropoietin/darbepoetin (SUT 4.2.9.A): Başlama şartı Hb < 10 g/dL (TSAT ≥ %20 ve/veya ferritin ≥ 100 µg/L olmalı — demir deposu yetersizse önce demir tedavisi). Hedef Hb 11–12; Hb > 12 g/dL'de tedavi KESİLİR. Tetkik tarihi ve sonucu reçete/raporda belirtilmeli (hemodiyalizde 3, periton diyalizinde 4 ayda bir yenilenir). Nefroloji veya diyaliz sertifikalı uzman içeren rapor şart; reçetede EN FAZLA 1 AYLIK doz ödenir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.9.A — ilacabak SUT metni + Aydın EO duyurusu ile çapraz teyit (11.06.2026)",
+      "not": "Doz aralıkları: EPO başlangıç 50–150 IU/kg/hafta, idame 25–75; darbepoetin başlangıç 0.25–0.75, idame 0.13–0.35 mcg/kg/hafta."
+    },
+    {
+      "id": "iv-demir",
+      "baslik": "Parenteral (IV) demir — rapor/endikasyon şartı (SUT 4.2.41)",
+      "ilacRe": "ferik karboksimaltoz|ferinject|demir sukroz|demir hidroksit sukroz|cosmofer|monofer|ferik karboksi|venofer",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Parenteral (IV) demir (SUT 4.2.41): UZMAN hekim raporu şart ve raporda endikasyon AÇIKÇA belirtilmeli (hemodiyaliz/periton diyalizi, intestinal malabsorbsiyon, kronik inflamatuvar bağırsak hastalığı, gastrektomi, oral demiri tolere edemeyen gebelik vb.). Evre III–V KBH'de demir eksikliği anemisi şartı: TSAT < %20 ve/veya ferritin < 100 mcg/L raporda belgelenmeli.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.41 — ilacabak SUT metni + Balıkesir EO fatura kontrol duyurusu ile çapraz teyit (11.06.2026)"
+    },
+    {
+      "id": "antitnf-ra-metotreksat",
+      "baslik": "Golimumab/İnfliksimab — RA'da metotreksat şartı",
+      "ilacRe": "golimumab|simponi|infliksimab|infliximab|remicade",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Golimumab/İnfliksimab romatoid artritte METOTREKSAT ile birlikte kullanımda endikedir. Hastanın ilaç geçmişinde metotreksat olup olmadığını kontrol edin; MTX yoksa (ve kontrendikasyon raporda belgelenmemişse) SGK kesinti yapıyor.",
+      "dogrulandi": true,
+      "kaynak": "Konya EO resmi kesinti listesi (SGK tarafından yapılan kesintiler, 11.06.2026)",
+      "baglamRe": "romatoid",
+      "taniKoduRe": "^M0[56]",
+      "uyariGenel": "⚠️ KESİNTİ RİSKİ — Golimumab/İnfliksimab: tanı romatoid artrit ise metotreksat ile kombine kullanım şartı vardır — hasta ilaç geçmişinde MTX kontrol edin."
+    },
+    {
+      "id": "hepatitb-hbsag",
+      "baslik": "Tenofovir alafenamid / Entekavir — güncel HBsAg/HBV-DNA şartı",
+      "ilacRe": "tenofovir alafenamid|vemlidy|entekavir|entecavir|baraclude",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Tenofovir alafenamid (Vemlidy) / Entekavir (Baraclude): raporda GÜNCEL HBsAg sonucu bulunmalı; rapor YENİLEMELERİNDE en yakın tarihli HBV-DNA (ve HBeAg) sonucu raporda belirtilmeli. Güncel olmayan laboratuvar sonucuyla yenilenen raporlarda SGK kesinti yapıyor.",
+      "dogrulandi": true,
+      "kaynak": "Konya EO resmi kesinti listesi + Isparta EO SUT komisyonu raporu (çapraz teyit, 11.06.2026)"
+    },
+    {
+      "id": "antivegf-goz",
+      "baslik": "Anti-VEGF göz (Lucentis/Eylea) — SKR + bevacizumab basamağı (SUT 4.2.33)",
+      "ilacRe": "ranibizumab|lucentis|aflibercept|eylea|verteporfin|deksametazon intravitreal|ozurdex",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Göz içi anti-VEGF (SUT 4.2.33): ÜÇ göz hastalıkları uzmanının yer aldığı 3 AY süreli sağlık kurulu raporu şart. YBMD/DMÖ/RVO'da önce BEVACIZUMAB basamağı uygulanır; ranibizumab/aflibercepte geçiş için bevacizumab yanıtsızlığı 4 veya 12. haftada OCT GÖRÜNTÜSÜ EKLENEREK belgelenmeli. Tedaviye uzun ara verildiyse endikasyon dışı onay + onay tarih/sayısı raporda olmalı.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.33 (ilacabak tam metin) + TEB SUT değişikliği duyurusu (11.06.2026 çapraz teyit)"
+    },
+    {
+      "id": "ursodeoksikolik-tani",
+      "baslik": "Ursodeoksikolik asit (Ursofalk) — muafiyet tanıya bağlı",
+      "ilacRe": "ursodeoksikolik|ursofalk|ursactive|destolit",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ursodeoksikolik asit: EK-4/D katılım payı muafiyeti yalnızca listede belirtilen tanıda (primer biliyer siroz/kolanjit) geçerlidir; safra taşı (K80) gibi diğer tanılarda katılım paylı ödenir. Prospektüs endikasyonu dahilindeki TEŞHİS rapor/reçetede açıkça yazılmalı (yıldızlı ilaç kuralı).",
+      "dogrulandi": true,
+      "kaynak": "Balıkesir EO fatura kontrol duyurusu (yıldızlı ilaçlar) + Isparta EO SUT komisyonu raporu (çapraz teyit, 11.06.2026)"
+    },
+    {
+      "id": "lmwh-gebelik-rapor",
+      "baslik": "Düşük molekül ağırlıklı heparin — gebelikte raporsuz ödenmez",
+      "ilacRe": "enoksaparin|enoxaparin|oksapar|kleksan|clexane|nadroparin|fraksiparin|fraxiparine|dalteparin|fragmin|tinzaparin|bemiparin|hibor|parnaparin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Gebelikte düşük molekül ağırlıklı heparin (O22/O30/Z33–Z35 tanılarında) SAĞLIK RAPORU OLMADAN ödenmez. Raporsuz verilen reçetelerde SGK kesinti yapıyor; rapor olduğundan emin olun.",
+      "dogrulandi": true,
+      "kaynak": "Konya EO resmi kesinti listesi (11.06.2026)",
+      "baglamRe": "gebe|hamile",
+      "taniKoduRe": "^(O2[12]|O30|Z3[345])"
+    },
+    {
+      "id": "sevelamer-ara-verme",
+      "baslik": "Sevelamer — 1 ay+ ara sonrası başlangıç kriterleri",
+      "ilacRe": "sevelamer|sevaren|lameris|renagel|renvela",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sevelamer: tedaviye 1 AYDAN uzun ara verilmişse başlangıç kriterleri (fosfor/PTH şartları) YENİDEN aranır. İlaç geçmişinden ara olup olmadığını kontrol edin; ara sonrası eski raporla idame doz devamı kesinti sebebidir.",
+      "dogrulandi": true,
+      "kaynak": "Konya EO resmi kesinti listesi (11.06.2026)"
+    },
+    {
+      "id": "klopidogrel-tani-sarti",
+      "baslik": "Klopidogrel — raporda tanıya özgü ifade/anjiyo tarihi",
+      "ilacRe": "klopidogrel|clopidogrel|plavix|karum|pingel|clodel|opirel",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Klopidogrel raporu: tanıya göre raporda 'tıkayıcı periferik arter hastalığı' veya 'iskemik inme' ifadesi ya da koroner girişim/stent için ANJİYO TARİHİ belirtilmiş olmalı. Bu ifadeler eksikse SGK kesinti yapıyor.",
+      "dogrulandi": true,
+      "kaynak": "Balıkesir EO fatura/reçete kontrol duyurusu (11.06.2026)"
+    },
+    {
+      "id": "teriparatid-sartlar",
+      "baslik": "Teriparatid (Forsteo) — yaş + T-skoru + kırık şartı",
+      "ilacRe": "teriparatid|forsteo|terrosa|movymia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Teriparatid (SUT osteoporoz): 65 YAŞ ÜSTÜ + T-skoru ≤ -3.5 (L1-L4 veya kalça total) + RÖNTGENLE kesin tanı konmuş EN AZ 2 KIRIK şartlarının ÜÇÜ DE raporda belgelenmeli; 6 ay süreli endokrinoloji (ve/veya geriatri) sağlık kurulu raporu gerekir. Devam raporu: ilk 6 ayda tedaviye yanıt kanıtıyla en fazla 12 ay. Tek şart eksiği tüm reçetede kesintidir.",
+      "dogrulandi": true,
+      "kaynak": "SUT osteoporoz maddesi (ilacabak) + Kocaeli EO + Samsun EO duyuruları (11.06.2026 çapraz teyit)"
+    },
+    {
+      "id": "sinakalset-pth",
+      "baslik": "Sinakalset — PTH/Ca eşikleri (SUT)",
+      "ilacRe": "sinakalset|cinacalcet|mimpara",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sinakalset (SUT): Başlama şartı hemodiyaliz/periton diyalizi + düzeltilmiş Ca ≥ 8.5 mg/dL + PTH ≥ 600 pg/mL. PTH < 300'e düşerse tedavi SONLANDIRILIR (ödenmez). Tetkikler en fazla 3 AY öncesine ait olabilir ve HER reçete/raporda belirtilmeli. Nefroloji/diyaliz sertifikalı uzman raporu (6 ay) ile en fazla 1 AYLIK doz.",
+      "dogrulandi": true,
+      "kaynak": "SGK sinakalset genelgesi + TEİS 28.04.2021 SUT değişikliği (PTH kesme eşiği 400→300) — çapraz teyit 11.06.2026"
+    },
+    {
+      "id": "etelkalsetid-sartlar",
+      "baslik": "Etelkalsetid (Parsabiv) — eşik + kombinasyon yasağı",
+      "ilacRe": "etelkalsetid|etelcalcetide|parsabiv",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Etelkalsetid (Parsabiv, SUT): Hemodiyaliz hastasında düzeltilmiş Ca ≥ 8.5 mg/dL + PTH ≥ 600 pg/mL şartı raporda belgelenmeli. Sinakalset ile BİRLİKTE kullanımı geri ödeme kapsamında DEĞİLDİR — hastanın ilaç geçmişinde sinakalset varsa kesinti yapılır. Nefroloji/diyaliz sertifikalı uzman raporu (6 ay), en fazla 1 aylık doz.",
+      "dogrulandi": true,
+      "kaynak": "TEİS 28.04.2021 SUT değişikliği bilgilendirmesi (11.06.2026 teyit)"
+    },
+    {
+      "id": "koah-uclu-kombinasyon",
+      "baslik": "KOAH üçlü tedavi (LABA+LAMA+İKS) — rapor şartları (SUT 4.2.24.B)",
+      "ilacRe": "trelegy|trimbow|enerzair|elebrato|trydonis",
+      "uyari": "⚠️ KESİNTİ RİSKİ — KOAH üçlü kombinasyon (LABA+LAMA+İKS, SUT 4.2.24.B): Raporda şu üçü belgelenmeli: (1) en az 3 AY İKS+LABA tedavisine rağmen yanıt alınamaması, (2) sık alevlenme (yılda ≥2 atak VEYA ≥1 hastane yatışı), (3) dispne (mMRC ≥ 2 veya CAT ≥ 10) — orta/ağır KOAH'ta uzman raporu ile. NOT: Bu ibare hastanın HERHANGİ BİR geçerli raporunda varsa yeterlidir; raporda yoksa ama ilaç geçmişinde bu ilaçlar zaten varsa ibare aranmaz (idame hasta).",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.24.B — Konya EO KOAH reçeteleme dosyası + Bursa EO duyurusu (11.06.2026 çapraz teyit)"
+    },
+    {
+      "id": "antitnf-baslangic-basamagi",
+      "baslik": "İnfliksimab/Sertolizumab/Golimumab — başlangıçta anti-TNF basamağı",
+      "ilacRe": "infliksimab|infliximab|remicade|remsima|sertolizumab|certolizumab|cimzia|golimumab|simponi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İnfliksimab (Remicade/Remsima), sertolizumab (Cimzia) ve golimumab (Simponi): YENİ BAŞLAYAN hastada, daha önce diğer anti-TNF ilaçlardan (adalimumab/Humira, etanersept/Enbrel vb.) en az birini kullanmış ve CEVAP ALINAMAMIŞ olma şartı vardır; bu durum 3 AY süreli sağlık kurulu raporunda belirtilmeli. İdame (eski) kullanıcıda aranmaz — ilaç geçmişinden teyit edin. İstisnalar raporda belgelenirse şart aranmaz: gebelikte sertolizumab; dirençli gastrointestinal tutulum veya VKİ ≥ 35'te infliksimab.",
+      "dogrulandi": true,
+      "kaynak": "SUT (23.05.2026 metni, birebir cümle) + eczanekesinti_sutbilgisi (Ecz. Metin Keleş) 25.05.2026 paylaşımı — çapraz teyit 12.06.2026"
+    },
+    {
+      "id": "biyolojik-ortak-kurallar",
+      "baslik": "Biyolojik ajan ortak kuralları — kombinasyon yasağı + ara verme (SUT 4.2.1.C)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita|etanersept|enbrel|benepali|infliksimab|infliximab|remicade|remsima|inflectra|sertolizumab|certolizumab|cimzia|golimumab|simponi|rituksimab|rituximab|mabthera|redditux|abatasept|orencia|tosilizumab|tocilizumab|actemra|ustekinumab|stelara|sekukinumab|secukinumab|cosentyx|iksekizumab|ixekizumab|taltz|guselkumab|tremfya|risankizumab|skyrizi|bimekizumab|bimzelx|vedolizumab|entyvio|tofacitinib|xeljanz|barisitinib|baricitinib|olumiant|upadasitinib|rinvoq|abrositinib|cibinqo|anakinra|kineret|kanakinumab|ilaris|apremilast|otezla",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Biyolojik/hedefli ajan (anti-TNF, IL inhibitörleri, JAK inhibitörleri vb.; SUT 4.2.1.C ortak hükümler): (1) KOMBİNASYON YASAĞI — aynı hastada iki farklı anti-TNF VEYA anti-TNF dışı iki farklı biyolojik ajanın BİRLİKTE kullanımı (iki farklı tanıyla bile) Kurumca ÖDENMEZ. (2) ARA VERME — tedaviye uzun ara veren hastada (rituksimab için 12 ay, diğer etkin maddeler için 6 ay ve üzeri) yeniden BAŞLANGIÇ kriterleri aranır; ara vermeden/nüks belgesiz eski raporla idame devam kesilir. İlaç geçmişini kontrol edin. (3) Etkisizlik/yan etki nedeniyle ilaç değişiminde başlangıç dozuyla başlanır; tedavi basamağı değişince başlangıç tarihindeki SUT kriterleri geçerlidir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C (1)-(4) birebir metin (resmî 23.05.2026 SUT docx; RG-02/11/2024-32710 + RG-25/11/2025-33088)",
+      "not": "Yatay biyolojik kuralı — spesifik başlangıç/basamak kuralları (antitnf-baslangic-basamagi, RA+MTX, guselkumab/PASI75) ayrıca çalışır; bu kural kombinasyon yasağı + ara verme katmanını ekler."
+    },
+    {
+      "id": "crohn-adalimumab-flakon",
+      "baslik": "Crohn'da adalimumab FLAKON formu ödenmez (SUT 4.2.1.C-1/10-a)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Adalimumab + Crohn hastalığı (SUT 4.2.1.C-1/10-a): Crohn hastalığında adalimumabın FLAKON formunun kullanılması halinde bedeli Kurumca KARŞILANMAZ — yalnızca kalem/şırınga (subkütan enjektör) formu ödenir. Reçetedeki sunumun flakon olmadığını kontrol edin. Ayrıca başlangıç: 12 haftalık sistemik kortikosteroid ve/veya klasik immünsupresif tedaviye yetersiz yanıt + 4 ay süreli (en az 1 gastroenteroloji/genel cerrahi uzmanı) sağlık kurulu raporu; reçete gastroenteroloji/iç hastalıkları/genel cerrahi uzmanınca.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (10)-a birebir metin (resmî 23.05.2026 SUT docx)",
+      "baglamRe": "crohn|kron hastal|fistuliz|luminal|flakon|flk"
+    },
+    {
+      "id": "jak-dupilumab-birlikte-yasak",
+      "baslik": "JAK inhibitörü + dupilumab atopik dermatitte birlikte kullanılamaz (SUT 4.2.1.C-6/8)",
+      "ilacRe": "upadasitinib|rinvoq|abrositinib|cibinqo|barisitinib|baricitinib|olumiant|dupilumab|dupixent",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Atopik dermatitte JAK inhibitörü (upadasitinib/abrositinib/barisitinib) ve dupilumab BİRLİKTE KULLANILAMAZ (SUT 4.2.1.C-6/8-ç,d). Hastanın aynı dönemde bunlardan ikisini almadığını ilaç geçmişinden doğrulayın. Başlangıç: 2 aydan uzun sistemik kortikosteroid+siklosporinden yarar görmeyen/tolere edemeyen 12 yaş ve üzeri (barisitinib 18+); 3. basamakta deri-zührevi/immünoloji/alerji uzmanlarından üçünün yer aldığı 4 ay süreli sağlık kurulu raporu. 12. haftada EASI %50 / DLQI 4 puan / pruritus NRS 3 puan yanıtı yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-6 (8) birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852)",
+      "baglamRe": "atopik dermatit|egzama|ekzema|atopik|L20"
+    },
+    {
+      "id": "laktozsuz-mama-tani",
+      "baslik": "Laktozsuz mama (Bebelac LF vb.) — tanı + inek sütü alerjisi ifadesi",
+      "ilacRe": "bebelac\\s*lf|\\blf\\b.*mama|laktozsuz|lactose\\s*free|aptamil\\s*lf",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Laktozsuz mama (Bebelac LF vb.): SADECE laktoz intoleransı (rapor kodu 20.00 altına 'laktoz intoleransı' yazılı) ile ödenir; başka rapor kodu kabul edilmez. Raporun AÇIKLAMA kısmında hastada İNEK SÜTÜ ALERJİSİ varsa ödenmez — LF mamalar inek sütü proteini içerir. 'İnek sütü alerjisi için ödenmemektedir' MEDULA iadesi tam bu yüzden çıkar. Muğlak tanı ('E73.9 tanımlanmamış') + çelişkili açıklama da iade sebebi.",
+      "dogrulandi": true,
+      "kaynak": "eczanekesinti_sutbilgisi (Ecz. Metin Keleş) — İKİ ayrı MEDULA iade ekranı (16.05 + 12.06 paylaşımları), Bebelac LF 'inek sütü alerjisi için ödenmemektedir' + rapor kodu 20.00/laktoz intoleransı detayı. 12.06.2026",
+      "taniKoduRe": "^E73",
+      "uyariGenel": "⚠️ KESİNTİ RİSKİ — Laktozsuz mama (Bebelac LF vb.) yalnızca LAKTOZ İNTOLERANSI tanısıyla (E73, rapor kodu 20.00) ödenir; başka tanı/kodda kesinti riski yüksek. İnek sütü alerjisi olan hastaya LF mama ödenmez (inek sütü proteini içerir) — o hastada hidrolize/aminoasit bazlı mama reçete edilmeli.",
+      "not": "İki bağımsız saha kanıtı ile teyitli. SUT'ta açık madde YOK (hedefli arandı) — MEDULA uygulama düzeyinde kural; tıbbi gerçek (LF = inek sütü proteini içerir) ile uyumlu."
+    },
+    {
+      "id": "enteral-isim-birebir",
+      "baslik": "Enteral ürün adı rapor ile HARFİYEN aynı olmalı",
+      "ilacRe": "\\bmama\\b|enteral|ensure|resource|fresubin|nutridrink|nutrison|fortimel|fortini|peptamen|glucerna|diason|diasip|nepro|isosource|novasource|nutricomp|survimed|supportan|reconvan|cubitan|pulmocare|osmolite|jevity|pediasure|infatrini|frebini|sondalis|nutrini|impact",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Enteral beslenme ürünü: Reçetedeki ürün adı, rapordaki adla HARFİYEN aynı olmalı — 'Oral', 'Fibre/Fiber', 'Junior', 'Advance', 'Plus' gibi ekler ve marka alt-tipi dahil. Örnekler: Raporda 'Impact' → reçetede 'Impact Oral' ödenmez (~11.000 TL kesinti); raporda 'Nutrison Advanced DIASON' → 'Nutrison Advanced CUBISON' verilemez (DIASON ile CUBISON eşdeğer DEĞİL, ~11.127 TL kesinti); 'fibre' yerine 'fiber' bile fark eder. Resource Junior raporuyla Resource Junior FIBRE verilemez. Vermeden önce rapordaki adı birebir karşılaştırın.",
+      "dogrulandi": true,
+      "kaynak": "eczanekesinti_sutbilgisi (Ecz. Metin Keleş) İKİ MEDULA kesinti ekranı (Impact Oral 11.008,80 TL + Nutrison Advanced Diason/Cubison 11.127,60 TL) + SUT 4.2.8.A 'Raporda beslenme ürününün ADI ... açıkça belirtilerek' (resmi dayanak), 12.06.2026",
+      "not": "SUT raporda ürün adını şart koşar → reçete adı rapor adıyla birebir tutmalı; ek kelimeler (Oral/Fibre/Junior) farklı ürün sayılır."
+    },
+    {
+      "id": "ranolazin-icd",
+      "baslik": "Ranolazin (Ranexa) — koroner arter / angina ICD şartı (SUT 4.2.15.F)",
+      "ilacRe": "ranolazin|ranexa",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ranolazin (Ranexa, SUT 4.2.15.F): Yalnızca KRONİK STABİL ANGİNA PEKTORİS'te, beta blokör ve/veya verapamil-diltiazem'e rağmen anjinası süren veya bunlara intoleran/kontrendike hastalarda; KARDİYOLOJİ uzmanınca düzenlenen 2 yıl süreli uzman hekim raporuyla, kardiyoloji VEYA iç hastalıkları uzmanınca reçete edilir. MEDULA son düzenlemeyle ödemeyi koroner arter hastalığı ICD kodlarına (I20/I21/I25/Z95 grubu) KISITLADI — bu kodlar DIŞINDA, ESKİ raporlarda bile ödeme YAPMIYOR. Reçete/rapordaki tanı kodunun güncel ödenen liste içinde olduğunu MEDULA ilaç kartından doğrulayın.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.15.F birebir metin (Değişik RG-02/11/2024-32710/16) + eczanekesinti_sutbilgisi MEDULA ilaç kartı görüntüsü (koroner arter 04.02, ödenir I20.x) + web teyidi (koroner arter ICD muafiyeti). 12.06.2026",
+      "not": "Klinik endikasyon (stabil angina) + 2 yıl kardiyoloji raporu SUT'tan birebir doğrulandı. Tam ICD listesi KASITLI yazılmadı — kaynaklar tam kod setinde çelişiyor (web I20.0/I25.2-5; ekran I20.1/8/9) ve MEDULA listesi değişken; eczacı güncel kartı kontrol etsin."
+    },
+    {
+      "id": "levotiroksin-coklu-doz",
+      "baslik": "Levotiroksin (Levotiron/Euthyrox) — aynı anda birden fazla doz formu",
+      "ilacRe": "levotiroksin|levotiron|euthyrox|tefor|bağ-tiron|tiromel|tireotom",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Levotiroksin (Levotiron/Euthyrox): Rapor dozu örn. '1x1' ise, aynı reçetede AYNI ilacın farklı mcg'lik İKİ formu (örn. 100 mcg + 125 mcg) birlikte raporlu/muaf ÖDENMEZ — toplam günlük doz rapor dozunu aşamaz (SUT 4.1.4 reçetelere yazılabilecek ilaç miktarı + rapordaki doz esası). Bu durumda yalnız biri rapor dozuyla ödenir, ikinci form RAPORSUZ (katılım paylı) kalır. Hastaya tek bir uygun mcg yazılması ya da rapor dozunun (örn. 1x1,5 / dönüşümlü doz) buna göre düzenlenmesi gerekir.",
+      "dogrulandi": true,
+      "kaynak": "eczanekesinti_sutbilgisi (Ecz. Metin Keleş) MEDULA kesinti ekranı (Levotiron 100 mcg, 'rapor dozu 1*1 olduğundan 125 mcg ödendi, 100 mcg raporsuz') + SUT 4.1.4 'Reçetelere yazılabilecek ilaç miktarı' (rapordaki doz esas alınır). 12.06.2026",
+      "not": "DÜZELTME 15.06.2026: künye 'SUT 6.1.1.Ç' idi; resmî SUT (23.05.2026 docx) kontrolünde 6.1.1.Ç DİYE MADDE YOK (bölüm 6 = Son Hükümler). İlke gerçekte 4.1.4 'Reçetelere yazılabilecek ilaç miktarı'dır. Aynı eskimiş atıf miktarKurallari.ts + bilgiGetir.ts + UI'da da vardı, hepsi 4.1.4'e düzeltildi (15.06.2026)."
+    },
+    {
+      "id": "guselkumab-pasi75",
+      "baslik": "Guselkumab (Tremfya) — 16. hafta PASI 75 yanıtı",
+      "ilacRe": "guselkumab|tremfya",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Guselkumab (Tremfya): 16. hafta sonunda başlangıç PASI değerine göre EN AZ %75 iyileşme raporda belgelenmeli; sağlanmazsa tedavi SONLANDIRILIR. İdame reçetelerinde bu yanıt aranır — uyarı kodu girmeden önce doz ve rapor süresini MEDULA ilaç bilgisinden kontrol edin.",
+      "dogrulandi": true,
+      "kaynak": "Konya EO resmi kesinti listesi + SUT psoriasis biyolojik kuralları (11.06.2026)"
+    },
+    {
+      "id": "psoriazis-biyolojik-pasi75",
+      "baslik": "Psoriazis biyolojikleri — 16. hafta PASI 75 + dermatoloji (SUT 4.2.1.C)",
+      "ilacRe": "sekukinumab|secukinumab|cosentyx|iksekizumab|ixekizumab|taltz|risankizumab|skyrizi|bimekizumab|bimzelx|ustekinumab|stelara",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Plak psoriazis biyolojiği (sekukinumab/iksekizumab/risankizumab/bimekizumab/ustekinumab; SUT 4.2.1.C): (1) Başlangıç: siklosporin, metotreksat veya fototerapi (PUVA) gibi geleneksel sistemik tedaviye yanıtsızlık/intolerans/kontrendikasyon + başlangıç PASI değeri raporda. (2) 16. HAFTA (ustekinumab 28. hafta) sonunda başlangıç PASI'ye göre EN AZ %75 iyileşme (PASI 75) yeni reçete/raporda belgelenmeli; sağlanmazsa tedavi SONLANDIRILIR — idame reçetelerinde bu yanıt aranır. (3) Rapor 3. basamakta dermatoloji uzmanının yer aldığı (başlangıç 4 ay, sonra 6'şar ay) sağlık kurulu raporu; reçete dermatoloji uzmanınca. Branş/PASI 75/rapor süresi uygun değilse kesilir. (Tedaviye 6 ay+ ara → yeniden başlangıç kriterleri.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-4/9/10/11/12/14 birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852)",
+      "baglamRe": "psoriaz|psöriaz|psoriasis|plak|sedef|L40",
+      "not": "Guselkumab için ayrı kural (guselkumab-pasi75) zaten var. Bu kural diğer psoriazis biyolojiklerini kapsar. Aynı ilaçların PsA/AS endikasyonunda yanıt kriteri farklıdır (PSARC / BASDAİ) — biyolojik-ortak-kurallar + romatoloji dalı kapsar."
+    },
+    {
+      "id": "antitnf-romatoid-artrit",
+      "baslik": "Anti-TNF — Romatoid Artrit başlangıç/devam kriterleri (SUT 4.2.1.C-1/1)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita|etanersept|etanercept|enbrel|benepali|infliksimab|infliximab|remicade|remsima|inflectra|golimumab|simponi|sertolizumab|certolizumab|cimzia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anti-TNF + Romatoid Artrit (SUT 4.2.1.C-1/1): BAŞLANGIÇ — biri METOTREKSAT olmak üzere en az 3 farklı DMARD'ı en az ÜÇER AY kullanmasına rağmen DAS 28 > 5,1; 3 ay süreli SAĞLIK KURULU raporu. DEVAM — 3 ay sonra DAS28'de 0,6 puandan fazla düşüş → 3 ay daha; rapor sonunda toplam 1,2 puandan fazla düşüş → 6 ay; 1,2 puandan fazla düşüş YOKSA tedavi SONLANDIRILIR (her raporda başlangıç+güncel DAS28 yazılı). İnfliksimab/sertolizumab/golimumab için ayrıca önce başka anti-TNF yanıtsızlığı şartı (istisna: infliksimab'da dirençli GI tutulum/VKİ≥35, sertolizumab'da gebelik). Rapor: romatoloji veya 3. basamakta klinik immünoloji/FTR uzmanı (max 6 ay); reçete bu uzmanlar veya iç hastalıkları/çocuk uzmanınca. Kriter/branş/DAS28 uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (1) birebir metin (resmî 23.05.2026 SUT docx; RG-23/05/2026-33262, RG-25/03/2025-32852)",
+      "baglamRe": "romatoid|\\bRA\\b|M05|M06"
+    },
+    {
+      "id": "antitnf-ankilozan-spondilit",
+      "baslik": "Anti-TNF — Ankilozan Spondilit / aksiyel spondilartrit (SUT 4.2.1.C-1/2-3)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita|etanersept|etanercept|enbrel|benepali|infliksimab|infliximab|remicade|remsima|inflectra|golimumab|simponi|sertolizumab|certolizumab|cimzia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anti-TNF + Ankilozan Spondilit / aksiyel spondilartrit (SUT 4.2.1.C-1/2): BAŞLANGIÇ — en az 3 NSAİİ'yi maksimum dozda kullanmasına rağmen BASDAİ > 5 VE şunlardan biri: ESR > 28 mm/s, normal üstü CRP, veya MR/sintigrafi ile aktif sakroileit/spondilit; 3 ay süreli sağlık kurulu raporu. DEVAM — 3 ay sonra BASDAİ'de 2 BİRİMDEN AZ düzelme → ilaca devam edilirse ödenmez; cevap varsa 6 ay süreli yeni rapor. Periferik eklem tutulumunda (C-1/3): max doz NSAİİ + sulfasalazin veya metotreksat yanıtsızlığı + BASDAİ>5 + ESR/CRP. İnfliksimab/sertolizumab/golimumab'da önce başka anti-TNF yanıtsızlığı (istisnalar geçerli). Kriter/rapor uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (2)-(3) birebir metin (resmî 23.05.2026 SUT docx; RG-23/05/2026-33262, RG-21/04/2022-31816)",
+      "baglamRe": "ankilozan|spondil|aksiyel|sakroil|\\bAS\\b|M45|M46"
+    },
+    {
+      "id": "antitnf-psoriatik-artrit",
+      "baslik": "Anti-TNF — Psöriatik Artrit (SUT 4.2.1.C-1/5)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita|etanersept|etanercept|enbrel|benepali|infliksimab|infliximab|remicade|remsima|inflectra|golimumab|simponi|sertolizumab|certolizumab|cimzia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anti-TNF + Psöriatik Artrit (SUT 4.2.1.C-1/5): BAŞLANGIÇ — en az 3 farklı DMARD'ı uygun dozda en az ÜÇER AY kullanmasına rağmen hastalık aktivitesi sürüyor (bir ay arayla yapılmış İKİ ayrı muayenede en az 3 HASSAS ve en az 3 ŞİŞ eklem); sağlık kurulu raporu. DEVAM — 3 ay sonra PSARC'a göre yeterli cevap yoksa tedavi SONLANDIRILIR; cevap varsa 6 ay süreli yeni rapor. İnfliksimab/sertolizumab/golimumab'da önce başka anti-TNF yanıtsızlığı (istisnalar geçerli). Kriter/rapor uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (5) birebir metin (resmî 23.05.2026 SUT docx; RG-23/05/2026-33262)",
+      "baglamRe": "psoriatik|psöriatik|psoriazis.*artrit|artrit.*psoriaz|M07|L40\\.5"
+    },
+    {
+      "id": "antitnf-ibd-crohn-ulseratifkolit",
+      "baslik": "Anti-TNF — Crohn / Ülseratif Kolit (SUT 4.2.1.C-1/10-11)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita|infliksimab|infliximab|remicade|remsima|inflectra|sertolizumab|certolizumab|cimzia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anti-TNF + İnflamatuar Bağırsak Hastalığı (SUT 4.2.1.C-1/10-11): CROHN — adalimumab/sertolizumab/infliksimab; sistemik kortikosteroid ve/veya klasik immünsupresif ile 12 HAFTALIK tedaviye yetersiz yanıt/tolere edememe + 4 ay süreli sağlık kurulu raporu (en az 1 gastroenteroloji veya genel cerrahi uzmanı). 4. ayda CDAI'de başlangıca göre en az 70 PUAN düşüş yoksa tedavi KESİLİR. ÜLSERATİF KOLİT — infliksimab/adalimumab; kortikosteroid + 6-MP veya AZA ile en az 8 HAFTA konvansiyonel tedaviye yetersiz yanıt + 3. basamakta 4 ay süreli SKR (en az 1 gastro/genel cerrahi). Reçete: gastroenteroloji/iç hastalıkları/genel cerrahi uzmanınca. NOT: Crohn'da adalimumab FLAKON formu ödenmez. Süre/kriter/branş uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (10)-(11) birebir metin (resmî 23.05.2026 SUT docx; RG-07/10/2016-29850, RG-26/09/2013-28777)",
+      "baglamRe": "crohn|kron hastal|ulseratif|ülseratif|kolit|K50|K51"
+    },
+    {
+      "id": "antitnf-uveit",
+      "baslik": "Adalimumab — Üveit (SUT 4.2.1.C-1/12)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Adalimumab + Üveit (SUT 4.2.1.C-1/12): Yetişkinde kortikosteroide yetersiz yanıt/azaltma gereği/uygun olmama durumunda non-enfeksiyöz orta-arka-panüveitte; 2 yaş+ çocukta non-enfeksiyöz kronik anterior üveitte 3 ay süreli SKR ile başlanır, 3 ay sonra yanıt varsa 6 ay süreli SKR ile devam. Raporun 3. BASAMAK sağlık kurumunda ve ÜÇ GÖZ HASTALIKLARI uzmanınca düzenlenmesi + göz hastalıkları uzmanınca reçete edilmesi şart. Branş/basamak/rapor uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (12) birebir metin (resmî 23.05.2026 SUT docx; RG-28/12/2018-30639)",
+      "baglamRe": "uveit|üveit|panuveit|panüveit|H20|H30"
+    },
+    {
+      "id": "adalimumab-hidradenitis",
+      "baslik": "Adalimumab — Hidradenitis Suppurativa (SUT 4.2.1.C-1/13)",
+      "ilacRe": "adalimumab|humira|imraldi|hyrimoz|amgevita",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Adalimumab + Hidradenitis Suppurativa (SUT 4.2.1.C-1/13): Orta/şiddetli aktif HS'de 6 HAFTA sistemik antibiyotik tedavisine yetersiz yanıt + en fazla 3 ay süreli SKR ile başlanır. 3 ay sonra başlangıca göre apse+inflamatuar nodülde ≥%50 azalma, apse sayısında ve akıntılı fistül sayısında artış olmaması → 6 ay süreli SKR ile devam. 1 yıl+ ara → yeniden başlangıç. Rapor 3. basamakta ÜÇ DERMATOLOJİ uzmanınca + dermatoloji reçetesi. Uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-1 (13) birebir metin (resmî 23.05.2026 SUT docx)",
+      "baglamRe": "hidradenit|hidradenitis|suppurativa|süpürativa|akne invers|L73"
+    },
+    {
+      "id": "rituksimab-endikasyon",
+      "baslik": "Rituksimab — RA / GPA-MPA / Pemfigus (SUT 4.2.1.C-2)",
+      "ilacRe": "rituksimab|rituximab|mabthera|redditux|truxima|ritemvia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Rituksimab (SUT 4.2.1.C-2): ROMATOİD ARTRİT — metotreksat ile kombine, 1+ anti-TNF'e rağmen kontrol edilemeyen (DAS28>5,1) veya anti-TNF uygun olmayan/intoleran; romatoloji/klinik immünoloji/FTR uzmanınca, 6 AYLIK sağlık kurulu raporu (DAS28 1,2 puan düşüş devam kriteri). GPA/MPA (Wegener) — siklofosfamide dirençli/verilemeyen ciddi aktif hastalıkta glukokortikoidle kombine; romatoloji/klinik immünoloji/nefroloji uzmanlı 1 AY süreli SKR, 6 aydan önce tekrar kullanılamaz. PEMFİGUS VULGARİS — PDAİ>15 + sistemik steroid/immünsupresif en az 1 ay sonrası yeni lezyon/iyileşmeme; 3. basamakta dermatoloji uzmanlı 6 ay SKR + dermatoloji reçetesi (raporda PDAİ + yanıt değerlendirmesi). Endikasyon/branş/kriter dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-2 birebir metin (resmî 23.05.2026 SUT docx; RG-16/03/2023-32134, RG-25/03/2025-32852)",
+      "baglamRe": "romatoid|\\bRA\\b|M05|M06|granülamatoz|granulamatoz|polianjit|wegener|GPA|MPA|mikroskobik|pemfigus|L10"
+    },
+    {
+      "id": "abatasept-endikasyon",
+      "baslik": "Abatasept — RA / Jüvenil RA (SUT 4.2.1.C-3)",
+      "ilacRe": "abatasept|orencia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Abatasept (SUT 4.2.1.C-3): ERİŞKİN RA — biri metotreksat olmak üzere en az 3 DMARD'ı üçer ay kullanmış VEYA en az 1 anti-TNF'e rağmen kontrol edilemeyen (DAS28>5,1) hastada METOTREKSAT İLE BİRLİKTE; romatoloji veya 3. basamakta klinik immünoloji/FTR uzmanlı 3 ay süreli SKR. Devam: 3 ay sonra DAS28 0,6 düşüş → 3 ay; toplam 1,2 düşüş → 6 ay; 1,2 düşüş yoksa sonlandırılır. JÜVENİL RA — 3 aylık anti-TNF'e rağmen ACR pediatrik 30'a ulaşamayan çocukta metotreksatla kombine, 3. basamakta çocuk romatoloji uzmanlı SKR. Kriter/branş uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-3 birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852, RG-18/02/2017-29983)"
+    },
+    {
+      "id": "tosilizumab-endikasyon",
+      "baslik": "Tosilizumab — RA / Jüvenil / SJİA / Dev Hücreli Arterit (SUT 4.2.1.C-5)",
+      "ilacRe": "tosilizumab|tocilizumab|actemra",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Tosilizumab (SUT 4.2.1.C-5): ERİŞKİN RA — biri MTX olmak üzere 3 DMARD üçer ay VEYA 1 anti-TNF'e rağmen DAS28>5,1; romatoloji/3. basamak klinik immünoloji/FTR uzmanlı 3 ay SKR; devam DAS28 0,6→3 ay, 1,2→6 ay, yoksa sonlandır. JÜVENİL İDİYOPATİK ARTRİT (2 yaş+) — NSAİİ/MTX/anti-TNF ile 3 ay sonu ACR ped 30 yok; 3. basamak çocuk romatoloji. SJİA — NSAİİ+steroid 3 ay sonra remisyon yoksa tosilizumab/anakinra; ACR ped 50 yanıtı 3 ayda bir. DEV HÜCRELİ ARTERİT — yüksek doz kortikosteroid + MTX/leflunomid/azatioprin 3 ay yanıtsız veya kortikosteroid kontrendike; SUBKÜTAN form; romatoloji/immünoloji uzmanlı SKR+reçete. Kriter dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-5 birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852, RG-25/11/2025-33088)"
+    },
+    {
+      "id": "jak-inhibitoru-romatoloji",
+      "baslik": "JAK inhibitörü (tofa/upa/bari) — RA / PsA / AS / IBD (SUT 4.2.1.C-6)",
+      "ilacRe": "tofacitinib|xeljanz|upadasitinib|rinvoq|barisitinib|baricitinib|olumiant",
+      "uyari": "⚠️ KESİNTİ RİSKİ — JAK inhibitörü tofacitinib/upadasitinib/barisitinib (SUT 4.2.1.C-6): ROMATOİD ARTRİT — en az 1 anti-TNF'i ≥3 ay kullanmasına rağmen DAS28>5,1 VEYA anti-TNF intoleransı; 3 ay SKR, devam DAS28 0,6→3 ay/1,2→6 ay/yoksa sonlandır; romatoloji/3.basamak klinik immünoloji/FTR raporu + iç hast. reçetesi. PSÖRİATİK ARTRİT (tofa/upa) — 3 DMARD üçer ay + 1 anti-TNF ≥3 ay yanıtsız veya intolerans; 12 HAFTA sonu PSARC yok → sonlandır; romatoloji raporu/reçetesi. ANKİLOZAN SPONDİLİT (tofa/upa) — 1+ anti-TNF yetersiz/intolerans; 12 hafta BASDAİ 2 birim düzelme yok → ödenmez. CROHN/ÜK (upa: 1 anti-TNF/biyolojik yanıtsız + gastro SKR). Kriter/branş uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-6 birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2024-32541, RG-25/03/2025-32852)",
+      "baglamRe": "romatoid|\\bRA\\b|M05|M06|psoriatik|psöriatik|M07|ankilozan|spondil|M45|M46|crohn|ulseratif|ülseratif|kolit|K50|K51"
+    },
+    {
+      "id": "kanakinumab-anakinra-endikasyon",
+      "baslik": "Kanakinumab / Anakinra — SJİA / FMF / CAPS / AOSD (SUT 4.2.1.C-7)",
+      "ilacRe": "kanakinumab|ilaris|anakinra|kineret",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kanakinumab/Anakinra (SUT 4.2.1.C-7): FMF (Ailevi Akdeniz Ateşi) — tolere edilen max doz KOLŞİSİN ile en az 6 AY kullanıma rağmen son 3 ayda akut faz yüksekliğiyle kanıtlı en az 3 ATAK (15 gün arayla CRP normal üst sınırın 2 katı+) → anakinra eklenir; anakinra 3 ay yanıtsız/ciddi yan etki → kanakinumab. 3. basamakta romatoloji uzmanlı SKR + romatoloji reçetesi. SJİA — NSAİİ+steroid 3 ay sonra remisyon yoksa tosilizumab/anakinra; yanıtsızsa kanakinumab; çocuk romatoloji. CAPS / TRAPS-HIDS — genetik/klinik tanı, anakinra ile başla, yanıtsızsa kanakinumab. AOSD (Erişkin Still) — glukokortikoid+DMARD 3 ay yanıtsız; anakinra biyolojik DMARD ve JAK inhibitörü ile KOMBİNE kullanılırsa ÖDENMEZ. Atak/CRP/branş/kombinasyon kriteri dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-7 birebir metin (resmî 23.05.2026 SUT docx; RG-12/12/2024-32750, RG-25/03/2025-32852)"
+    },
+    {
+      "id": "vedolizumab-endikasyon",
+      "baslik": "Vedolizumab — Crohn / Ülseratif Kolit (SUT 4.2.1.C-8)",
+      "ilacRe": "vedolizumab|entyvio",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Vedolizumab (SUT 4.2.1.C-8): CROHN — en az 1 anti-TNF'e rağmen kontrol edilemeyen; idame dozu 8 HAFTADA BİR 300 mg olması koşuluyla 4 ay süreli SKR (en az 1 gastroenteroloji/genel cerrahi). 4. ayda CDAI'de 70 puan düşüş yoksa kesilir; varsa 6 ay SKR. ÜLSERATİF KOLİT — 8 hafta konvansiyonel (kortikosteroid+6MP/AZA) yetersiz veya 1 anti-TNF yanıtsız; 3. basamakta 4 ay SKR (gastro/genel cerrahi). Reçete bu uzmanlar + iç hastalıkları; sağlık kurumunda klinik koşulda uygulanır. İdame dozu/kriter/branş uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-8 birebir metin (resmî 23.05.2026 SUT docx; RG-02/11/2024-32710)"
+    },
+    {
+      "id": "apremilast-endikasyon",
+      "baslik": "Apremilast — Psöriatik Artrit / Plak Psoriazis (SUT 4.2.1.C-13)",
+      "ilacRe": "apremilast|otezla",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Apremilast (SUT 4.2.1.C-13): PSÖRİATİK ARTRİT — en az 3 DMARD'ı uygun dozda üçer ay kullanmasına rağmen aktif (bir ay arayla 2 muayenede ≥3 hassas + ≥3 şiş eklem); 16 HAFTA sonu PSARC'a göre yanıt yoksa ödenmez; romatoloji/3.basamak klinik immünoloji/FTR uzmanlı en fazla 6 ay SKR + iç hast. reçetesi. PLAK PSORİAZİS — siklosporin/MTX/PUVA dahil sistemik tedaviye yanıtsız orta-şiddetli; 3. basamakta dermatoloji uzmanlı 6 ay SKR + dermatoloji reçetesi. 6 ay+ ara → yeniden başlangıç. Kriter/branş uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.C-13 birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852)"
+    },
+    {
+      "id": "pregabalin-gabapentin-saglik-kurulu",
+      "baslik": "Pregabalin/Gabapentin (Lyrica/Neurontin) — sağlık kurulu raporu (SUT 4.2.35)",
+      "ilacRe": "pregabalin|gabapentin|lyrica|neurontin|pregamid|gabateva|nervi|epileptan",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pregabalin/Gabapentin (SUT 4.2.35): basit reçete veya TEK uzman hekim raporu YETMEZ — SAĞLIK KURULU (heyet) raporu şart (2./3. basamakta düzenlenmiş, ~6 ay süreli). Nöropatik ağrıda (4.2.35.A) raporda nöroloji, beyin cerrahisi, FTR, algoloji, dermatoloji, romatoloji, ortopedi, geriatri veya endokrinoloji uzmanlarından EN AZ BİRİ; fibromiyalji/kronik kas-iskelet ağrısında (4.2.35.B) romatoloji, ortopedi, FTR, algoloji (pregabalinde ayrıca nöroloji) uzmanlarından en az biri yer almalı. Pregabalin ve gabapentin AYNI ANDA (kombine) ödenmez. Rapor yok / yanlış branş / tek uzman raporu → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.35.A/B birebir metin (23.05.2026; güncel hükümler RG-09/05/2024-32541 + RG-02/11/2024-32710 değişiklikleriyle)",
+      "not": "Mülga tuzağına dikkat edildi: güncel hüküm SAĞLIK KURULU raporu (eski 'uzman hekim raporu' mülga). Çok sık yazılan + çok kesilen grup."
+    },
+    {
+      "id": "triptan-migren",
+      "baslik": "Triptanlar (migren) — nöroloji + ayda 6 doz sınırı (SUT 4.2.19)",
+      "ilacRe": "triptan|imigran|zomig|maxalt|relpax|sumamigren|migrettin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Triptanlar (migren, SUT 4.2.19): Nöroloji uzman hekimi reçete eder (ya da nöroloji uzman hekim raporu — 1 yıl geçerli — ile diğer hekimler EN FAZLA AYLIK dozda yazar). Bu gruptan yalnız BİR triptan etken maddesi yazılabilir ve AYDA EN FAZLA 6 doz/adet ödenir. Aynı ilacın farklı formları (tablet + sprey vb.) aynı anda yazılırsa yalnız BİRİNİN bedeli ödenir. Aylık 6 dozu aşma / ikinci triptan / nöroloji dışı reçete → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.19 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "antiepileptik-yeni-nesil",
+      "baslik": "Yeni nesil antiepileptikler — uzman raporu (SUT 4.2.25)",
+      "ilacRe": "lamotrigin|topiramat|vigabatrin|levetirasetam|levatirasetam|zonisamit|lamictal|topamax|keppra|lamic|epitop",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Yeni nesil antiepileptik (lamotrigin/topiramat/vigabatrin/levetirasetam; SUT 4.2.25): nöroloji, beyin cerrahisi, çocuk sağlığı ve hastalıkları veya psikiyatri uzman hekimi tarafından ya da bu uzmanlardan birinin düzenlediği uzman hekim raporuna dayanılarak yazılır. Zonisamit: nöroloji uzmanı / 1 yıl süreli rapor. Uygun branş uzman raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.25 birebir metin (23.05.2026; RG-19/10/2023-32344 değişikliği)"
+    },
+    {
+      "id": "pregabalin-anksiyete-odenmez",
+      "baslik": "Pregabalin — yaygın anksiyete bozukluğunda ödenmez (SUT 4.2.25)",
+      "ilacRe": "pregabalin|lyrica",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pregabalin (SUT 4.2.25): YAYGIN ANKSİYETE BOZUKLUĞU endikasyonunda ÖDENMEZ. Tanı/raporda anksiyete bozukluğu (F41 vb.) varsa SGK karşılamaz; ödenen bir endikasyon (nöropatik ağrı/fibromiyalji — sağlık kurulu raporuyla) belgelenmelidir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.25(3): 'Pregabalin yaygın anksiyete bozukluğu endikasyonunda ödenmez' birebir (23.05.2026)",
+      "baglamRe": "anksiyete|anksiyoz|f41"
+    },
+    {
+      "id": "ms-noroloji-edss",
+      "baslik": "Multipl Skleroz ilaçları — nöroloji + EDSS (SUT 4.2.34)",
+      "ilacRe": "interferon|glatiramer|teriflunomid|fingolimod|dimetil fumarat|okrelizumab|natalizumab|kladribin|alemtuzumab|fampiridin|ozanimod|ponesimod|siponimod|avonex|rebif|betaferon|copaxone|gilenya|aubagio|tecfidera|ocrevus|tysabri|mavenclad",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Multipl Skleroz ilacı (SUT 4.2.34): Beta interferon/glatiramer/teriflunomid için EDSS (disabilite skoru) 0–5,5 arasında VE relapsing-remitting (ataklarla seyreden) tip olması, bunun 3. basamak sağlık kurumunda NÖROLOJİ uzman hekim raporunda belirtilmesi ve nöroloji uzmanınca reçete edilmesi şart. Yüksek etkili ilaçlarda (fingolimod, okrelizumab, natalizumab, kladribin, alemtuzumab) ek başlama/yanıtsızlık kriterleri aranır. Rapor/branş/EDSS uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.34 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "sglt2-kalp-bobrek",
+      "baslik": "Dapagliflozin/Empagliflozin — kalp yetmezliği & KBH (SUT 4.2.74)",
+      "ilacRe": "dapagliflozin|empagliflozin|forziga|forxiga|jardiance|dapanj|edistride|xigduo|synjardy",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Dapagliflozin/Empagliflozin KALP YETMEZLİĞİ veya KBH endikasyonunda (SUT 4.2.74 — diyabetten AYRI kural): Kalp yetmezliğinde standart tedavi (ACE-i/ARB + beta blokör + aldosteron antagonisti) + EF ≤ %40 + NYHA II–IV + eGFR (empagliflozin ≥20, dapagliflozin ≥25 mL/dk) + en az BİR KARDİYOLOJİ uzmanı olan 1 yıl süreli SAĞLIK KURULU raporu. KBH'de RAAS inhibitörü + ≥3 ay persistan proteinüri (ACR ≥ 200 mg/g veya PCR > 300 mg/g) + eGFR uygun + en az BİR NEFROLOJİ uzmanı olan sağlık kurulu raporu. Sağlık kurulu raporu / eşik / branş eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.74 birebir metin (23.05.2026)",
+      "baglamRe": "kalp yetmezli|kalp yetersiz|ejeksiyon|nyha|kronik bobrek|proteinuri|nefropati|\\bi50\\b|\\bn18\\b"
+    },
+    {
+      "id": "buyume-hormonu",
+      "baslik": "Büyüme hormonu (somatropin) — endokrinoloji sağlık kurulu raporu (SUT 4.2.6)",
+      "ilacRe": "somatropin|genotropin|norditropin|omnitrope|omnitrop|saizen|humatrope|nutropin|zomacton|scitropin|ekovet",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Büyüme hormonu (somatropin, SUT 4.2.6): ENDOKRİNOLOJİ uzmanının yer aldığı SAĞLIK KURULU raporu şart; raporda kullanım dozu, uygulama planı, süre + hastanın YAŞI ve fiziki BOYU yazılı olmalı. Rapor en fazla 1 yıl geçerli; reçete EN FAZLA 3 AYLIK doz. Çocukta başlama kriterleri raporda belgelenmeli (en az 6 ay büyüme hızı izlemi; yıllık büyüme hızı 0–4 yaş < 6 cm / 4 yaş üzeri < 4,5 cm; kemik yaşı geriliği; büyüme hormonu uyarı testlerinden en az İKİSİNE yetersiz yanıt). Rapor/branş/doz/yaş-boy eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.6.A birebir metin (23.05.2026; RG-16/06/2020-31157 değişikliği)"
+    },
+    {
+      "id": "pulmoner-ht",
+      "baslik": "Pulmoner hipertansiyon ilaçları — sağlık kurulu raporu (SUT 4.2.30)",
+      "ilacRe": "bosentan|ambrisentan|masitentan|macitentan|iloprost|riosiguat|riociguat|seleksipag|selexipag|tracleer|diamond|tractan|zepahex|prindan|ventavis|opsumit|uptravi|adempas",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pulmoner hipertansiyon ilacı (bosentan/ambrisentan/iloprost/riosiguat/seleksipag; SUT 4.2.30): kardiyoloji, kalp-damar cerrahisi, göğüs hastalıkları veya çocuk kardiyolojisi uzmanlarından birinin yer aldığı SAĞLIK KURULU raporu şart ve bu hekimlerce reçete edilir. Raporda NYHA sınıf II–IV + vazoreaktivite testi negatif + 3 aylık kontrolde efor kapasitesi (6 dk yürüme/treadmil), hemodinami veya eko verilerinde düzelme/stabilite belgelenmeli (3'er aylık periyotlar). NOT: sildenafil/tadalafilin yalnız pulmoner HT formu (Revatio/Adcirca) bu kapsamda ödenir; ereksiyon (Viagra/Cialis) endikasyonu ödenmez.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.30 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "kadin-cinsiyet-hormonu",
+      "baslik": "Kadın cinsiyet hormonları / HRT — uzman raporu (SUT 4.2.29)",
+      "ilacRe": "ostradiol|estradiol|ostrojen|estrojen|tibolon|progestojen|didrogesteron|dienogest|noretisteron|estrofem|ovestin|climen|femoston|angeliq|livial|duphaston|lutenyl|visanne|cyclo-progynova",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kadın cinsiyet hormonu / hormon replasman tedavisi (östrojen/progestojen/tibolon; SUT 4.2.29): endokrinoloji, kadın hastalıkları ve doğum, iç hastalıkları, ortopedi ve travmatoloji, FTR veya aile hekimliği uzmanınca ya da bu uzmanların raporuyla reçete edilir. Tek başına DİENOGEST veya infertilitede topikal PROGESTERON: yalnız KADIN HASTALIKLARI VE DOĞUM uzmanı / raporu. Uygun branş raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.29 birebir metin (23.05.2026; RG-21/03/2018-30367 değişikliği)"
+    },
+    {
+      "id": "ivig-immunglobulin",
+      "baslik": "İmmünglobulinler (IVIG) — Sağlık Bakanlığı onaylı endikasyon (SUT 4.2.12)",
+      "ilacRe": "immunglobulin|immünglobulin|\\bivig\\b|privigen|octagam|flebogamma|kiovig|intratect|hizentra|gamunex|pentaglobin|gammanorm",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İmmünglobulin (IVIG, SUT 4.2.12): Ayakta tedavide yalnız SAĞLIK BAKANLIĞININ ONAY VERDİĞİ endikasyonlarda, uzman hekim raporuna dayanılarak uzman hekimlerce reçete edilir. (Hepatit B, tetanos ve kuduz immünglobulininde uzman hekim raporu şartı aranmaz.) Spesifik/hiperimmün ürünlerde doz sınırları ve endikasyon uyumu raporda belgelenmeli. Onaylı endikasyon/rapor yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.12 birebir metin (23.05.2026; RG-16/06/2020-31157 değişikliği)"
+    },
+    {
+      "id": "ileri-antifungal-basamagi",
+      "baslik": "İleri antifungaller — basamak şartı (SUT 4.2.23)",
+      "ilacRe": "kaspofungin|caspofungin|anidulafungin|anidilofungin|mikafungin|micafungin|vorikonazol|voriconazole|posakonazol|posaconazole|lipozomal amfoterisin|ambisome|kankidas|cancidas|vfend|noxafil|mycamine|ecalta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İleri antifungal (kaspofungin/anidulafungin/mikafungin/vorikonazol/posakonazol/lipozomal amfoterisin-B; SUT 4.2.23): İlk tercih klasik amfoterisin-B veya flukonazoldür. Bu ileri ilaçlara geçiş için klasik amfoterisin-B'ye ALERJİK reaksiyon (uzman raporuyla) VEYA karaciğer/böbrek fonksiyon testlerinin laboratuvar verileriyle BOZUK olduğu belgelenmeli. Sistemik mantar enfeksiyonu endikasyonu raporda olmalı; basamak/belge eksikse kesilir. (Ayrıca EHU/yatarak tedavi şartlarına da dikkat — EK-4/E ve EK-4/G.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.23 birebir metin (23.05.2026; RG-21/03/2018-30367 değişikliği)"
+    },
+    {
+      "id": "topikal-antifungal-2-kutu",
+      "baslik": "Topikal antifungal — bir reçetede en fazla 2 kutu (SUT 4.1.4/5-c)",
+      "ilacRe": "klotrimazol|mikonazol|ekonazol|bifonazol|sertakonazol|oksikonazol|izokonazol|flutrimazol|tiokonazol|naftifin|butenafin|siklopiroks|terbinafin|ketokonazol|canesten|fungoral|nizoral|travogen|pevaryl|mycospor|zalain|exoderil|batrafen|lamisil|fungitop",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Topikal antifungal (krem/solüsyon/sprey/şampuan; klotrimazol, mikonazol, sertakonazol, terbinafin krem, ketokonazol vb.): SUT 4.1.4/5-c — aynı farmasötik form + aynı etken maddeden BİR REÇETEDE en fazla 2 KUTU ve toplamda en fazla 6 AYLIK doz ödenir. Daha fazla kutu ya da 6 aydan uzun tedavi gerekiyorsa: dermatoloji (ya da ilgili endikasyonda kadın hastalıkları ve doğum) uzmanının reçetesi VEYA bu uzmanların düzenlediği 6 ay süreli uzman hekim raporu (rapora istinaden tüm hekimler) gerekir. Aksi halde 2 kutuyu aşan kısım kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.1.4/5-c birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2024-32541 ve öncesi)",
+      "baglamRe": "krem|krm|pomad|merhem|sol(?:usyon|üsyon)?|losyon|sprey|jel|oj|t[ıi]rnak|sampuan|şampuan|deri|cilt|tinea|dermatofit|mantar",
+      "uyariGenel": "⚠️ KESİNTİ RİSKİ — Topikal antifungalde (krem/sprey/solüsyon) SUT 4.1.4/5-c: bir reçetede en fazla 2 kutu ödenir; fazlası için dermatoloji/kadın-doğum uzmanı reçetesi ya da 6 ay süreli uzman raporu gerekir.",
+      "not": "Yatay miktar kuralı (forma bağlı). Oral terbinafin/ketokonazol bu kuralın DIŞINDADIR; uyarı topikal (krem/sprey/sol/şampuan) formu için geçerli — bu yüzden baglamRe form/tanı ipucu ister."
+    },
+    {
+      "id": "glokom-goz-uzmani",
+      "baslik": "Glokom ilaçları — göz hastalıkları uzmanı (SUT 4.2.11)",
+      "ilacRe": "latanoprost|travoprost|bimatoprost|tafluprost|dorzolamid|brinzolamid|brimonidin|timolol|xalatan|travatan|lumigan|azopt|trusopt|cosopt|ganfort|duotrav|alphagan|saflutan|monoprost|izba",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Glokom ilacı (SUT 4.2.11): Tedaviye GÖZ HASTALIKLARI uzman hekimi başlar; göz uzmanının düzenlediği uzman hekim raporuyla diğer hekimler de reçete edebilir. Göz uzmanı başlangıcı/raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.11 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "parkinson-rls",
+      "baslik": "Parkinson / Huzursuz bacak ilaçları — nöroloji/geriatri (SUT 4.2.36, 4.2.40)",
+      "ilacRe": "pramipeksol|pramipexol|ropinirol|rasajilin|rasagilin|apomorfin|kabergolin|entakapon|tolkapon|pergolid|bornaprin|amantadin|mirapexin|requip|azilect|stalevo|comtan|pk-merz",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Parkinson / huzursuz bacak ilacı (SUT 4.2.36 / 4.2.40): Parkinsonda dopamin agonistleri/MAO-B/COMT (pramipeksol, ropinirol, rasajilin, kabergolin, entakapon, amantadin) NÖROLOJİ veya GERİATRİ uzmanı / raporu ile yazılır. Huzursuz bacak sendromunda pramipeksol/ropinirol NÖROLOJİ, GERİATRİ veya PSİKİYATRİ uzmanı / raporu. Tolkapon: entakapon yanıtsızlığında 3. basamak nöroloji/geriatri raporu, en fazla 1 aylık. Uygun branş raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.36 + 4.2.40 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "orlistat",
+      "baslik": "Orlistat (Xenical) — endokrinoloji raporu + VKİ/kilo şartı (SUT 4.2.18)",
+      "ilacRe": "orlistat|xenical|orlika|cetislim|\\blistat\\b|orled",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Orlistat (SUT 4.2.18): ENDOKRİNOLOJİ ve metabolizma uzmanı raporu (en fazla 3 ay) şart. Başlama: 4 ardışık hafta yalnız diyetle en az 2,5 kg kayıp + VKİ ≥ 40 kg/m². HER reçeteye bir önceki reçeteye göre kaybedilen kilo, diyet/egzersize uyum ve VKİ hekimce yazılıp kaşe-imza onayı şart; reçeteler birer aylık. 12 hafta sonunda başlangıç ağırlığının en az %5'i kaybedilmezse tedavi KESİLİR. Kullanım ömür boyu 2 yılı geçemez.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.18 birebir metin (23.05.2026; RG-30/08/2014-29104 değişikliği)"
+    },
+    {
+      "id": "osteoporoz-ilaclari",
+      "baslik": "Osteoporoz ilaçları (bifosfonat/denosumab) — KMY + rapor (SUT 4.2.17)",
+      "ilacRe": "alendronat|risedronat|ibandronat|zoledronik|zoledronat|denosumab|raloksifen|kalsitonin|calcitonin|stronsiyum ranelat|fosamax|fosavance|actonel|bonviva|aclasta|prolia|evista|miacalcic|osseor|alendteva|alenset",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Osteoporoz ilacı (bifosfonat/denosumab/raloksifen/kalsitonin/stronsiyum; SUT 4.2.17): Tedavi süresinin belirtildiği SAĞLIK RAPORU (süre 2 yıl) şart. Rapor tarihinden önceki son 2 yıl içinde KEMİK MİNERAL YOĞUNLUĞU (KMY/DXA) ölçümü yapılmış olmalı; ölçüm yılda 1'den sık yapılamaz; KMY tarihi ve SONUCU (T-skoru) reçetede/raporda belirtilmeli. Bu grup ilaçların KOMBİNE kullanımında yalnız BİRİNİN bedeli ödenir. KMY/rapor/T-skoru eksik ya da kombinasyon → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.17.A birebir metin (23.05.2026; RG-21/03/2018-30367, rapor süresi 2 yıl)"
+    },
+    {
+      "id": "febuksostat",
+      "baslik": "Febuksostat (Adenuric) — allopurinol basamağı + ürik asit (SUT 4.2.52)",
+      "ilacRe": "febuksostat|febuxostat|adenuric|feburic|fabudio|uloric|fexostat",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Febuksostat (SUT 4.2.52): Ürat depozisyonu olan erişkinde; serum ürik asit gut artriti atağı VARSA > 6 mg/dl, YOKSA > 8 mg/dl olan kronik hiperürisemide, ALLOPURİNOL ile 3 ay tedaviye rağmen ürik asit < 6 mg/dl'ye düşmeyen VEYA allopurinol intoleransı/kontrendikasyonu olan hastalarda ödenir. Ürik asit < 3,5 mg/dl'ye düşerse tedavi SONLANDIRILIR. 6 aydan uzun ara → başlangıç kriterleri yeniden aranır. İç hastalıkları, nefroloji, romatoloji veya FTR uzman raporu. Basamak/eşik/branş eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.52 birebir metin (23.05.2026; RG-01/06/2022-31853 değişikliği)"
+    },
+    {
+      "id": "dupilumab",
+      "baslik": "Dupilumab (Dupixent) — atopik dermatit basamağı (SUT 4.2.57)",
+      "ilacRe": "dupilumab|dupixent",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Dupilumab (Dupixent, SUT 4.2.57): Orta/şiddetli atopik dermatitte; abrositinib, barisitinib veya upadasitinib (JAK inhibitörü) tedavilerinden en az birini 12 hafta kullanıp yanıt vermeyen / tolere edemeyen / kontrendike olan 18 yaş üstü hastalarda, bu durumun SAĞLIK KURULU raporunda belirtilmesi + deri ve zührevi hastalıkları uzmanınca (3. basamak) reçete şartı. 600 mg yükleme, sonra 2 haftada bir 300 mg; 16 haftada yanıt yoksa tedavi kesilir. Basamak/rapor/branş eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.57 birebir metin (23.05.2026; RG-26/04/2025-32882 güncel basamak)"
+    },
+    {
+      "id": "ipf-pirfenidon-nintedanib",
+      "baslik": "Pirfenidon/Nintedanib (IPF) — göğüs sağlık kurulu raporu (SUT 4.2.46)",
+      "ilacRe": "pirfenidon|pirfenidone|nintedanib|esbriet|ofev",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pirfenidon/Nintedanib (idiyopatik pulmoner fibrozis, SUT 4.2.46): 3. basamakta en az ÜÇ GÖĞÜS HASTALIKLARI uzman hekiminin bulunduğu 1 yıl süreli SAĞLIK KURULU raporu şart; göğüs hastalıkları uzmanınca reçete. IPF tanısı biyopsi ve/veya uluslararası kriterlerle (toraks HRCT + DLCO içeren solunum fonksiyon testleri raporda belirtilerek) konmuş, romatoloji konsültasyonu alınmış olmalı. Rapor/branş/tanı kriterleri eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.46 birebir metin (23.05.2026; RG-25/09/2024-32673)"
+    },
+    {
+      "id": "akromegali",
+      "baslik": "Akromegali ilaçları (pegvisomant/somatostatin) — endokrinoloji + IGF-1 (SUT 4.2.37)",
+      "ilacRe": "pegvisomant|oktreotid|octreotide|lanreotid|lanreotide|pasireotid|pasireotide|somavert|sandostatin|somatulin|signifor",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Akromegali ilacı (pegvisomant/oktreotid/lanreotid; SUT 4.2.37): endokrinoloji ve metabolizma uzmanının yer aldığı SAĞLIK KURULU raporu şart; raporda yaşa uygun IGF-1 referans aralığı ve hastanın IGF-1 sonuç değeri belirtilmeli. Pegvisomant için: cerrahi/radyasyona rağmen (veya uygun olmayan) aktif akromegali + en az 12 ay tam doz uzun etkili somatostatin analoğuna rağmen IGF-1'in yüksek kalması şartı. IGF-1 takibi/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.37 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "botulinum-toksini",
+      "baslik": "Botulismus toksini Tip A (Botox/Dysport) — endikasyon + sağlık kurulu (SUT 4.2.5)",
+      "ilacRe": "botulismus|botulinum|onabotulinum|abobotulinum|incobotulinum|botox|dysport|xeomin|botulift|neurobloc",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Botulismus toksini Tip A (Botox/Dysport/Xeomin; SUT 4.2.5): YALNIZCA şu endikasyonlarda ödenir — göz adalesi felçleri, blefarospazm, hemifasiyal spazm, servikal distoni, fokal distoni, erişkinde inme sonrası fokal spastisite (organik neden ekarte + tıbbi tedaviye yanıtsız), pediatrik serebral palsi. 3. basamakta göz/nöroloji/FTR uzmanlarından üçünün yer aldığı 6 ay süreli SAĞLIK KURULU raporu (serebral palside ortopedi/FTR/çocuk nöroloji/çocuk uzmanı). KOZMETİK / onaysız endikasyon ÖDENMEZ. Endikasyon/rapor/branş dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.5 birebir metin (23.05.2026; RG-25/03/2025-32852 değişikliği)"
+    },
+    {
+      "id": "ozel-diyet-mama",
+      "baslik": "Doğuştan metabolik / inek sütü alerjisi özel mamaları — EK-4/B + uzman (SUT 4.2.16)",
+      "ilacRe": "neocate|nutramigen|althera|alfare|pregomin|aptamil pepti|similac alimentum|aminoasit mama|hidrolize mama|fenilalanin|\\bpku\\b|glutensiz|comidagen|puramino",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Özel diyet mamaları (doğuştan metabolik hastalık / kistik fibrozis / malabsorbsiyon / inek sütü-çoklu gıda alerjisi; SUT 4.2.16): Bu mamalar EK-4/A'da değil EK-4/B 'Hastalığa Özel Diyet Ürünleri' listesindedir. Çocuk metabolizma, erişkin endokrinoloji-metabolizma veya gastroenteroloji uzmanı (yoksa çocuk sağlığı / iç hastalıkları) raporu şart. İki yaşına kadar inek sütü/çoklu gıda protein alerjisi mamalarında ayrıca çocuk alerji veya klinik immünoloji uzmanı da rapor düzenleyebilir. Ürün EK-4/B'de değilse / uygun branş raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.16 birebir metin (23.05.2026; RG-21/04/2015-29333 değişikliği)"
+    },
+    {
+      "id": "tolvaptan-adpkd",
+      "baslik": "Tolvaptan (Jinarc) — ADPKD nefroloji sağlık kurulu (SUT 4.2.67)",
+      "ilacRe": "tolvaptan|jinarc",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Tolvaptan (Jinarc, ADPKD; SUT 4.2.67): 18–55 yaş arası, GFR > 25 ml/dk, ADPKD tanılı, HIZLI İLERLEYEN olgularda başlanır. Yaşa göre GFR kriteri (40–44 yaş GFR<90; 45–49 GFR<75; 50–55 GFR<60) ve hızlı ilerleme (4 yıllık takipte yıllık GFR düşüşü ≥3 veya Mayo sınıf 1D/1E) raporda belgelenmeli. 3. basamakta en az bir NEFROLOJİ uzmanı olan SAĞLIK KURULU raporu + nefroloji uzmanı reçete. Yaş/GFR/ilerleme/rapor uygun değilse kesilir. (NOT: tolvaptanın hiponatremi formu farklı endikasyondur.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.67 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "lizozomal-enzim",
+      "baslik": "Lizozomal hastalık enzim tedavileri (Gaucher/Fabry/Pompe) — kriter + uzman (SUT 4.2.10)",
+      "ilacRe": "imiglukeraz|imiglucerase|velaglukeraz|taliglukeraz|miglustat|eliglustat|cerezyme|vpriv|cerdelga|zavesca|agalsidaz|agalsidase|fabrazyme|replagal|alglukozidaz|alglucosidase|myozyme|nexviazyme|laronidaz|aldurazyme|idursulfaz|elaprase|galsulfaz|naglazyme|sebelipaz|kanuma|velmanaz|lamzede",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Lizozomal hastalık enzim tedavisi (Gaucher/Fabry/Pompe/MPS vb.; SUT 4.2.10 — YÜKSEK BEDELLİ): Tanı enzim düzeyi ve/veya mutasyon analiziyle kesinleşmiş olmalı. Hastalığa özel başlama/sonlandırma kriterleri (örn. Gaucher Tip I/III'te Hb, trombosit, karaciğer/dalak hacmi, kemik dansitesi eşikleri; Tip II'ye enzim verilmez) ve takip değerleri SAĞLIK KURULU raporunda belgelenmeli. Kriter/rapor eksikse — ilaç çok pahalı olduğundan — kesinti riski çok yüksektir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.10 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "palivizumab",
+      "baslik": "Palivizumab (Synagis) — RSV profilaksi pediatrik uzman (SUT 4.2.20)",
+      "ilacRe": "palivizumab|synagis",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Palivizumab (Synagis, RSV profilaksi; SUT 4.2.20): çocuk kardiyoloji, neonatoloji, çocuk alerji, çocuk enfeksiyon veya çocuk göğüs hastalıkları uzmanlarından biri tarafından 1 yıl süreli uzman hekim raporu; bu uzmanlar veya çocuk sağlığı uzmanınca reçete. Yüksek RSV riskli belirli gruplar (KAH için medikal tedavi gereken < 2 yaş; ≤ 28–29 hafta erken doğanlar; siyanotik/konjestif kalp hastalığı vb.) ve RSV SEZONU şartı. Endikasyon/sezon/rapor dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.20 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "anagrelid",
+      "baslik": "Anagrelid — esansiyel trombositemi basamağı (SUT 4.2.21)",
+      "ilacRe": "anagrelid|anagrelide|xagrid|thromboreductin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anagrelid (SUT 4.2.21): Yüksek vasküler riskli esansiyel trombositemide; HİDROKSİÜRE + asetilsalisilik asit tedavisine DİRENÇLİ olduğu ya da hidroksiüre ile dirençli sitopeni (anemi/lökopeni) geliştiği belgelenmiş hastalarda, HEMATOLOJİ veya TIBBİ ONKOLOJİ uzmanı raporuyla bu uzmanlarca reçete edilir. Basamak/branş/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.21 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "tafamidis-attr",
+      "baslik": "Tafamidis (Vyndaqel) — ATTR amiloidoz kardiyomiyopati (SUT 4.2.70)",
+      "ilacRe": "tafamidis|vyndaqel|vyndamax",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Tafamidis (Vyndaqel/Vyndamax, ATTR-KM; SUT 4.2.70): Vahşi tip veya herediter transtiretin amiloidoz kardiyomiyopati tanısı kriterlere uygun konmalı — EKG/eko/kardiyak MR ile kardiyak amiloidoz şüphesi + MONOKLONAL GAMAPATİNİN DIŞLANMASI (serbest hafif zincir Kappa/Lambda oranı, protein/immünfiksasyon elektroforezi; pozitiflikte hematoloji konsültasyonuyla dışlama). Sağlık kurulu raporu + tanı kriterleri belgelenmeli. Kriter/rapor eksikse — yüksek bedelli olduğundan — kesinti riski çok yüksek.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.70.A birebir metin (23.05.2026; RG-25/03/2025-32852)"
+    },
+    {
+      "id": "gonadotropin",
+      "baslik": "Gonadotropinler — hipogonadotropik hipogonadizm (SUT 4.2.66)",
+      "ilacRe": "gonadotropin|folitropin|follitropin|lutropin|koryogonadotropin|menotropin|urofollitropin|gonal|puregon|menopur|merional|fostimon|pergoveris|ovitrelle|choragon|pregnyl",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Gonadotropinler (SUT 4.2.66): Erkekte hipogonadotropik hipogonadizm tanısı (6 ay arayla toplam 3 yıl FSH/LH normal alt sınır veya düşük + total testosteron düşük) endokrinoloji veya üroloji uzmanı içeren 6 ay süreli SAĞLIK KURULU raporuyla belgelenmeli. Kombine FSH-LH preparatları + koryogonadotropin alfa BİRLİKTE ödenmez. Doz sınırları (kombine FSH-LH en fazla 750 IU/hafta) aşılmamalı. (Tüp bebek/IVF kapsamı ayrıca IVF hükümlerine tabidir.) Rapor/branş/doz dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.66 birebir metin (23.05.2026; RG-23/05/2026-33262, yürürlük 04/06/2026)"
+    },
+    {
+      "id": "propranolol-hemanjiyom",
+      "baslik": "Propranolol oral çözelti (Hemangiol) — infantil hemanjiyom (SUT 4.2.62)",
+      "ilacRe": "hemangiol",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Propranolol oral çözelti (Hemangiol, çocukluk çağı hemanjiyomu; SUT 4.2.62): 5 hafta–5 ay bebeklerde, hayatı/fonksiyonu tehdit eden VEYA ülsere yanıtsız VEYA kalıcı iz/şekil bozukluğu riski taşıyan hemanjiyomlarda; çocuk hematoloji-onkoloji, çocuk kardiyoloji veya neonatoloji uzmanı raporu (en fazla 6 ay) ile bu uzmanlarca reçete edilir. Yaş/endikasyon/branş dışı → kesilir. (Propranolol tabletin erişkin kardiyak kullanımı bu kapsamda değildir.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.62 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "wilson-d-penisilamin",
+      "baslik": "D-penisilamin / trientin — Wilson hastalığı (SUT 4.2.63, 4.2.64)",
+      "ilacRe": "penisilamin|penicillamine|trientin|trientine|cuprimine|kelatin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Wilson hastalığı ilacı (D-penisilamin/trientin; SUT 4.2.64/4.2.63): Wilson hastalığı tanısıyla, 3. basamakta nöroloji, çocuk nörolojisi, gastroenteroloji veya çocuk gastroenterolojisi uzmanlarından birinin düzenlediği sağlık raporuna istinaden tüm hekimlerce reçete edilir. Uygun branş raporu yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.64 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "dmd-ataluren",
+      "baslik": "Ataluren (Translarna) — Duchenne MD (SUT 4.2.45)",
+      "ilacRe": "ataluren|translarna",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ataluren (Translarna, Duchenne MD; SUT 4.2.45): distrofin geninde NONSENSE mutasyon GENETİK TEST (DNA) ile kanıtlanmış + 6 dk yürüme testinde ≥ 300 m + ≥ 5 yaş hastalarda; 3. basamakta en az bir pediatrik/erişkin nöroloji uzmanı olan en fazla 6 ay süreli SAĞLIK KURULU raporu + nörolog reçete. Genetik/yürüme/yaş kriteri veya rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.45 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "sma-ilaclari",
+      "baslik": "SMA ilaçları (nusinersen/risdiplam) — çocuk nörolojisi sağlık kurulu (SUT 4.2.49)",
+      "ilacRe": "nusinersen|risdiplam|spinraza|evrysdi|onasemnogen|zolgensma",
+      "uyari": "⚠️ KESİNTİ RİSKİ — SMA ilacı (nusinersen/risdiplam; SUT 4.2.49 — YÜKSEK BEDELLİ): çocuk nörolojisi uzmanının yer aldığı, Kurumca belirlenen 3. basamak sağlık kurumunda düzenlenen SAĞLIK KURULU raporu + Sağlık Bakanlığı-TİTCK kişisel tedavide kullanım değerlendirmesi şart. SMA tipi, başlama/devam kriterleri raporda belgelenmeli. Kriter/rapor/onay eksikse kesinti riski çok yüksek.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.49 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "metreleptin-lipodistrofi",
+      "baslik": "Metreleptin (Myalepta) — lipodistrofi/leptin eksikliği (SUT 4.2.47)",
+      "ilacRe": "metreleptin|myalepta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Metreleptin (konjenital jeneralize lipodistrofi/leptin eksikliği; SUT 4.2.47): LEPTİN düşüklüğü (erkek < 8 ng/ml, kadın < 12 ng/ml) + metabolik tedavilere (metformin/glitazon/insülin/hipolipidemik/diyet) en az 6 ay yanıtsızlık belgelenmeli; çocuk ve/veya erişkin endokrinoloji uzmanlarından oluşan 6 ay süreli SAĞLIK KURULU raporu. Eşik/basamak/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.47 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "kanakinumab-caps",
+      "baslik": "Kanakinumab (Ilaris) — CAPS, anakinra basamağı (SUT 4.2.44)",
+      "ilacRe": "kanakinumab|ilaris",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kanakinumab (Ilaris, CAPS; SUT 4.2.44): > 7,5 kg ve ≥ 2 yaş hastalarda kriyopirin ilişkili periyodik sendromlarda (FCAS/FCU, Muckle-Wells, NOMID/CINCA). Tedaviye ANAKİNRA ile başlanır; anakinraya yanıtsızlık veya ciddi yan etki belgelenmeli. Basamak/tanı/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.44 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "vosoritide-akondroplazi",
+      "baslik": "Vosoritide (Voxzogo) — akondroplazi (SUT 4.2.75)",
+      "ilacRe": "vosoritide|voxzogo",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Vosoritide (Voxzogo, akondroplazi; SUT 4.2.75): FGFR3 geninde tanımlı mutasyon (genetik test merkezi + rapor no belirtilmiş) + epifizi AÇIK + kemik yaşı kızlarda < 15 / erkeklerde < 16 + 4 aylık ve üzeri hastalarda başlanır; sağlık kurulu raporunda kemik yaşı/boy/uzama hızı kaydı. Devam kriterleri (uzama hızı) izlenir. Kriter/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.75 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "egf-diyabetik-ayak",
+      "baslik": "Epidermal büyüme faktörü topikal (diyabetik ayak) — Wagner 1/2 (SUT 4.2.65)",
+      "ilacRe": "epidermal buyume faktoru|heberprot|epiprot|epibest|easyef",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Epidermal büyüme faktörü topikal (diyabetik ayak ülseri; SUT 4.2.65): Konvansiyonel yara tedavisine rağmen iyileşmeyen, gangrensiz, osteomiyeliti ve enfeksiyonu tedavi edilmiş, WAGNER 1 veya 2 nöropatik diyabetik ayak ülserlerinde; 2./3. basamakta ilgili uzmanların yer aldığı sağlık kurulu raporuyla. Wagner evresi/enfeksiyon durumu/rapor uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.65 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "droksidopa",
+      "baslik": "Droksidopa (Northera) — nörojenik ortostatik hipotansiyon (SUT 4.2.51)",
+      "ilacRe": "droksidopa|droxidopa|northera",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Droksidopa (Northera; SUT 4.2.51): Dopamin beta hidroksilaz eksikliği (enzim düzeyi ve/veya moleküler tetkikle) saptanmış, diğer tedavilere yanıtsız semptomatik nörojenik ortostatik hipotansiyonda; 3. basamakta metabolizma hastalıkları, endokrinoloji ve kardiyoloji uzmanı içeren sağlık kurulu raporuyla bu uzmanlarca reçete. Tanı/basamak/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.51 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "miltefosine",
+      "baslik": "Miltefosine (Impavido) — visseral leishmaniasis basamağı (SUT 4.2.54)",
+      "ilacRe": "miltefosine|miltefosin|impavido",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Miltefosine (Impavido, visseral leishmaniasis; SUT 4.2.54): ≥ 12 yaş ve ≥ 30 kg hastalarda; amfoterisin B'ye yanıtsızlık/ciddi yan etki/kontrendikasyon veya HIV pozitifte amfoterisin B ile kombine; 3. basamakta enfeksiyon hastalıkları ve klinik mikrobiyoloji (veya çocuk enfeksiyon) uzmanı raporuyla. Yaş/kilo/basamak/branş dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.54 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "dijital-ulser-skleroz",
+      "baslik": "Sistemik skleroz dijital ülser (iloprost IV/bosentan) — romatoloji (SUT 4.2.43)",
+      "ilacRe": "iloprost|bosentan|tracleer|diamond|tractan|zepahex|prindan",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sistemik sklerozda dijital ülser (SUT 4.2.43): İV iloprost romatoloji veya klinik immünoloji uzman raporuyla. Bosentan için: kalsiyum kanal blokeri + İV iloprost ile en az 3 ay yanıtsızlık + en az biri > 2 mm çaplı/derinlikli ağrılı kardinal ülser olmak üzere multiple (≥ 4) dijital ülser şartı. (Bosentanın pulmoner HT kullanımı 4.2.30'a tabidir.) Basamak/kriter/branş eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.43 birebir metin (23.05.2026; RG-25/11/2025-33088 değişikliği)",
+      "baglamRe": "skleroz|dijital ulser|raynaud|\\bm34\\b"
+    },
+    {
+      "id": "kolik-asit",
+      "baslik": "Kolik asit (Orphacol) — safra asidi sentez bozukluğu (SUT 4.2.48)",
+      "ilacRe": "kolik asit|cholic acid|orphacol|kolbam",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kolik asit (SUT 4.2.48): 3-beta-hidroksisteroid dehidrojenaz eksikliği ve Zellweger spektrum bozukluğu tanılı hastalarda; 3. basamakta çocuk endokrinoloji, çocuk metabolizma, erişkin endokrinoloji-metabolizma veya gastroenteroloji uzmanı içeren sağlık kurulu raporuyla. Tanı/branş/rapor dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.48 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "sakrosidaz",
+      "baslik": "Sakrosidaz (Sucraid) — sükraz-izomaltaz eksikliği (SUT 4.2.69)",
+      "ilacRe": "sakrosidaz|sacrosidase|sucraid",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sakrosidaz (Sucraid; SUT 4.2.69): Jeneralize sükraz-izomaltaz eksikliği — SI geninde homozigot/bileşik heterozigot mutasyon GENETİK analizle kanıtlanmış olmalı; 3. basamakta çocuk gastroenteroloji uzmanı içeren (pediatrik) sağlık kurulu raporuyla. Tanı/genetik/rapor eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.69 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "sodium-benzoate",
+      "baslik": "Sodyum benzoat — üre döngüsü bozukluğu (SUT 4.2.60)",
+      "ilacRe": "sodyum benzoat|sodium benzoate",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sodyum benzoat (SUT 4.2.60): Üre döngüsü enzim bozukluklarında (CPS1, NAGS, OTC, argininosüksinat sentaz/liyaz, arginaz eksikliği) veya hiperamonemik krizde (organik asidemi, yağ asidi oksidasyon bozukluğu, sitrülinemi tip-2, HHH sendromu vb.). Tanı + uygun uzman sağlık kurulu raporu belgelenmeli; eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.60 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "natriumflouride-otoskleroz",
+      "baslik": "Sodyum florür — otoskleroz (SUT 4.2.55)",
+      "ilacRe": "natriumflouride|natriumfluorid|sodyum florur|sodium fluoride|florocalcic",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sodyum florür (SUT 4.2.55): Koklear otoskleroz veya cerrahiye uygun olmayan diğer otoskleroz hastalarında; 3. basamakta KBB (kulak burun boğaz) uzmanı raporuyla KBB uzmanınca reçete. Tanı/branş/rapor dışı → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.55 birebir metin (23.05.2026)"
+    },
+    {
+      "id": "kseroderma-gunes-koruyucu",
+      "baslik": "Güneş koruyucu krem — kseroderma pigmentozum/albinizm (SUT 4.2.39)",
+      "ilacRe": "gunes koruyucu|gunesten koruyucu|sunblock|sunscreen|gunes kremi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Güneşten koruyucu krem (SUT 4.2.39): YALNIZCA kseroderma pigmentozum ve okülokütanöz albinizm tanısında ödenir; aylık bedel ÜST SINIRI 249,48 TL'yi geçemez. Sağlık kurulu raporu + reçete + FATURA ile sağlık sosyal güvenlik merkezlerince işlem yapılır. Tanı dışı (kozmetik/genel) güneş kremi ÖDENMEZ; tutar üst sınırı aşılırsa fark kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.39 birebir metin (23.05.2026; RG-08/04/2026-33218, aylık üst sınır 249,48 TL)",
+      "baglamRe": "kseroderma|pigmentozum|pigmentosum|albinizm|\\bq82|\\be70"
+    },
+    {
+      "id": "fosfomisin-endikasyon",
+      "baslik": "Fosfomisin oral (Monurol) — endikasyon/saşe kısıtı (ADAY, teyit bekliyor)",
+      "ilacRe": "fosfomisin|monurol|uromisin|uroday",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Fosfomisin oral (Monurol): İDDİA EDİLEN YENİ KURAL (Haziran 2026, teyit bekliyor) — yalnızca (1) kadın/adölesan kızda akut komplike olmamış sistit, (2) erkekte transrektal prostat biyopsisi öncesi profilaksi; haftada en fazla 1 saşe. YÜRÜRLÜKTEKİ resmi kural ise: alt üriner sistem enfeksiyonunda 10 günde en fazla 2 saşe (N21/N30/N34 kodları). Reçete öncesi güncel SUT'u/MEDULA kartını kontrol edin.",
+      "dogrulandi": false,
+      "kaynak": "eczaneveteknisyen Instagram (3 Haziran 2026, AI infografik) — İDDİA. Çelişki: Kayseri EO resmi duyurusu (24.06.2020 yürürlük) 'alt üriner sistem enf., 10 günde 2 saşe' diyor, prostat biyopsisi YOK. Bizim SUT metnimizde (23.05.2026) fosfomisin HİÇ yok.",
+      "not": "ADAY — dogrulandi:false, motor çalıştırmaz. Resmi yayımlanmış SUT ile teyit edilince (günlük SUT izleyici yeni tebliği yakalayınca) aktive edilecek. Kaynak AI infografik + 'gelecek değişiklik' beyanı; yürürlükteki resmi kuralla çelişiyor → eczacıya gösterilmez."
+    },
+    {
+      "id": "antibiyotik-ehu-onayi",
+      "baslik": "İleri antibiyotikler — Enfeksiyon Hastalıkları Uzmanı (EHU) onayı şartı (EK-4/E)",
+      "ilacRe": "imipenem|meropenem|meronem|ertapenem|invanz|doripenem|tienam|karbapenem|vankomisin|vancomycin|vankomicin|teikoplanin|teicoplanin|targocid|linezolid|zyvox|kolistin|kolistimetat|colistin|colimycin|sefepim|cefepime|maxipime|piperasilin|tazobaktam|tazocin|aztreonam|azactam|daptomisin|daptomycin|cubicin|tigesiklin|tigecycline|tygacil|seftarolin|ceftaroline|seftolozan|ceftolozane|zerbaxa",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İleri antibiyotik (karbapenem [imipenem/meropenem/ertapenem/doripenem], glikopeptid [vankomisin/teikoplanin], linezolid, kolistin, sefepim, piperasilin-tazobaktam, aztreonam, daptomisin, tigesiklin vb.; EK-4/E Sistemik Antimikrobik ve Diğer İlaçların Reçeteleme Kuralları Listesi): Bu antibiyotikler 'EHU' grubundadır — AYAKTAN tedavide reçeteleme için ENFEKSİYON HASTALIKLARI UZMANI onayı şarttır (EHU bulunmayan yerlerde endikasyona göre iç hastalıkları/çocuk hastalıkları uzmanı). Onay ibaresi reçete/raporda yoksa SGK kesinti yapar. (Yatarak tedavide kural farklıdır — EK-4/G yalnız yatarak ödenenleri kontrol edin.)",
+      "dogrulandi": true,
+      "kaynak": "SUT eki EK-4/E 'Sistemik Antimikrobik ve Diğer İlaçların Reçeteleme Kuralları Listesi' (resmî SUT 23.05.2026 metni EK-4/E'ye atıf yapar; operasyonel liste ilacabak.com/sutek1.php) — web çapraz teyit: EK-4/E EHU grubu (aztreonam/vankomisin/imipenem/meropenem/linezolid/ertapenem/doripenem/kolistimetat/daptomisin). 15.06.2026",
+      "not": "EHU = Enfeksiyon Hastalıkları Uzmanı onayı. NOT: Resmî SUT'ta 4.2.13 = Hepatit tedavisidir; antibiyotik reçeteleme kuralları ana metinde DEĞİL eki EK-4/E listesindedir. Kısıtlı antibiyotik listesi MEDULA'da değişebilir; reçete öncesi güncel ilaç kartından 'reçeteleme kuralı' kodunu (EHU/UH-P/KY) kontrol edin."
+    },
+    {
+      "id": "antibiyotik-kultur-antibiyogram",
+      "baslik": "Oral solunum kinolonları + telitromisin — kültür-antibiyogram şartı (EK-4/E)",
+      "ilacRe": "levofloksasin|levofloxacin|tavanic|levoday|moksifloksasin|moxifloxacin|avelox|gemifloksasin|gemifloxacin|faktive|telitromisin|telithromycin|ketek",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Oral solunum kinolonu (levofloksasin/moksifloksasin/gemifloksasin) veya telitromisin (EK-4/E, 'K-AB' grubu): PNÖMONİ dışı endikasyonlarda KÜLTÜR-ANTİBİYOGRAM sonucu (etkenin bu antibiyotiğe duyarlı / diğerlerine dirençli olduğu) reçete/rapora EKLENMELİDİR. Pnömoni endikasyonunda kısıtlama aranmaz. Kültür sonucu olmadan pnömoni dışı tanıyla yazılan reçetelerde SGK kesinti yapar.",
+      "dogrulandi": true,
+      "kaynak": "SUT eki EK-4/E 'Sistemik Antimikrobik ve Diğer İlaçların Reçeteleme Kuralları Listesi' (ilacabak.com/sutek1.php) — K-AB (kültür-antibiyogram) grubu: levofloksasin/moksifloksasin/gemifloksasin oral + telitromisin; pnömonide KY (kısıtlamasız). 15.06.2026",
+      "not": "K-AB yalnız ORAL formda ve pnömoni DIŞI endikasyonda. Parenteral formların kuralı ayrıdır (UH-P/EHU). Güncel kuralı MEDULA ilaç kartından teyit edin."
+    },
+    {
+      "id": "antibiyotik-apat-a72",
+      "baslik": "Ayaktan parenteral antibiyotik (APAT) + 72 saat (A-72) kuralı (EK-4/E)",
+      "ilacRe": "seftriakson|ceftriaxone|rocephin|sefotaksim|cefotaxime|seftazidim|ceftazidime|fortum|sefoperazon|cefoperazone|sulperazon|sulbaktam|seftizoksim|sefodizim|sefuroksim sodyum|parenteral antibiyotik|i\\.?m\\.? antibiyotik|i\\.?v\\.? antibiyotik",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ayaktan parenteral antibiyotik (APAT) ve A-72 kuralı (EK-4/E): (1) APAT — ayaktan damar/kas içi antibiyotik tedavisi, belirli istisnalar dışında HASTANE SAĞLIK KURULU raporu gerektirir; raporsuz ayaktan parenteral antibiyotikte kesinti olur. (2) A-72 grubu antibiyotikler (3. kuşak sefalosporin parenteral, piperasilin-tazobaktam vb.) 72 SAATTEN uzun kullanılacaksa ilk 72 saat içinde ENFEKSİYON HASTALIKLARI UZMANI onayı alınmalıdır. Onay/rapor eksikse SGK kesinti yapar.",
+      "dogrulandi": true,
+      "kaynak": "SUT eki EK-4/E 'Sistemik Antimikrobik ve Diğer İlaçların Reçeteleme Kuralları Listesi' (ilacabak.com/sutek1.php) — A-72 tanımı ('72 saatten uzun kullanımda ilk 72 saatte EHU onayı') + APAT (ayaktan parenteral antibiyotik tedavisi hastane kurulu raporu). 15.06.2026",
+      "baglamRe": "ayaktan|parenteral|enjektabl|flakon|i\\.?m\\.?|i\\.?v\\.?|damardan|kas i[cç]i",
+      "not": "3. kuşak sefalosporin parenteral = UH-P, A-72 veya EHU. Endikasyona/forma göre kural değiştiği için MEDULA ilaç kartındaki reçeteleme kuralı kodu esas alınmalı."
+    },
+    {
+      "id": "noac-antikoagulan",
+      "baslik": "Yeni nesil oral antikoagülan (dabigatran/rivaroksaban/apiksaban/edoksaban) — varfarin basamağı + sağlık kurulu (SUT 4.2.15.D)",
+      "ilacRe": "dabigatran|pradaxa|rivaroksaban|rivaroxaban|xarelto|apiksaban|apixaban|eliquis|edoksaban|edoxaban|lixiana",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Yeni nesil oral antikoagülan (dabigatran/rivaroksaban/apiksaban/edoksaban; SUT 4.2.15.D): (1) VARFARIN BASAMAĞI — non-valvüler atriyal fibrilasyon veya DVT/PE endikasyonunda; en az 2 AY varfarin kullanımına rağmen, ≥1 hafta arayla yapılan SON 5 INR ölçümünün en az 3'ünde INR 2-3 arasında tutulamadığı raporda belgelenmeli (VEYA varfarin altındayken inme/SVO geçirme → doğrudan geçiş). Bu basamak belgelenmemişse kesinti olur. DVT/PE istisnası: tekrarlayan idiopatik PE, homozigot trombofili, VTE geçirmiş aktif kanser veya immobil hastada varfarin şartı aranmaz (gerekçe raporda belirtilmeli). (2) RAPOR — AF'de en az biri KARDİYOLOJİ veya NÖROLOJİ olmak üzere kardiyoloji/iç hastalıkları/göğüs/KVC/nöroloji uzmanlarından EN AZ ÜÇÜNÜN yer aldığı 1 yıl süreli SAĞLIK KURULU raporu; bu uzmanlarca reçete. İlk iki rapor (toplam 24 ay) sonrası uzman hekim raporu + AİLE HEKİMİ reçetesi yeterli olur. (3) KOMBİNASYON — iki NOAC birlikte VEYA NOAC + antiagregan (klopidogrel/tikagrelor/prasugrel) birlikte ÖDENMEZ (SUT 4.2.15.G). Apiksaban bu madde kapsamı dışındaki endikasyonlarda ödenmez.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.15.D / D-1 / D-2 birebir metin — masaüstü resmî '23.05.2026 - Değişiklik Tebliği İşlenmiş Güncel 2013 SUT' docx; risk faktörü/rapor RG-16/06/2020-31157 + RG-25/03/2025-32852. Doğrudan resmî SUT metninden teyit 15.06.2026",
+      "not": "İlk 24 ay sağlık kurulu raporu zorunlu; sonrası uzman hekim raporu + aile hekimi reçetesi (RG-25/03/2025-32852). NOAC+NOAC ve NOAC+antiagregan kombinasyonu hiçbir koşulda ödenmez."
+    },
+    {
+      "id": "antidepresan-antipsikotik-brans",
+      "baslik": "Antidepresan / atipik antipsikotik — branş ve süre şartları, demansta antipsikotik (SUT 4.2.2)",
+      "ilacRe": "venlafaksin|duloksetin|desvenlafaksin|milnasipran|reboksetin|moklobemid|mirtazapin|bupropiyon|vortioksetin|agomelatin|trazodon|klozapin|olanzapin|risperidon|amisulpirid|ketiapin|ketiyapin|ziprasidon|aripiprazol|paliperidon|brekspiprazol|lurasidon|kariprazin|zotepin|sertindol",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Antidepresan / atipik antipsikotik (SUT 4.2.2): (1) SNRI/SSRE/RIMA/NASSA (venlafaksin, duloksetin, mirtazapin, moklobemid vb.): PSİKİYATRİ, NÖROLOJİ veya GERİATRİ uzmanı ya da bu uzmanların raporu ile yazılır; 1 YILDAN uzun kullanımda PSİKİYATRİ uzmanı / raporu şart. (Düz SSRI/trisiklik/tetrasiklikleri tüm hekimler 1 yıl yazabilir.) (2) ATİPİK ANTİPSİKOTİKLER (klozapin, olanzapin, risperidon, ketiapin, aripiprazol, paliperidon, brekspiprazol, lurasidon, kariprazin vb.): PSİKİYATRİ uzmanı / psikiyatri uzman raporu şart. DEMANSTA atipik antipsikotik: psikiyatri, NÖROLOJİ veya GERİATRİ uzmanı / raporu yeterli. (3) Klozapin reçetesinde EN FAZLA 1 AYLIK doz ödenir. (4) Bupropiyon/vortioksetin/agomelatin/trazodon uzatılmış salımlı formları yalnız major/orta-ağır depresif bozuklukta; BREKSPİPRAZOL major depresif bozuklukta (MDD) ÖDENMEZ. Branş/süre/endikasyon uygun değilse kesinti olur.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.2 birebir metin — masaüstü resmî '23.05.2026 - Değişiklik Tebliği İşlenmiş Güncel 2013 SUT' docx (güncel hükümler RG-25/03/2025-32852, RG-19/10/2023-32344, RG-02/11/2024-32710, RG-25/11/2025-33088). Doğrudan resmî SUT metninden teyit 15.06.2026",
+      "not": "DEMANS: SUT'ta donepezil/rivastigmin/memantin/galantamin için özel kısıt YOK (genel hükümlerle + EK-4/D demans muafiyetiyle ödenir); demansa özgü tek psikiyatri kuralı atipik antipsikotik branşıdır (4.2.2(6))."
+    },
+    {
+      "id": "enjektabl-alerji-asisi",
+      "baslik": "Enjektabl alerji aşısı (immünoterapi) — başlangıç, grup ve süre sınırları (SUT 4.2.3)",
+      "ilacRe": "alerji aşı|alerji aş|allerji aş|immunoterapi|immünoterapi|alergoid|allergoid|alergovit|allergovit|pollinex|alk|alutard|venom|arı venom|ari venom|pangramin|staloral|oralair|grazax|acarizax",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Enjektabl alerji aşısı / immünoterapi (SUT 4.2.3): (1) Başlangıç: solunum alerjeni cilt testi/spesifik IgE ile gösterilmiş + en az 3 ay medikal tedaviye rağmen kontrol altına alınamamış alerjik astım/rinit/konjonktivitte; immünoloji ve/veya alerji ve/veya immünoloji-alerji uzmanının yer aldığı, tedavi protokolünü gösterir 1 YIL süreli SAĞLIK KURULU raporu; İLK reçete bu uzmanlarca yazılır (devam reçeteleri KBB/göz/göğüs/çocuk/dermatoloji/iç hast./aile hekimince de olur). (2) En fazla 2 FARKLI GRUP alerjen için ödenir (polen, ev tozu akarı, küf mantarı, hayvan epiteli). (3) ORAL alerji aşısı formları ÖDENMEZ — yalnız enjektabl. (4) Tedaviye 6 ay+ ara → yeniden başlangıç dozu + rapor. (5) Aşı tedavisi (arı venom hariç) toplamda 5 YILI geçemez; mevsim öncesi allergoid ömür boyu en fazla 5 kez. Bu şartlar dışı reçeteler kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.3 birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2024-32541 değişikliği)",
+      "not": "Arı venom aşısı ayrı: alerji/immünoloji/çocuk uzmanı raporu+reçetesi; 5 yıl sınırı arı venomda YOK. Oral form (Staloral/Oralair/Grazax/Acarizax gibi) ödenmez — enjektabl şart."
+    }
+  ]
+}
