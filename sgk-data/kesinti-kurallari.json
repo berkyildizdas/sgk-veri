@@ -1,7 +1,7 @@
 {
   "tarih": "2026-06-15",
-  "hash": "e6d5897cf72c7bae",
-  "kayit_sayisi": 97,
+  "hash": "6de318c9dd52303c",
+  "kayit_sayisi": 115,
   "kurallar": [
     {
       "id": "lmwh-hemodiyaliz",
@@ -829,6 +829,156 @@
       "uyari": "⚠️ KESİNTİ RİSKİ — Sodyum zirkonyum siklosilikat (Lokelma; SUT 4.2.9.F): RAAS inhibitörü veya MRA kullanan, DİYALİZ ALMAYAN Evre 4 veya Evre 5 KBH hastasında; son 1 ayda sodyum/kalsiyum polistiren sülfonat kullanımına rağmen en az bir ŞİDDETLİ hiperkalemi atağı + serum potasyum ≥ 6,0 mmol/L olması şart. En az bir NEFROLOJİ uzmanı 3 ay süreli sağlık kurulu raporu; reçete nefroloji/iç hastalıkları uzmanınca. Yılda en fazla 2 atak için TOPLAM en fazla 6 KUTU ödenir. Şart/atak/kutu dışı kesilir.",
       "dogrulandi": true,
       "kaynak": "SUT 4.2.9.F birebir metin (resmî 23.05.2026 SUT docx; RG-25/03/2025-32852/7)"
+    },
+    {
+      "id": "leflunomid-kullanim",
+      "baslik": "Leflunomid — branş + 1 yıl rapor (SUT 4.2.1.A)",
+      "ilacRe": "leflunomid|leflunomide|arava|leflumid|lunomid|lefono",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Leflunomid (Arava; SUT 4.2.1.A): Romatoid artrit veya psöriatik artrit (psöriatik artritte sadece leflunomid 20-100 mg) tedavisinde; İÇ HASTALIKLARI, ROMATOLOJİ, ÇOCUK SAĞLIĞI VE HASTALIKLARI veya FİZİKSEL TIP VE REHABİLİTASYON uzmanınca düzenlenen 1 YIL süreli uzman hekim raporuna dayanılarak bu uzman hekimlerce reçete edilir. Branş dışı / rapor yok ise kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.A birebir metin (resmî 23.05.2026 SUT docx; RG-19/10/2023-32344)"
+    },
+    {
+      "id": "altin-preparatlari-kullanim",
+      "baslik": "Altın preparatları — RA basamak + branş (SUT 4.2.1.B)",
+      "ilacRe": "altın preparat|altin preparat|sodyum aurotiyomalat|aurotiyomalat|aurothiomalate|sodyum aurotiomalat|miyokrizin|myocrisin|tauredon",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Altın preparatları (sodyum aurotiyomalat; SUT 4.2.1.B): Romatoid artritte, hastalık sulfasalazin veya metotreksat ile kontrol altına alınamadığı VEYA bu ilaçların kontrendike olduğu/yan etki nedeniyle kullanılamadığı durumlarda; FİZİKSEL TIP VE REHABİLİTASYON, KLİNİK İMMÜNOLOJİ veya ROMATOLOJİ uzmanınca düzenlenen 1 YIL süreli uzman hekim raporuyla bu uzmanlarca reçete edilir. Basamak/branş/rapor uygun değilse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.1.B birebir metin (resmî 23.05.2026 SUT docx)"
+    },
+    {
+      "id": "pimekrolimus-takrolimus-topikal",
+      "baslik": "Pimekrolimus / Takrolimus topikal (Elidel/Protopic) — kutu sınırı (SUT 4.2.58)",
+      "ilacRe": "pimekrolimus|pimecrolimus|elidel|protopic|takrolimus|tacrolimus",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pimekrolimus / Takrolimus TOPİKAL (Elidel krem / Protopic pomad; SUT 4.2.58): Ayakta tedavide aynı reçetede 2 KUTUYA kadar TÜM hekimlerce ödenir; 2 kutu ÜZERİ için DERMATOLOJİ uzmanı reçetesi şart. Dermatoloji uzmanınca düzenlenmiş 1 YIL süreli rapora istinaden aynı reçetede 10 KUTUYA kadar tüm hekimlerce, 10 kutu üzeri yine dermatoloji uzmanınca. Kutu sınırı/branş/rapor uygun değilse aşan kısım kesilir. (Sistemik takrolimus/Prograf bu kuralın dışındadır — bu kural topikal form içindir.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.58 birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2020-31122)",
+      "baglamRe": "topik|krem|pomad|merhem|atopik|dermatit|egzama|ekzema|deri|cilt|L20|L30"
+    },
+    {
+      "id": "mct-yagi-kullanim",
+      "baslik": "Medium-chain triglyceride (MCT) yağı — metabolik endikasyon (SUT 4.2.53)",
+      "ilacRe": "\\bmct\\b|medium.?chain triglyceride|orta zincirli trigliser|liquigen|betaquik|mct\\s*oil|mct\\s*procal",
+      "uyari": "⚠️ KESİNTİ RİSKİ — MCT (orta zincirli trigliserit) yağı (SUT 4.2.53): Diyete ek beslenme ürünü olarak yalnızca yağ asidi oksidasyon bozuklukları (multiple açil CoA dehidrogenaz eksikliği HARİÇ), kolestatik karaciğer hastalıkları veya lipoprotein metabolizması bozukluklarında; çocuk metabolizma hastalıkları veya endokrinoloji ve metabolizma hastalıkları uzmanlarından en az birinin yer aldığı sağlık kurulu raporuyla bu hekimler veya çocuk sağlığı ve hastalıkları uzmanınca reçete edilir. Endikasyon/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.53 birebir metin (resmî 23.05.2026 SUT docx; RG-04/09/2019-30878)"
+    },
+    {
+      "id": "lnna-fenilketonuri",
+      "baslik": "Large Neutral Amino Acids (LNNA) — fenilketonüri (SUT 4.2.56)",
+      "ilacRe": "large neutral amino|\\blnna\\b|\\blnaa\\b|neophe|prekunil|nötr amino asit|notr amino asit",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Large Neutral Amino Acids (LNNA) içeren beslenme ürünleri (SUT 4.2.56): Yalnızca 8 YAŞ ve üzerinde, DİYETE UYUM gösteremeyen ve TIBBİ MAMA kullanamayan klasik FENİLKETONÜRİ hastalığında; çocuk metabolizma hastalıkları veya çocuk endokrinolojisi ve metabolizma hastalıkları uzmanı raporuyla bu hekimler veya çocuk sağlığı ve hastalıkları uzmanınca reçete edilir. Yaş/tanı/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.56 birebir metin (resmî 23.05.2026 SUT docx; RG-05/08/2024-32623)"
+    },
+    {
+      "id": "belinostat-kullanim",
+      "baslik": "Belinostat — relaps/refrakter periferik T hücreli lenfoma (SUT 4.2.59)",
+      "ilacRe": "belinostat|beleodaq",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Belinostat (Beleodaq; SUT 4.2.59): Yalnızca RELAPS/REFRAKTER PERİFERİK T HÜCRELİ LENFOMA'da; 3. basamak resmi sağlık hizmet sunucusunda en az bir HEMATOLOJİ veya HEMATOLOJİ-ONKOLOJİ uzmanının yer aldığı 3 ay süreli sağlık kurulu raporuyla ilgili uzman hekimlerce reçete edilir. Endikasyon/basamak/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.59 birebir metin (resmî 23.05.2026 SUT docx)"
+    },
+    {
+      "id": "thiotepa-kullanim",
+      "baslik": "Thiotepa — endikasyon dışı onay + hematoloji (SUT 4.2.61)",
+      "ilacRe": "thiotepa|tiotepa|tepadina",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Thiotepa (Tepadina; SUT 4.2.61): Sağlık Bakanlığından HASTA BAZINDA ENDİKASYON DIŞI ONAY şart. 3. basamakta çocuk hematoloji ve onkoloji veya erişkin hematoloji uzmanının yer aldığı 6 ay süreli sağlık kurulu raporuyla bu hekimlerce reçete edilir. Hodgkin/Non-Hodgkin lenfomada kemik iliği nakli hazırlık rejiminde kullanımda raporda KARMUSTİN'in kontrendike olduğu belirtilmeli (primer MSS lenfoması ve MSS tutulumlu lenfomalar hariç). Onay tarihi/süresi raporda yer almalı. Onay/rapor/branş eksikse kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.61 birebir metin (resmî 23.05.2026 SUT docx; RG-16/06/2020-31157)"
+    },
+    {
+      "id": "aktive-protein-c",
+      "baslik": "Aktive protein C (drotrekogin) — yoğun bakım/ağır sepsis (SUT 4.2.22)",
+      "ilacRe": "aktive protein c|aktif protein c|drotrekogin|drotrecogin|xigris",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Aktive protein C (drotrekogin; SUT 4.2.22): Yalnızca YOĞUN BAKIM ünitelerinde, en az 2 organ yetmezliği gelişmiş AĞIR SEPSİS hastasında; anestezi-reanimasyon/enfeksiyon/iç hastalıkları/göğüs/genel cerrahi hekimlerinden en az ÜÇÜNÜN onayı + ilk 48 saat içinde, doz/süre (24 µg/kg/saat × 96 saat) belirten onaylı epikriz raporuyla ödenir. Ayakta/şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.22 birebir metin (resmî 23.05.2026 SUT docx)",
+      "not": "Yatan/yoğun bakım ilacı; drotrekogin (Xigris) dünyada büyük ölçüde piyasadan kalktı — kayıt SUT bütünlüğü için."
+    },
+    {
+      "id": "levosimendan-milrinon",
+      "baslik": "Levosimendan / Milrinon — yatan/yoğun bakım kalp yetmezliği (SUT 4.2.26)",
+      "ilacRe": "levosimendan|simdax|milrinon|primacor|corotrop",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Levosimendan/Milrinon (SUT 4.2.26): Levosimendan yalnız invaziv hemodinamik monitörizasyonlu yoğun bakımda yatan veya akut/dekompanse kalp yetmezliğinin akut dönemindeki YATAN hastada; milrinon klasik tedaviye yanıtsız şiddetli konjestif kalp yetmezliği/kalp cerrahisi sonrası düşük debide YATAN hastada. Kardiyoloji/KVC/anestezi-reanimasyon/iç hastalıkları/yoğun bakım/acil uzmanı raporuyla bu hekimlerce. Ayakta/şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.26 birebir metin (resmî 23.05.2026 SUT docx; RG-25/07/2014-29071)"
+    },
+    {
+      "id": "faktor-kan-urunleri",
+      "baslik": "Faktör / koagülasyon ürünleri — hematoloji + 4500 ünite sınırı (SUT 4.2.27)",
+      "ilacRe": "\\bfakt[öo]r\\b|fakt[öo]r viii|fakt[öo]r ix|fviii|\\bfix\\b|von willebrand|\\bvwf\\b|emicizumab|emisizumab|hemlibra|protrombin kompleks|aktifle[şs]mi[şs] protrombin|\\bapcc\\b|feiba|novoseven|antitrombin|wilate|haemate|octanate|kogenate|advate|benefix|nuwiq|elocta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Faktör / koagülasyon ürünleri (hemofili vb.; SUT 4.2.27): Hematoloji uzmanının yer aldığı sağlık kurulu raporu (hematoloji yoksa 3 iç hastalıkları veya 3 çocuk uzmanı, 1 yıl) + hemofili takip karnesi şart; İLK rapor 3. basamakta düzenlenir. PROFİLAKSİDE haftalık faktör kullanımı 4500 ÜNİTEYİ geçemez (aşımda gerekçeli, en fazla 6 ay süreli yeni rapor). Akut kanama/cerrahide en fazla 3 günlük doz + 3 gün süreli hematoloji raporu. Faktör VIIa/aPCC doz sınırları ayrıdır. Rapor/branş/4500 ünite/doz dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.27.A birebir metin (resmî 23.05.2026 SUT docx; RG-08/02/2025-32835, RG-02/11/2024-32710)"
+    },
+    {
+      "id": "human-albumin-yatan",
+      "baslik": "Human albümin — yalnız yatan + albümin ≤2.5 (SUT 4.2.27.Ç)",
+      "ilacRe": "human albumin|human albümin|insan albumin|albumin|albümin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Human albümin (SUT 4.2.27.Ç): YALNIZCA YATARAK tedavi gören hastalara ve serum albümin düzeyi 2,5 g/dl ve ALTINDA ise ödenir; laboratuvar sonucu ve kullanılan miktar epikrizde belirtilir. Ayaktan reçete / albümin >2,5 ise ödenmez. (Konjenital nefrotik sendrom/nefrotik sendrom çocuk/plazmaferez/karaciğer nakli hastalarında albümin düzeyi şartı aranmaz.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.27.Ç birebir metin (resmî 23.05.2026 SUT docx; RG-16/06/2020-31157)",
+      "baglamRe": "yatan|yatarak|epikriz|nefrotik|plazmaferez|karaciğer nakli|albumin|albümin"
+    },
+    {
+      "id": "eltrombopag-romiplostim-itp",
+      "baslik": "Eltrombopag / Romiplostim — ITP / aplastik anemi (SUT 4.2.27.D)",
+      "ilacRe": "eltrombopag|revolade|promacta|romiplostim|nplate",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Eltrombopag (Revolade)/Romiplostim (Nplate) (SUT 4.2.27.D): KRONİK İMMÜN TROMBOSİTOPENİK PURPURA'da, kortikosteroid+immünglobulin+splenektomiye dirençli/kontrendike/nüks + trombosit < 30.000 + 1 yaş üstü hastada başlanır (romiplostim ayrıca eltrombopaga dirençli olmalı). Trombosit 250.000 (romiplostimde 400.000) aşınca tedavi kesilir; doz/yanıt kriterleri raporda. Hematoloji veya çocuk hematoloji-onkoloji uzmanı 6 ay rapor (aplastik anemide 3 ay, 3. basamak). Trombosit eşiği/dirençlilik/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.27.D birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2024-32541, RG-28/04/2021-31468)"
+    },
+    {
+      "id": "ribavirin-kkka",
+      "baslik": "Ribavirin — Kırım Kongo Kanamalı Ateşi (SUT 4.2.31)",
+      "ilacRe": "ribavirin|rebetol|copegus|virazole|ribav",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ribavirin Kırım Kongo Kanamalı Ateşinde (SUT 4.2.31): Enfeksiyon hastalıkları, çocuk sağlığı ve hastalıkları veya iç hastalıkları uzmanınca; ya da bu hekimlerden birinin düzenlediği uzman hekim raporuna dayanılarak diğer hekimlerce reçete edilebilir. (Not: ribavirinin hepatit C kullanımı 4.2.13 kapsamındadır, bu kural KKKA içindir.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.31 birebir metin (resmî 23.05.2026 SUT docx; RG-02/11/2024-32710)",
+      "baglamRe": "k[ıi]r[ıi]m kongo|kkka|kanamal[ıi] ate[şs]|A98|hemorajik ate[şs]"
+    },
+    {
+      "id": "kontrast-madde-kutu",
+      "baslik": "Non-iyonik kontrast / gadoksetat — kutu sınırı (SUT 4.2.32)",
+      "ilacRe": "iohexol|iyohekzol|iopromid|iyopromid|iodixanol|iyodiksanol|ioversol|iyoversol|iobitridol|iyobitridol|iomeprol|iyomeprol|gadoksetat|gadoxetate|omnipaque|ultravist|visipaque|xenetix|iomeron|primovist|non-?iyonik|radyo-?opak",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Non-iyonik iyotlu kontrast / gadoksetat (SUT 4.2.32): Ayakta İVP/HSG/üretrografi/sistografi vb. tetkiklerde 1 KUTU ödenir. BT/BT anjiyo/DSA/anjiyografi veya aşırı kilolu hastada 1 kutuyu aşan doz gerekiyorsa GEREKÇE reçeteye yazılmalı. Gadoksetat (Primovist) yalnız karaciğer/safra yolları MR kolanjiyografide, en fazla 1 kutu. Gerekçesiz fazla kutu kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.32 birebir metin (resmî 23.05.2026 SUT docx)"
+    },
+    {
+      "id": "ivf-oi-iui-gonadotropin",
+      "baslik": "IVF/OI/IUI gonadotropin — doz/siklus sınırları (SUT 4.2.42)",
+      "ilacRe": "gonadotropin|folitropin|follitropin|menotropin|urofollitropin|koriogonadotropin|gonal|puregon|menopur|fostimon|merional|elonva|ovaleap|bemfola|pergoveris|ovitrelle|pregnyl|choragon",
+      "uyari": "⚠️ KESİNTİ RİSKİ — IVF/OI/IUI'da gonadotropin (SUT 4.2.42): Kadın hastalıkları ve doğum uzmanlı sağlık kurulu raporu + Kurumla SÖZLEŞMELİ merkez şart; rapor 6 ay içinde başlanmazsa yenilenir. DOZ SINIRLARI: OI/IUI standart 3 siklus, siklus başı 1000 IU, toplam 3000 IU; PCOS/hipogonadotropik hipogonadizmde 6 uygulama, toplam 10000 IU. IVF normal yanıtlı: en fazla 3 uygulama, siklus başı 3000 IU, toplam 9000 IU (önce IUI şartı); kötü/düşük rezerv: 3 uygulama, siklus başı 4500 IU, toplam 13500 IU. hCG max 10000 IU. IVF/OI/IUI ilaçları katılım payından MUAF DEĞİL. Doz/siklus/merkez/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.42 birebir metin (resmî 23.05.2026 SUT docx; RG-25/08/2022-31934)",
+      "baglamRe": "\\bivf\\b|\\boi\\b|\\biui\\b|infertilite|tüp bebek|tup bebek|inseminasyon|ovulasyon|in vitro|üremeye yard|uremeye yard|pcos|polikistik over|hipogonadotropik"
+    },
+    {
+      "id": "diaminopiridin-lems",
+      "baslik": "3,4-Diaminopiridin (amifampridin) — LEMS / konjenital miyastenik (SUT 4.2.68)",
+      "ilacRe": "diaminopyridin|diaminopiridin|amifampridin|amifampridine|firdapse|ruzurgi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — 3,4-Diaminopiridin / amifampridin (Firdapse; SUT 4.2.68): 6 YAŞ üzeri; elektrofizyolojik test/klinik ile tanı konmuş LAMBERT-EATON MİYASTENİK SENDROM (LEMS) VEYA genetik analizle konjenital miyastenik sendrom. 3. basamakta en az bir çocuk nöroloji ve/veya nöroloji uzmanının yer aldığı sağlık kurulu raporuyla bu uzmanlarca reçete edilir. Tanı/basamak/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.68 birebir metin (resmî 23.05.2026 SUT docx)"
+    },
+    {
+      "id": "mitokondriyal-sitopati-urun",
+      "baslik": "Mitokondriyal sitopati — tedaviye yardımcı ürünler (SUT 4.2.72)",
+      "ilacRe": "mitokondriyal|mitokondrial|koenzim q10|coenzyme q10|koenzim.?q|idebenon|mitokondri",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Mitokondriyal sitopatide tedaviye yardımcı ürünler (SUT 4.2.72): 3. basamakta çocuk nöroloji, çocuk endokrinoloji ve metabolizma, çocuk metabolizma veya erişkin endokrinoloji ve metabolizma uzmanlarından en az biri 6 ay süreli sağlık kurulu raporu. Tanı GENETİK mutasyonla kesinleşmiş VEYA (biyopsi/organ tutulumu/biyokimya/görüntüleme/aile öyküsünden en az İKİSİ). Bedel şahıs bazında AYLIK NAKDEN ödenir (en güncel tutar SGK'ca belirlenir). Tanı/branş/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.72 birebir metin (resmî 23.05.2026 SUT docx; RG-25/11/2025-33088)",
+      "baglamRe": "mitokondriyal|mitokondrial|sitopati|G71|E88"
+    },
+    {
+      "id": "cftr-modulator-kistik-fibrozis",
+      "baslik": "Elexacaftor/Tezacaftor/Ivacaftor (Kaftrio) — kistik fibrozis (SUT 4.2.73)",
+      "ilacRe": "elexacaftor|elaksakaftor|tezacaftor|tezakaftor|ivacaftor|ivakaftor|lumacaftor|lumakaftor|kaftrio|trikafta|kalydeco|symkevi|orkambi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — CFTR modülatörü (Kaftrio = elexacaftor/tezacaftor/ivacaftor; SUT 4.2.73): BAŞLAMA — kistik fibrozis tanısı (klinik/yenidoğan tarama + iki ter testi klor ≥60 veya kondüktivite ≥90 ya da 2 CFTR varyantı) + en az bir F508del veya etkinliği gösterilmiş varyant (genetik test merkezi/tarih/no raporda) + 24 AY ve üzeri. Belirsiz tanı (CFSPID/KİMS/CFTR-RD) ve Child-Pugh C'de başlanmaz. DEVAM — ter testinde ≥%20/20 mmol/L azalma VEYA FEV1'de ≥%5 artış VEYA alevlenmede ≥%20 azalmadan en az biri. 6 aydan uzun ara → başlangıç kriterleri. 3. basamakta göğüs hastalıkları uzmanlı 6 ay rapor + göğüs hastalıkları reçetesi. Kriter/rapor dışı kesilir (yüksek bedelli).",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.73 birebir metin (resmî 23.05.2026 SUT docx; RG-25/11/2025-33088 / RG-08/04/2026-33218)"
     }
   ]
 }
