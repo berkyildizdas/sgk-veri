@@ -1,7 +1,7 @@
 {
   "tarih": "2026-06-15",
-  "hash": "d6a0e6c1f48a1d56",
-  "kayit_sayisi": 91,
+  "hash": "697fd2111439608b",
+  "kayit_sayisi": 92,
   "kurallar": [
     {
       "id": "lmwh-hemodiyaliz",
@@ -779,6 +779,14 @@
       "dogrulandi": true,
       "kaynak": "SUT 4.2.3 birebir metin (resmî 23.05.2026 SUT docx; RG-09/05/2024-32541 değişikliği)",
       "not": "Arı venom aşısı ayrı: alerji/immünoloji/çocuk uzmanı raporu+reçetesi; 5 yıl sınırı arı venomda YOK. Oral form (Staloral/Oralair/Grazax/Acarizax gibi) ödenmez — enjektabl şart."
+    },
+    {
+      "id": "rasburicase-kullanim",
+      "baslik": "Rasburicase (Fasturtec) — yatan hasta + uzman raporu (SUT 4.2.4)",
+      "ilacRe": "rasburicase|rasburikaz|fasturtec",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Rasburicase (Fasturtec; SUT 4.2.4): YALNIZCA YATAN hastada, en fazla 5 GÜNLÜK tedavi ödenir. Şartlar: myeloablatif çoklu ajanlı kemoterapi alan, tümör yükü olan hematolojik malignite/akut lösemi + beyaz küre > 100.000/mm³ + allopurinol ve hidrasyona rağmen böbrek bozuk (kreatinin > 2 mg/dl veya kreatinin klerensi < 50 ml/dk) VEYA allopurinolün kontrendike olduğu durum. Hematoloji, tıbbi onkoloji veya nefroloji uzmanınca düzenlenen, laboratuvar sonuçlarını içeren uzman hekim raporuyla, bu uzmanlarca reçete edilir. Ayakta/5 günü aşan/branş dışı reçete → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.4 birebir metin (resmî 23.05.2026 SUT docx)"
     }
   ]
 }
