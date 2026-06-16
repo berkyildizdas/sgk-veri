@@ -1,7 +1,7 @@
 {
-  "tarih": "2026-06-15",
-  "hash": "6de318c9dd52303c",
-  "kayit_sayisi": 115,
+  "tarih": "2026-06-16",
+  "hash": "b207a2d4960c5e2d",
+  "kayit_sayisi": 281,
   "kurallar": [
     {
       "id": "lmwh-hemodiyaliz",
@@ -32,7 +32,7 @@
       "dogrulandi": true,
       "kaynak": "SUT 4.2.8.A birebir metin (resmî 23.05.2026 SUT docx, RG-25/03/2025-32852/6-b VKİ eşikleri) + TEB enteral uyarı kodları",
       "baglamRe": "\\b309\\b|malnutrisyon|malnutrisyonu",
-      "not": "12.06.2026 DÜZELTME: önceki eşik 'son 6 ayda >%5' YANLIŞTI; resmi SUT 'son 3 ayda ≥%10 istemsiz kilo kaybı' (erişkin) + çocukta <-2SD. 309 uyarı kodu malnütrisyon şartını tetikler."
+      "not": "DÜZELTME 15.06.2026: önceki 'son 3 ayda ≥%10 VEYA SGD C/D' ifadesi YANLIŞTI — resmî güncel SUT'ta 'SGD/Subjektif Global Değerlendirme' ve 'son 3 ay' GEÇMİYOR (sut.docx'te grep'le teyit). Doğru tanım son 6 ayda >%5 / VKİ eşikleri + eşlik eden hastalık + besin azalması (üçü birlikte). Eski 'son 6 ayda %5' aslında doğruymuş; araya giren düzeltme hataydı. 309 uyarı kodu malnütrisyon şartını tetikler."
     },
     {
       "id": "omalizumab-ara-verme-gecmis",
@@ -717,15 +717,6 @@
       "baglamRe": "kseroderma|pigmentozum|pigmentosum|albinizm|\\bq82|\\be70"
     },
     {
-      "id": "fosfomisin-endikasyon",
-      "baslik": "Fosfomisin oral (Monurol) — endikasyon/saşe kısıtı (ADAY, teyit bekliyor)",
-      "ilacRe": "fosfomisin|monurol|uromisin|uroday",
-      "uyari": "⚠️ KESİNTİ RİSKİ — Fosfomisin oral (Monurol): İDDİA EDİLEN YENİ KURAL (Haziran 2026, teyit bekliyor) — yalnızca (1) kadın/adölesan kızda akut komplike olmamış sistit, (2) erkekte transrektal prostat biyopsisi öncesi profilaksi; haftada en fazla 1 saşe. YÜRÜRLÜKTEKİ resmi kural ise: alt üriner sistem enfeksiyonunda 10 günde en fazla 2 saşe (N21/N30/N34 kodları). Reçete öncesi güncel SUT'u/MEDULA kartını kontrol edin.",
-      "dogrulandi": false,
-      "kaynak": "eczaneveteknisyen Instagram (3 Haziran 2026, AI infografik) — İDDİA. Çelişki: Kayseri EO resmi duyurusu (24.06.2020 yürürlük) 'alt üriner sistem enf., 10 günde 2 saşe' diyor, prostat biyopsisi YOK. Bizim SUT metnimizde (23.05.2026) fosfomisin HİÇ yok.",
-      "not": "ADAY — dogrulandi:false, motor çalıştırmaz. Resmi yayımlanmış SUT ile teyit edilince (günlük SUT izleyici yeni tebliği yakalayınca) aktive edilecek. Kaynak AI infografik + 'gelecek değişiklik' beyanı; yürürlükteki resmi kuralla çelişiyor → eczacıya gösterilmez."
-    },
-    {
       "id": "antibiyotik-ehu-onayi",
       "baslik": "İleri antibiyotikler — Enfeksiyon Hastalıkları Uzmanı (EHU) onayı şartı (EK-4/E)",
       "ilacRe": "imipenem|meropenem|meronem|ertapenem|invanz|doripenem|tienam|karbapenem|vankomisin|vancomycin|vankomicin|teikoplanin|teicoplanin|targocid|linezolid|zyvox|kolistin|kolistimetat|colistin|colimycin|sefepim|cefepime|maxipime|piperasilin|tazobaktam|tazocin|aztreonam|azactam|daptomisin|daptomycin|cubicin|tigesiklin|tigecycline|tygacil|seftarolin|ceftaroline|seftolozan|ceftolozane|zerbaxa",
@@ -979,6 +970,1422 @@
       "uyari": "⚠️ KESİNTİ RİSKİ — CFTR modülatörü (Kaftrio = elexacaftor/tezacaftor/ivacaftor; SUT 4.2.73): BAŞLAMA — kistik fibrozis tanısı (klinik/yenidoğan tarama + iki ter testi klor ≥60 veya kondüktivite ≥90 ya da 2 CFTR varyantı) + en az bir F508del veya etkinliği gösterilmiş varyant (genetik test merkezi/tarih/no raporda) + 24 AY ve üzeri. Belirsiz tanı (CFSPID/KİMS/CFTR-RD) ve Child-Pugh C'de başlanmaz. DEVAM — ter testinde ≥%20/20 mmol/L azalma VEYA FEV1'de ≥%5 artış VEYA alevlenmede ≥%20 azalmadan en az biri. 6 aydan uzun ara → başlangıç kriterleri. 3. basamakta göğüs hastalıkları uzmanlı 6 ay rapor + göğüs hastalıkları reçetesi. Kriter/rapor dışı kesilir (yüksek bedelli).",
       "dogrulandi": true,
       "kaynak": "SUT 4.2.73 birebir metin (resmî 23.05.2026 SUT docx; RG-25/11/2025-33088 / RG-08/04/2026-33218)"
+    },
+    {
+      "id": "silostazol-pad",
+      "baslik": "Silostazol — periferik arter hastalığı şartı (SUT 4.2.15.B)",
+      "ilacRe": "silostazol|pletal",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Silostazol (SUT 4.2.15.B): En az 1 KALP DAMAR CERRAHİSİ uzmanı (KDC yoksa kardiyoloji + genel cerrahi birlikte) bulunan 1 YIL süreli sağlık kurulu raporu şart → bu hekimler veya iç hastalıkları/aile hekimliği reçete eder. Endikasyon: (a) ileri evre periferik arter hastalığı (doppler/anjiyografik, klas 3 veya 4 semptom, opere edilemeyen) VEYA (b) periferik arter hastalığı + yüksek riskli operasyona engel. Bu kurul/koşul yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "ivabradin-sart",
+      "baslik": "İvabradin — kronik stabil angina / kalp yetmezliği (SUT 4.2.15.C)",
+      "ilacRe": "ivabradin|coralan|procoralan|bixebra",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İvabradin (SUT 4.2.15.C): KARDİYOLOJİ uzmanı 1 YIL uzman hekim raporu → kardiyoloji veya iç hastalıkları reçete. (1) Kronik stabil anginada: normal sinüs ritmi + beta blokör ve/veya verapamil-diltiazem'e intolerans/kontrendikasyon. (2) Kronik kalp yetmezliğinde: sistolik disfonksiyonlu NYHA II-IV + sinüs ritmi + KALP HIZI ≥75/dk. Şart/branş/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "prasugrel-sart",
+      "baslik": "Prasugrel — AKS yaş/kilo şartı (SUT 4.2.15.Ç)",
+      "ilacRe": "prasugrel|efient",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Prasugrel (SUT 4.2.15.Ç): <75 YAŞ + >60 KG + serebrovasküler olay öyküsü YOK + akut koroner sendrom (PKG kararlı NSTEMI/STEMI) VEYA klopidogrel altında stent trombozu gelişen AKS. Raporsuz 4 haftalık (kardiyoloji/KDC) ya da kardiyoloji/KDC uzmanlı 1 yıl sağlık kurulu raporu → en fazla 1 yıl tedavi. Yaş/kilo/öykü şartı dışı veya süre aşımı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "tikagrelor-aks-ekg",
+      "baslik": "Tikagrelor — AKS + EKG kriteri (SUT 4.2.15.E)",
+      "ilacRe": "tikagrelor|brilinta|brilique",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Tikagrelor (SUT 4.2.15.E): AKS (NSTEMI/STEMI) + son 72 saatte fibrinolitik UYGULANMAMIŞ + hasta VARFARİN altında DEĞİL + EKG kriteri (STEMI: ≥2 ardışık derivasyonda ≥1 mm ST yükselme + troponin/CK-MB(+); NSTEMI: ≥1 mm ST depresyonu veya ≥1 mm T negatifliği + troponin(+)). Raporsuz 4 haftalık (kardiyoloji/KDC) ya da 1 yıl sağlık kurulu raporu → en fazla 1 YIL (13 kutu). Süre/koşul aşımı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "statin-ldl-esik",
+      "baslik": "Statinler — başlangıç LDL eşikleri (SUT 4.2.28.A)",
+      "ilacRe": "atorvastatin|rosuvastatin|simvastatin|pravastatin|fluvastatin|pitavastatin|lipitor|crestor|ators|cardact|ecol|colmariz|saxis|zarator|lipovas",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Statin (SUT 4.2.28.A): İlk başlamada UZMAN HEKİM RAPORU şart. LDL eşikleri: LDL >190 → tek başına; LDL >160 + 2 ek risk (HT / ailede erken KVH / ≥65 yaş); LDL >130 + 3 ek risk; LDL >70 + DM/AKS/geçirilmiş Mİ/inme/KAH/PAH/aort anevrizması/karotid. İlk raporda son 6 ayda en az 1 hafta arayla 2 ölçüm (ikisi de yüksek). YÜKSEK DOZ (rosuvastatin ≥20 / atorva-simva-prava ≥40 / fluva ≥80 mg) → kardiyoloji/KDC/endokrin/geriatri/nöroloji/iç hast. raporu gerekir. 6+ ay ara → yeniden başlangıç kriteri.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "ezetimib-sart",
+      "baslik": "Ezetimib — statine rağmen LDL>100 şartı (SUT 4.2.28.C)",
+      "ilacRe": "ezetimib|ezetrol|inegy|zient|vytorin|atozet|rosuzet",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ezetimib (SUT 4.2.28.C): En az 6 AY statine rağmen LDL >100 mg/dL kalması + belgeleme → kardiyoloji/iç hast./nöroloji/KDC uzman raporu. Statin kullanılamama (AST/ALT ≥3 kat VEYA CPK ≥2 kat) durumunda da raporla. Safra asidi tutucular Tip-2 DM'de KARŞILANMAZ. Şart/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "pcsk9-evolokumab",
+      "baslik": "PCSK9 inhibitörü (evolokumab/alirokumab) — homozigot FH (SUT 4.2.28.E)",
+      "ilacRe": "evolokumab|evolocumab|repatha|alirokumab|alirocumab|praluent|inklisiran|inclisiran|leqvio",
+      "uyari": "⚠️ KESİNTİ RİSKİ — PCSK9 inhibitörü (SUT 4.2.28.E): YALNIZ diyete ek en az 3 AY maksimum doz statin (80 mg atorvastatin veya 40 mg rosuvastatin) + maksimum doz ezetimib (10 mg) kombine tedaviye rağmen LDL >190 olan YETİŞKİN HOMOZİGOT AİLESEL HİPERKOLESTEROLEMİ. Kardiyoloji/iç hast./endokrinoloji uzmanlı 6 ay sağlık kurulu raporu. 6 ay sonra LDL'de ≥%30 düşüş → 1 yıl rapor ile devam. En fazla 1 hafta öncesine ait LDL rapor/reçetede. Koşul dışı (heterozigot, basamak eksik) kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "fibrat-trigliserid",
+      "baslik": "Fenofibrat/gemfibrozil — trigliserid eşiği (SUT 4.2.28.B)",
+      "ilacRe": "fenofibrat|fenofibrik|gemfibrozil|lipanthyl|lipidil|fenofib|lopid|tridexample",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Statin dışı lipid düşürücü (fibrat, SUT 4.2.28.B): Trigliserid >500 mg/dL VEYA Trigliserid >200 + DM/AKS/Mİ/inme/KAH/PAH/aort anevrizması/karotid. Kardiyoloji/KDC/endokrin/iç hast./nöroloji raporu → tüm hekimler. 6+ ay ara → yeniden başlangıç. Eşik/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "dpp4-kombinasyon",
+      "baslik": "DPP-4 antagonistleri (gliptinler) — kombinasyon + KBY dozu (SUT 4.2.38/4)",
+      "ilacRe": "sitagliptin|vildagliptin|saksagliptin|saxagliptin|linagliptin|alogliptin|januvia|galvus|onglyza|trajenta|vipidia|gliptin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — DPP-4 antagonisti (SUT 4.2.38/4): Metformin ve/veya sülfonilürenin maksimum tolere dozunda yetersiz glisemik kontrol şart; endokrinoloji+iç hastalıkları uzmanı veya raporu ile tüm hekimler. GLP-1 analogları ile BİRLİKTE kullanılırsa ÖDENMEZ. Saksagliptin 2,5 mg / alogliptin 12,5 mg formları yalnız KRONİK BÖBREK YETMEZLİĞİNDE.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "sglt2-diyabet",
+      "baslik": "SGLT2 inhibitörü (gliflozinler) diyabette — basamak şartı (SUT 4.2.38/6)",
+      "ilacRe": "dapagliflozin|empagliflozin|ertugliflozin|forxiga|jardiance|steglatro|gliflozin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — SGLT2 inhibitörü diyabette (SUT 4.2.38/6): Metformin ve/veya sülfonilürenin maksimum dozunda yetersiz kontrol şart; endokrinoloji+iç hastalıkları uzmanı veya raporu ile tüm hekimler. (Kalp yetmezliği/KBH endikasyonu için 4.2.74 ayrı — orada eGFR + EF/proteinüri şartı var.)",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "diyabet|tip 2|tip2|dm|seker|hiperglisemi"
+    },
+    {
+      "id": "glp1-eksenatid",
+      "baslik": "GLP-1 analogları (eksenatid/liraglutid) — VKİ>35 + pankreatit (SUT 4.2.38/5-7)",
+      "ilacRe": "eksenatid|exenatid|liraglutid|liksisenatid|lixisenatid|dulaglutid|byetta|bydureon|victoza|trulicity|saxenda|lyxumia|semaglutid|ozempic|rybelsus",
+      "uyari": "⚠️ KESİNTİ RİSKİ — GLP-1 analoğu diyabette (SUT 4.2.38/5,7): Tedavi başında VKİ >35 kg/m² + akut pankreatit öyküsü YOK şart. Endokrinoloji raporu (ilk reçete raporsuz başlangıç 1 kutu); metformin/sülfonilüre/bazal insülinle kombinasyon kuralları. DPP-4 antagonistleri ile BİRLİKTE → ÖDENMEZ. Tedavide AKUT PANKREATİT geçirilirse ilaç kesilir, tekrar kullanılmaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "diyabet|tip 2|tip2|dm|seker"
+    },
+    {
+      "id": "sekukinumab-16hafta",
+      "baslik": "Sekukinumab — 16. hafta PASI 75 / BASDAİ / PSARC (SUT 4.2.1.C-9)",
+      "ilacRe": "sekukinumab|secukinumab|cosentyx",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sekukinumab (SUT 4.2.1.C-9): (AS) ≥3 NSAİİ maks doza rağmen BASDAİ >5 + (ESH >28 veya CRP↑ veya MR/sintigrafi aktif sakroileit); 16. HAFTADA BASDAİ'de <2 birim düzelme → SONLANDIRILIR. (Plak psoriazis) siklosporin/MTX/PUVA yanıtsız + 16. haftada PASI <%75 → sonlandırılır; 3. basamak dermatoloji 6'şar ay rapor. (PsA) ≥3 DMARD + ≥1 anti-TNF; 16. hafta PSARC yoksa sonlandırılır. (HS) 6 hafta antibiyotik + ≥3 ay adalimumab sonrası. 6+ ay ara → başlangıç kriterleri.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "iksekizumab-16hafta",
+      "baslik": "İksekizumab — 16. hafta PASI 75 / PSARC (SUT 4.2.1.C-10)",
+      "ilacRe": "iksekizumab|ixekizumab|taltz",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İksekizumab (SUT 4.2.1.C-10): (Plak psoriazis) siklosporin/MTX/PUVA yanıtsız + PASI raporda; 16. HAFTADA PASI <%75 iyileşme → SONLANDIRILIR; 3. basamak dermatoloji, başlangıçta 4 ay sonra 6'şar ay rapor. (PsA) ≥3 DMARD + ≥1 anti-TNF (≥3 hassas+≥3 şiş eklem); 16. hafta PSARC yoksa sonlandırılır; romatoloji/FTR 6'şar ay rapor.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "guselkumab-16hafta",
+      "baslik": "Guselkumab — plak psoriazis 16. hafta PASI 75 (SUT 4.2.1.C-11)",
+      "ilacRe": "guselkumab|tremfya",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Guselkumab (SUT 4.2.1.C-11): Orta-şiddetli plak psoriazis; siklosporin/MTX/fototerapi yanıtsız/kontrendike + PASI raporda. 16. HAFTADA PASI <%75 → SONLANDIRILIR. 3. basamak dermatoloji, başlangıçta 4 ay sonra 6'şar ay rapor; dermatoloji reçete.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "risankizumab-16hafta",
+      "baslik": "Risankizumab — plak psoriazis 16. hafta PASI 75 (SUT 4.2.1.C-12)",
+      "ilacRe": "risankizumab|skyrizi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Risankizumab (SUT 4.2.1.C-12): Orta-şiddetli plak psoriazis; siklosporin/MTX/fototerapi yanıtsız/kontrendike + PASI raporda. 16. HAFTADA PASI <%75 → SONLANDIRILIR. 3. basamak dermatoloji, başlangıçta 4 ay sonra 6'şar ay rapor.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "bimekizumab-16hafta",
+      "baslik": "Bimekizumab — plak psoriazis 16. hafta PASI 75 (SUT 4.2.1.C-14)",
+      "ilacRe": "bimekizumab|bimzelx",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Bimekizumab (SUT 4.2.1.C-14): Orta-şiddetli plak psoriazis; siklosporin/MTX/fototerapi yanıtsız/kontrendike + PASI raporda. 16. HAFTADA PASI <%75 → SONLANDIRILIR. 3. basamak dermatoloji, başlangıçta 4 ay sonra 6'şar ay rapor.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "astim-biyolojik-eozinofil",
+      "baslik": "Mepolizumab/benralizumab — eozinofilik ağır astım (SUT 4.2.24.A)",
+      "ilacRe": "mepolizumab|nucala|benralizumab|fasenra|reslizumab|dupilumab.*astim",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Eozinofilik ağır persistan astım biyolojiği (SUT 4.2.24.A/3): Mepolizumab ≥6 yaş, benralizumab yalnız yetişkin. Kan eozinofili ≥300 hücre/µl (düzenli sistemik steroid altında mepolizumab ≥150). En az 6 aydır düzenli sistemik steroid ve/veya yüksek doz İKS (>800 mcg/gün budesonid eşdeğeri) + LABA en az 1 yıldır kullanmasına rağmen kontrolsüz (yılda ≥2 atak). 3. basamak, en az 1 alerji/immünoloji uzmanlı kurul raporu; 16. HAFTADA yanıt değerlendirilir → yetersizse devam ödenmez.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "kalsitonin-sudek",
+      "baslik": "Kalsitonin — Sudek atrofisi 6 ay sınırı (SUT 4.2.17.B)",
+      "ilacRe": "kalsitonin|calcitonin|miacalcic|tonocalcin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kalsitonin / Sudek atrofisi (SUT 4.2.17.B): Tanıdan sonraki İLK 6 AY süresince ödenir; FTR veya ortopedi veya romatoloji uzman hekim raporu. 6 AYIN ÜSTÜNDEKİ kullanım ÖDENMEZ. (Ağrılı vertebral kırıkta 4.2.17.A/7: her kırıkta en fazla 3 aylık doz.)",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "sudek|algonorodistrofi|algonörodistrofi|reflek sempatik"
+    },
+    {
+      "id": "romosozumab-osteoporoz",
+      "baslik": "Romosozumab/teriparatid — 65+ yaş, T≤-3,5, ≥2 kırık (SUT 4.2.17.D)",
+      "ilacRe": "romosozumab|evenity",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Romosozumab (SUT 4.2.17.D): TÜM şartlar: 65 YAŞ ÜSTÜ + T-skoru ≤ -3,5 (L1-L4 veya kalça total) + RÖNTGENLE kesin tanılı ≥2 KIRIK. 24 hafta süreli endokrinoloji/FTR/geriatri sağlık kurulu raporu; 24. haftada yanıt → romosozumab 6 ay yeni rapor. ÖMÜR BOYU romosozumab ≤12 AY (teriparatid ≤76 hafta). Şart eksiği veya süre aşımı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "egfr-tki-ardisik",
+      "baslik": "EGFR-TKİ ardışık/kombine yasağı (SUT 4.2.14.C)",
+      "ilacRe": "erlotinib|tarceva|gefitinib|iressa|afatinib|giotrif|dakomitinib|dacomitinib|vizimpro|osimertinib|tagrisso",
+      "uyari": "⚠️ KESİNTİ RİSKİ — EGFR-TKİ (SUT 4.2.14.C): Erlotinib + gefitinib + dakomitinib + afatinib ARDIŞIK ya da KOMBİNE kullanılırsa ÖDENMEZ (istisna: yalnız Grade 3-4 majör yan etki + SB endikasyon dışı onayında belirtilmesi). Reçete ekinde EGFR genetik tetkik sonucu (ekson 19 del / 21 L858R) ZORUNLU; akredite lab. Tıbbi onkoloji 6 ay sağlık kurulu raporu. Osimertinib altında progresyonda DİĞER EGFR-TKİ kullanılamaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "alk-inhibitoru-ardisik",
+      "baslik": "ALK inhibitörü ardışık/kombine yasağı (SUT 4.2.14.C)",
+      "ilacRe": "krizotinib|crizotinib|xalkori|alektinib|alecensa|seritinib|ceritinib|zykadia|brigatinib|alunbrig|lorlatinib|lorviqua",
+      "uyari": "⚠️ KESİNTİ RİSKİ — ALK inhibitörü (SUT 4.2.14.C): Krizotinib/alektinib/brigatinib/seritinib/lorlatinib biri sonrası progresyonda DİĞERİNİN ardışık/kombine kullanımı ÖDENMEZ (alektinib/brigatinib/seritinib arası Grade 3-4 + SB onayı istisnası). ALK/ROS-1 pozitifliği FISH ile akredite lab'da doğrulanmalı; tıbbi onkoloji 6 ay rapor. Reçete tıbbi onkoloji.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "cdk46-fulvestrant",
+      "baslik": "CDK4/6 inh. (palbosiklib/ribosiklib/abemasiklib) — fulvestrant kombinasyon (SUT 4.2.14.C)",
+      "ilacRe": "palbosiklib|palbociclib|ibrance|ribosiklib|ribociclib|kisqali|abemasiklib|abemaciclib|verzenios",
+      "uyari": "⚠️ KESİNTİ RİSKİ — CDK4/6 inhibitörü (SUT 4.2.14.C): ER ≥%10(+), HER-2(-) meme kanseri; tıbbi onkoloji 6 ay rapor. Fulvestrant ile kombinasyonda: daha önce fulvestrant almış VEYA adjuvan aromataz inhibitörünün İLK 12 AYINDA relaps VEYA metastatik için >1 sıra AI almışsa → ÖDENMEZ. Pre/perimenopozalde endokrin tedavi LHRH agonisti ile birleştirilmeli. Devam raporunda progresyon olmadığı belirtilmeli.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "prostat-arpi-ardisik",
+      "baslik": "Prostat (abirateron/enzalutamid/apalutamid/darolutamid) ardışık yasağı (SUT 4.2.14.C)",
+      "ilacRe": "abirateron|abiraterone|zytiga|enzalutamid|enzalutamide|xtandi|apalutamid|apalutamide|erleada|darolutamid|darolutamide|nubeqa",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Prostat AR yolağı ilaçları (SUT 4.2.14.C): Enzalutamid + apalutamid + darolutamid + abirateron ARDIŞIK kullanım YALNIZCA SB endikasyon dışı onayı ile ödenir. Abirateron prednizolon ile kombine; testosteron <50 ng/dl şartı çeşitli alt-endikasyonlarda. Tıbbi onkoloji 6 ay rapor; rapor sonu progresyon olmadığı belirtilmeli. Ardışık onaysız kullanım kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "braf-mek-ardisik",
+      "baslik": "BRAF/MEK inh. (dabrafenib/trametinib/vemurafenib/kobimetinib) (SUT 4.2.14.C)",
+      "ilacRe": "dabrafenib|tafinlar|trametinib|mekinist|vemurafenib|zelboraf|kobimetinib|cobimetinib|cotellic|enkorafenib|binimetinib",
+      "uyari": "⚠️ KESİNTİ RİSKİ — BRAF/MEK inhibitörü (SUT 4.2.14.C): BRAF V600 mutasyon(+) + ECOG 0-1 melanom; tıbbi onkoloji 6 ay rapor. Yalnız tanımlı çiftler kombine (dabrafenib+trametinib; vemurafenib+kobimetinib); bu 4 ilacın ARDIŞIK kullanımı ÖDENMEZ, başka kombinasyon ödenmez. Adjuvanda en fazla 12 ay.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "mm-yedili-kombinasyon",
+      "baslik": "Multipl miyelom 7'li grup kombinasyon yasağı (SUT 4.2.14.C)",
+      "ilacRe": "iksazomib|ixazomib|karfilzomib|carfilzomib|daratumumab|isatuksimab|isatuximab|elranatamab|selineksor|selinexor|pomalidomid|pomalidomide",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Multipl miyelom ileri ajanları (SUT 4.2.14.C): İksazomib, karfilzomib, daratumumab, isatuksimab, elranatamab, selineksor, pomalidomid — özel hükümler dışında BİRBİRİYLE KOMBİNE kullanılırsa ÖDENMEZ. Ayrıca daratumumab↔isatuksimab ÇAPRAZ DİRENÇ (birine dirençlide diğeri ödenmez). 3. kür ≥minör, 6. kür ≥kısmi yanıt; hematoloji/onkoloji 3 ay rapor.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "mrcc-ardisik",
+      "baslik": "mRCC TKİ (sunitinib/sorafenib/pazopanib/temsirolimus) ardışık yasağı (SUT 4.2.14.C)",
+      "ilacRe": "sunitinib|sutent|sorafenib|nexavar|pazopanib|votrient|temsirolimus|torisel|kabozantinib|cabozantinib|cabometyx|aksitinib|axitinib|inlyta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Metastatik renal hücreli kanser TKİ (SUT 4.2.14.C): Temsirolimus + sunitinib + sorafenib + pazopanib ARDIŞIK/KOMBİNE kullanılamaz (Grade 3-4 majör yan etki + SB onayı istisnası). KABOZANTİNİB sonrası progresyonda bu dördü ÖDENMEZ. Tıbbi onkoloji 6 ay rapor; rapor sonu progresyon olmadığı belirtilmeli.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "emicizumab-hemofili",
+      "baslik": "Emicizumab — hemofili A profilaksi (SUT 4.2.27.A.2)",
+      "ilacRe": "emicizumab|hemlibra",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Emicizumab (SUT 4.2.27.A.2): Konjenital faktör VIII eksikliği hemofili A rutin profilaksi. (a) Faktör ≤%1 ve/veya ayda >3 kanama olan 18 YAŞ ALTI, VEYA (b) Faktör VIII'e karşı >5 BU inhibitör gelişmiş tüm yaşlar. 3. basamak, en az 1 hematoloji uzmanlı, tanı+faktör+inhibitör düzeyi belirten 3 ay rapor. Yükleme ilk 4 hafta haftada 1×3 mg/kg, idame değişken. Reçetede güncel vücut ağırlığı zorunlu.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "daratumumab-al-amiloidoz",
+      "baslik": "Daratumumab — AL amiloidoz (SUT 4.2.71)",
+      "ilacRe": "daratumumab.*amiloid|amiloid.*daratumumab|darzalex",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Daratumumab AL amiloidoz (SUT 4.2.71): YALNIZ SC form; biyopsi ile AL tipi + yeni teşhis sistemik hafif zincir amiloidoz; siklofosfamid+bortezomib+deksametazon ile KOMBİNE (üçlü zorunlu). NYHA Sınıf IIIB/IV kalp hastalığı VEYA Mayo Evre IIIB → ÖDENMEZ. 3. kür ≥minör, 6. kür ≥kısmi yanıt; hematoloji 3 ay rapor; tedavi en fazla 2 YIL.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "amiloid|al amiloidoz"
+    },
+    {
+      "id": "ms-kombinasyon-kis",
+      "baslik": "MS ilaçları — kombinasyon + Klinik İzole Sendrom yasağı (SUT 4.2.34)",
+      "ilacRe": "fingolimod|gilenya|natalizumab|tysabri|okrelizumab|ocrelizumab|ocrevus|kladribin|cladribine|mavenclad|alemtuzumab|lemtrada|teriflunomid|aubagio|dimetil fumarat|dimethyl fumarate|tecfidera|glatiramer|copaxone|fampiridin|fampridine|fampyra",
+      "uyari": "⚠️ KESİNTİ RİSKİ — MS ilaçları (SUT 4.2.34): Fampiridin hariç bu ilaçların KOMBİNE kullanımı ÖDENMEZ. KLİNİK İZOLE SENDROM'da kullanılırsa ÖDENMEZ. 1. basamak ilaçlar EDSS ≤5,5'te; tedavi altında EDSS >6,5 → SONLANDIRILIR (okrelizumab/kladribin/alemtuzumab EDSS ≤7'ye kadar). Yüksek aktiviteli forma geçişte ≥1 yıl 1. basamak + yanıtsızlık + ≥2 aktivite özelliği şart. 3. basamak nöroloji 1 yıl rapor.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "multipl skleroz|\\bms\\b|klinik izole"
+    },
+    {
+      "id": "antifibrotik-ipf",
+      "baslik": "Pirfenidon/nintedanib — IPF DLCO/FVC eşikleri (SUT 4.2.46)",
+      "ilacRe": "pirfenidon|pirfenidone|esbriet|nintedanib|ofev",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Antifibrotik (pirfenidon/nintedanib, SUT 4.2.46): Başlama DLCO ≥%30 + FVC ≥%50 + HRCT/biyopsi ile IPF tanısı (bağ dokusu belirteçleri değerlendirilmiş). 3. basamak, en az 3 göğüs hastalıkları uzmanlı 1 yıl sağlık kurulu raporu (4.2.46.B/C: romatoloji eşliği). Her 12 AYDA değerlendirme: FVC'de ≥%10 düşme → SONLANDIRILIR; devam raporunda ≥%10 düşme olmadığı belirtilmeli. Rapor/eşik dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "febuksostat-urik-asit",
+      "baslik": "Febuksostat — gut/ürik asit eşikleri (SUT 4.2.52)",
+      "ilacRe": "febuksostat|febuxostat|adenuric|feburic",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Febuksostat (SUT 4.2.52): Ürat depoziti olan erişkinde; ürik asit (gut atağı varsa >6, atak yoksa >8 mg/dl) + ALLOPURİNOL ile 3 ay tedaviye rağmen <6'ya düşmeyen VEYA allopurinol intoleransı/kontrendikasyonu. İç hast./nefroloji/romatoloji/FTR uzmanı 1 yıl uzman hekim raporu. Ürik asit <3,5 mg/dl'ye düşende SONLANDIRILIR; 6+ ay ara → başlangıç kriterleri. (KT alan hematoloji hastasında ayrı: en fazla 3 ay hematoloji raporu.)",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "sglt2-ky-kbh",
+      "baslik": "Dapagliflozin/empagliflozin — kalp yetmezliği / KBH (SUT 4.2.74)",
+      "ilacRe": "dapagliflozin|forxiga|empagliflozin|jardiance",
+      "uyari": "⚠️ KESİNTİ RİSKİ — SGLT2 inh. KY/KBH endikasyonu (SUT 4.2.74): (KY) standart tedavi (ACEi/ARB + beta blokör + aldosteron antagonisti) + EF ≤%40 + semptomatik NYHA II-IV; eGFR empagliflozin ≥20 / dapagliflozin ≥25; en az 1 kardiyoloji uzmanlı 1 yıl kurul raporu. (KBH) RAAS inhibitörü + en az 3 ay persistan proteinüri (ACR ≥200 mg/g veya PCR >300); aynı eGFR eşikleri; en az 1 nefroloji uzmanlı kurul raporu. Standart tedavi/eşik/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "kalp yetmezli|kalp yetersiz|ejeksiyon|nyha|kronik bobrek|böbrek hastal|proteinuri|proteinüri|kbh"
+    },
+    {
+      "id": "pah-kombinasyon",
+      "baslik": "Pulmoner arteriyel HT ilaçları — kombinasyon kuralları (SUT 4.2.30)",
+      "ilacRe": "bosentan|tracleer|masitentan|macitentan|opsumit|ambrisentan|volibris|sildenafil.*pah|riociguat|adempas|seleksipag|selexipag|uptravi|iloprost|ventavis|epoprostenol|treprostinil|tadalafil.*pah",
+      "uyari": "⚠️ KESİNTİ RİSKİ — PAH ilaçları (SUT 4.2.30): Tanı sağ kalp kateterizasyonu + kama basıncı <15 mmHg. Bosentan+masitentan+ambrisentan KOMBİNE kullanılamaz; sildenafil+riociguat+tadalafil KOMBİNE kullanılamaz; iloprost inhaler+epoprostenol+treprostinil+seleksipag KOMBİNE kullanılamaz. 3. basamak kardiyoloji/KDC/göğüs/çocuk kardiyoloji 3 ay kurul raporu; her 3 ayda değerlendirme. NYHA sınıfına göre mono/ikili/üçlü. Epoprostenol diyaliz endikasyonunda karşılanmaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)",
+      "baglamRe": "pulmoner|pah|pulmoner arter|pulmoner hipertan"
+    },
+    {
+      "id": "pegvisomant-akromegali",
+      "baslik": "Pegvisomant — akromegali IGF-1 şartı (SUT 4.2.37.A)",
+      "ilacRe": "pegvisomant|somavert",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pegvisomant (SUT 4.2.37.A): Cerrahi/radyasyona rağmen veya uygun olmayan AKTİF akromegali + en az 12 AY tam doz uzun etkili somatostatin analoğuna rağmen IGF-1 normalin ÜSTÜNDE. 3. basamak, en az 1 endokrinoloji-metabolizma uzmanlı kurul raporu; başlangıç toplam 6 ayı aşmaz (2'şer ay); idame en fazla 1 yıl; reçetede IGF-1 yazılır. Şart/IGF-1 dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "orlistat-bmi",
+      "baslik": "Orlistat — BMI ≥40 + kilo kaybı şartı (SUT 4.2.18)",
+      "ilacRe": "orlistat|xenical|orlex|alli",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Orlistat (SUT 4.2.18): Endokrinoloji-metabolizma uzmanı en fazla 3 ay uzman hekim raporu. ŞART: daha önce 4 ardışık hafta yalnız diyetle en az 2,5 kg kayıp + obez hastada BMI ≥40 kg/m². Her reçeteye kaybedilen kilo+BMI+diyet uyumu yazılır. 12 HAFTA sonunda başlangıç ağırlığının ≥%5'i kaybedilmezse SONLANDIRILIR. Ömür boyu toplam ≤2 yıl.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (çıkarım 2026-06-16, 14 ajan tam tarama)"
+    },
+    {
+      "id": "immunoterapi-pd1-yatarak",
+      "baslik": "İmmünoterapi (PD-1/PD-L1) — YALNIZ yatarak/hastanece temin (SUT 4.2.14.C)",
+      "ilacRe": "nivolumab|opdivo|pembrolizumab|keytruda|atezolizumab|tecentriq|durvalumab|imfinzi|ipilimumab|yervoy|avelumab|bavencio|semiplimab|cemiplimab|libtayo",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İmmünoterapi/PD-1-PD-L1 (nivolumab/pembrolizumab/atezolizumab/durvalumab/ipilimumab, SUT 4.2.14.C/5): Bu etken maddeler YALNIZCA YATARAK TEDAVİDE hastanelerce temin edilir; AYAKTA ECZANE REÇETESİYLE ÖDENMEZ. Tıbbi onkoloji uzmanlı en fazla 3'er ay tedavi protokolü gösteren sağlık kurulu raporu; doz/biyobelirteç (PD-L1, MSI-H vb.) ve progresyon kriterleri endikasyona özgüdür. Eczaneye ayaktan gelirse kesinti — hastane temini gerekir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin — reçeteleme bağlamı (çıkarım 2026-06-16)"
+    },
+    {
+      "id": "onkoloji-oral-hedefli-raporlu",
+      "baslik": "Oral hedefli onkoloji/hematoloji — ayakta RAPORLU + tıbbi onkoloji/hematoloji (SUT 4.2.14.C)",
+      "ilacRe": "imatinib|glivec|gleevec|ruksolitinib|ruxolitinib|jakavi|lenalidomid|lenalidomide|revlimid|pomalidomid|pomalidomide|imnovid|ibrutinib|imbruvica|akalabrutinib|acalabrutinib|calquence|venetoklaks|venetoclax|venclyxto|olaparib|lynparza|niraparib|zejula|gilteritinib|xospata|midostaurin|rydapt|bosutinib|bosulif|dasatinib|sprycel|nilotinib|tasigna|everolimus|afinitor|regorafenib|stivarga|trabektedin|yondelis",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Oral hedefli onkoloji/hematoloji ilacı (SUT 4.2.14.C): Ayakta eczaneden RAPORLU verilir ama TIBBİ ONKOLOJİ ve/veya HEMATOLOJİ uzmanının yer aldığı SAĞLIK KURULU RAPORU şart (rapor süresi genelde 3-6 ay). Raporsuz, yanlış branş raporu veya devam raporunda 'progresyon olmadığı/yanıt' kriteri belirtilmemişse kesilir. Çoğunda genetik/biyobelirteç (BCR-ABL, 17p del, BRCA, mutasyon) + yanıt değerlendirme penceresi (kür/ay) raporda olmalı.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin — reçeteleme bağlamı (çıkarım 2026-06-16)"
+    },
+    {
+      "id": "trastuzumab-her2-raporlu",
+      "baslik": "Trastuzumab/pertuzumab/T-DM1 — HER2(+) şartı + tıbbi onkoloji (SUT 4.2.14.C)",
+      "ilacRe": "trastuzumab|herceptin|kanjinti|ontruzant|pertuzumab|perjeta|emtansin|kadcyla|trastuzumab deruxtekan|enhertu|lapatinib|tyverb",
+      "uyari": "⚠️ KESİNTİ RİSKİ — HER2 hedefli meme/mide ilacı (SUT 4.2.14.C): HER2/neu IHC +3 VEYA FISH/CISH/SISH(+) raporda BELGELENMELİ; tıbbi onkoloji sağlık kurulu raporu, tıbbi onkologca reçete. Progresyon gelişirse tedavi sonlandırılır; erken evrede toplam süre 52 haftayı geçemez. SC formlar ayakta olabilir; IV formlar genelde hastanece uygulanır. HER2 belgesi/branş/süre dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin — reçeteleme bağlamı (çıkarım 2026-06-16)"
+    },
+    {
+      "id": "antifungal-ayakta-yatarak",
+      "baslik": "Sistemik antifungaller — oral ayakta raporlu / parenteral yatarak+EHU (SUT 4.2.23)",
+      "ilacRe": "vorikonazol|voriconazole|vfend|posakonazol|posaconazole|noxafil|kaspofungin|caspofungin|cancidas|anidulafungin|ecalta|mikafungin|micafungin|mycamine|amfoterisin|amphotericin|ambisome|itrakonazol.*infuzyon",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sistemik antifungal (SUT 4.2.23): Lipozomal/lipid amfoterisin B parenteral, kaspofungin, anidulafungin, vorikonazol, mikafungin, posakonazol, itrakonazol infüzyon → ENFEKSİYON HASTALIKLARI UZMANI ONAYI + uzman hekim raporu ile YATARAK tedavide. ORAL formlar enfeksiyon uzmanı raporu ile AYAKTA tüm uzman hekimlerce. EHU onayı/yatarak şartı veya rapor yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin — reçeteleme bağlamı (çıkarım 2026-06-16)"
+    },
+    {
+      "id": "kemo-klasik-uzman-hekim",
+      "baslik": "Klasik kemoterapötikler — uzman hekim raporu (SUT 4.2.14.A)",
+      "ilacRe": "adriamisin|doksorubisin|doxorubicin|asparaginaz|bleomisin|busulfan|treosulfan|dakarbazin|daktinomisin|daunorubisin|epirubisin|estramustin|etoposid|fluorourasil|5-fu|folinik asit|lökovorin|ifosfamid|hidroksiure|hidroksiüre|karboplatin|klorambusil|lomustin|metotreksat|methotrexat|melfalan|merkaptopurin|merkaptourin|mesna|mitoksantron|mitomisin|prokarbazin|siklofosfamid|sisplatin|sitozin arabinosid|sitarabin|tamoksifen|vinblastin|vinkristin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Klasik kemoterapötik (SUT 4.2.14.A): Endikasyon uyumu aranmaksızın UZMAN HEKİM RAPORU ile ödenir. Ayakta KT: kür tanımına uyuyorsa 1 kürlük, uymuyorsa en fazla 3 aylık doz. Rapor yoksa/ayakta kür dışı miktar kesilir. (Tamoksifen meme kanseri; hidroksiüre/metotreksat gibi bazıları farklı endikasyonda ayrı maddelere tabi olabilir.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "kemo-kurul-raporlu",
+      "baslik": "Sağlık kurulu raporlu KT/hormonal ajanlar (SUT 4.2.14.B)",
+      "ilacRe": "amifostin|anastrazol|anastrozole|bikalutamid|buserelin|dosetaksel|docetaxel|eksemestan|exemestane|flutamid|gemsitabin|gemcitabine|goserelin|ibandronik|interferon alfa|irinotekan|kapesitabin|capecitabine|klodronat|letrozol|leprolid|löprolid|leuprolid|medroksiprogesteron|oksaliplatin|oxaliplatin|paklitaksel|paclitaxel|pamidronat|siproteron|tegafur|topotekan|triptorelin|vinorelbin|zoledronik|zoledronic|zometa",
+      "uyari": "⚠️ KESİNTİ RİSKİ — KT/hormonal ajan (SUT 4.2.14.B): SAĞLIK KURULU RAPORU ile ödenir. Hormon/antagonist + metastatik yardımcı ilaçlar uzman raporuyla 3 aylık doz. Oral vinorelbin: kür protokolünde belirtilip enjektabl ile başlama şartı. Kurul raporu/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "gcsf-kemoterapi",
+      "baslik": "G-CSF (filgrastim/pegfilgrastim) — 6 ay kurul raporu (SUT 4.2.14.B/2)",
+      "ilacRe": "filgrastim|lenograstim|pegfilgrastim|lipegfilgrastim|neupogen|granulokine|neulasta|leucostim|zarzio",
+      "uyari": "⚠️ KESİNTİ RİSKİ — G-CSF (SUT 4.2.14.B/2): Hematoloji/tıbbi onkoloji/enfeksiyon/radyasyon onkolojisi/göğüs/üroloji/kadın doğum biri → 6 AY süreli sağlık kurulu raporu; reçete +iç hastalıkları/çocuk; en fazla BİRER AYLIK doz. Lenograstim günde 4 flakona kadar yalnız periferik kan progenitör hücre mobilizasyonunda. Rapor/süre/doz dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "rituksimab-kanser",
+      "baslik": "Rituksimab (lenfoma/KLL) — CD20(+) + küre sınırı (SUT 4.2.14.C/f)",
+      "ilacRe": "rituksimab|rituximab|mabthera|truxima|rixathon|ritemvia",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Rituksimab onkoloji (SUT 4.2.14.C/f): Tıbbi onkoloji/hematoloji SK raporu. Nükseden/kemorezistan CD20(+) foliküler/DBBHL/mantle lenfoma; max 8 küre; foliküler idamede 2 yıl max 8 kür. KLL: 17p delesyonu YOK + ECOG 0-1; ilk kür 375 mg/m², sonraki 500 mg/m², 4 (+2) kür. CD20(+) belgesi/küre aşımı/branş dışı kesilir. (RA için 4.2.1.C-2 ayrı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)",
+      "baglamRe": "lenfoma|kll|lösemi|losemi|cd20|foliküler|folikuler|dbbhl|mantle|b hücre"
+    },
+    {
+      "id": "temozolomid",
+      "baslik": "Temozolomid — glioma/beyin tümörü (SUT 4.2.14.C/g)",
+      "ilacRe": "temozolomid|temozolomide|temodal|temomedac",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Temozolomid (SUT 4.2.14.C/g): Tıbbi onkoloji veya radyasyon onkolojisi biri sağlık kurulu raporu; bu hekimler veya 2.-3. basamakta tüm uzmanlarca reçete. RT ile/tek başına. Rapor/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "azasitidin-decitabin",
+      "baslik": "Azasitidin/decitabin — MDS/AML blast eşiği + kombinasyon yasağı (SUT 4.2.14.C/h)",
+      "ilacRe": "azasitidin|azacitidine|vidaza|decitabin|decitabine|dacogen|inqovi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Azasitidin/decitabin (SUT 4.2.14.C/h): MDS dirençli anemide kemik iliği BLAST >%5; ≥1 hematoloji uzmanlı rapor (azasitidin 6 ay, decitabin 4 ay), 18 yaş üstü, birer aylık. Azasitidin 6 siklus sonra blast %50'den az azalırsa KESİLİR; decitabin 4 siklus sonra blast ≤%5 veya <%50 azalmada kesilir. AZASİTİDİN VE DECİTABİN BİRLİKTE KULLANILAMAZ. Decitabin AML: blast >%30, 70 yaş üstü.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "pemetrekset",
+      "baslik": "Pemetrekset — nonskuamöz KHDAK / mezotelyoma (SUT 4.2.14.C/m)",
+      "ilacRe": "pemetrekset|pemetrexed|alimta|pemfexy",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pemetrekset (SUT 4.2.14.C/m): Lokal ileri/metastatik NONSKUAMÖZ (adeno/büyük hücreli) KHDAK, 1. basamak KT sonrası progresyon → tıbbi onkoloji 6 ay rapor, reçete tıbbi onkoloji veya GÖĞÜS HASTALIKLARI. Malign plevral mezotelyoma: ÜÇ uzman hekim raporu. Skuamöz histolojide/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "anti-egfr-mab-kolorektal",
+      "baslik": "Panitumumab/setuksimab — RAS wild-tip kolorektal (SUT 4.2.14.C/t,y)",
+      "ilacRe": "panitumumab|vectibix|setuksimab|cetuximab|erbitux",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Anti-EGFR mAb (panitumumab/setuksimab, SUT 4.2.14.C): RAS MUTASYONU OLMAYAN (wild-tip) + ECOG 0-1 metastatik kolorektal; 1./2. seri FOLFOX veya FOLFIRI'nin SADECE biriyle progresyona kadar; tıbbi onkoloji 6 ay rapor. PROGRESYONDA veya KT rejimi değişiminde anti-EGFR KULLANILMAZ. Setuksimab ayrıca baş-boyun yassı hücrelide platin+5-FU ile. RAS belgesi/progresyon kuralı dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "kabazitaksel-prostat",
+      "baslik": "Kabazitaksel — dosetaksel dirençli prostat (SUT 4.2.14.C/u)",
+      "ilacRe": "kabazitaksel|cabazitaxel|jevtana",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kabazitaksel (SUT 4.2.14.C/u): Hormonal + dosetaksel temelli KT'ye dirençli, ECOG 0-1, PSA+görüntüleme ile progresyon gösterilmiş metastatik prostat; PREDNİZOLON ile kombine; tıbbi onkoloji 6 ay rapor. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "fluorourasil-topikal",
+      "baslik": "Fluorourasil topikal — rapor aranmaz, sınırlı branş (SUT 4.2.14.C/ü)",
+      "ilacRe": "fluorourasil.*topikal|5-fu.*krem|efudix|fluoroplex",
+      "uyari": "ℹ️ NOT — Fluorourasil topikal (SUT 4.2.14.C/ü): Sağlık raporu koşulu ARANMAZ; ancak YALNIZCA dermatoloji, tıbbi onkoloji veya plastik cerrahi uzmanları reçete edebilir. Bu branşlar dışında yazılırsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "beksaroten",
+      "baslik": "Beksaroten — kutanöz T-hücreli lenfoma (SUT 4.2.14.C/aa)",
+      "ilacRe": "beksaroten|bexarotene|targretin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Beksaroten (SUT 4.2.14.C/aa): Oral form ≥1 sistemik tedaviye dirençli ileri evre (EORTC IIB-IV) kutanöz T-hücreli lenfoma; tıbbi onkoloji/hematoloji/dermatoloji biri rapor. Topikal: refrakter Evre IA/IB/IIA, en az 3 dermatoloji uzmanlı 6 ay rapor. Lipid düşürücü gerekirse 4.2.28 koşulları aranmaz. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "hedgehog-vismodegib-sonidegib",
+      "baslik": "Vismodegib/sonidegib — bazal hücreli kanser + ardışık yasağı (SUT 4.2.14.C/cc)",
+      "ilacRe": "vismodegib|erivedge|sonidegib|odomzo",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Hedgehog inhibitörü (SUT 4.2.14.C/cc): Cerrahi/RT sonrası progresif lokal ileri/metastatik cildin bazal hücreli kanseri; daha önce başka hedgehog inhibitörü KULLANILMAMIŞ olmalı. Başlangıç: tıbbi onkoloji+dermatoloji+radyasyon onkolojisi+cerrahi 6 ay kurul; reçete tıbbi onkoloji. VİSMODEGİB + SONİDEGİB ARDIŞIK KULLANILAMAZ; progresyon sonrası kullanılamaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "aflibercept-kolorektal",
+      "baslik": "Aflibercept (Zaltrap) — metastatik kolorektal FOLFIRI ile (SUT 4.2.14.C/hh)",
+      "ilacRe": "aflibercept.*kolorektal|zaltrap|ziv-aflibercept",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Aflibercept onkoloji (SUT 4.2.14.C/hh): ECOG 0-1; 1. basamakta oksaliplatin bazlı(+anti-EGFR, RAS wild) almış+progresyon metastatik kolorektal; FOLFIRI ile kombine; tıbbi onkoloji 6 ay rapor. RAS wild-tip'te 1. basamakta oksaliplatin+anti-VEGF almışsa KULLANILAMAZ. (Göz içi aflibercept 4.2.33 ayrı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "blinatumomab-all",
+      "baslik": "Blinatumomab — B-ALL CD19(+) Ph(-) (SUT 4.2.14.C/kk)",
+      "ilacRe": "blinatumomab|blincyto",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Blinatumomab (SUT 4.2.14.C/kk): Prekürsör B-ALL, CD19(+), Ph kromozomu NEGATİF; relaps/refrakter veya MRD(+); en az bir kurtarma tedavisi almış, blast ≤%50, MSS tutulumu yok, HLA uyumlu verici. SB ruhsatlı nakil merkezi, hematoloji raporu; nakil öncesi blast klirensi için MAX 2 SİKLUS. Ph(+)/blast>%50/>2 siklus kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "inotuzumab-all",
+      "baslik": "İnotuzumab ozogamisin — B-ALL CD22(+) (SUT 4.2.14.C/iii)",
+      "ilacRe": "inotuzumab|besponsa",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İnotuzumab ozogamisin (SUT 4.2.14.C): Prekürsör B-ALL, CD22(+), relaps/refrakter; en az bir kurtarma tedavisi, blast >%10, MSS tutulumu yok, KC/böbrek normal, HLA uyumlu verici (Ph+ için ek TKİ şartı). 3. basamak nakil merkezi, hematoloji raporu. Kriter dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "gemtuzumab-aml",
+      "baslik": "Gemtuzumab ozogamisin — CD33(+) AML (SUT 4.2.14.C/jjj)",
+      "ilacRe": "gemtuzumab|mylotarg",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Gemtuzumab ozogamisin (SUT 4.2.14.C/jjj): ≥15 yaş, tedavi edilmemiş de novo CD33(+) AML (APL HARİÇ), düşük/orta risk; daunorubisin+sitarabin ile kombine; hematoloji 6 ay rapor. APL'de/yüksek riskte/CD33(-)/kombinasyonsuz kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "brentuksimab-vedotin",
+      "baslik": "Brentuksimab vedotin — CD30(+) Hodgkin/ALCL (SUT 4.2.14.C/ll)",
+      "ilacRe": "brentuksimab|brentuximab|adcetris",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Brentuksimab vedotin (SUT 4.2.14.C/ll): CD30(+) Hodgkin lenfoma (otolog KHN sonrası/2 seri sonrası) veya anaplastik büyük hücreli lenfoma; siklus sınırları (4 siklusta yanıt → max 12; evre IV ABVD'siz max 6). ≥1 hematoloji/tıbbi onkoloji rapor. CD30(-)/siklus aşımı/yanıtsız kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "obinutuzumab-kll",
+      "baslik": "Obinutuzumab — KLL (CIRS/kreatinin klirensi) (SUT 4.2.14.C/bbb)",
+      "ilacRe": "obinutuzumab|gazyva|gazyvaro",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Obinutuzumab (SUT 4.2.14.C/bbb): ≥70 yaş + CIRS >6 ve/veya kreatinin klirensi 30-69 KLL'de klorambusil ile 1. seri; VEYA <70 yaş uygun olmayan + önceden rituksimab kullanmış 2. sıra. ≥1 hematoloji 3 ay rapor; devamda stabil/≥kısmi yanıt. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "denosumab-kemik-metastaz",
+      "baslik": "Denosumab 120 mg — kemik metastazı (zoledronik asit kullanmamış) (SUT 4.2.14.C/öö)",
+      "ilacRe": "denosumab.*120|xgeva",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Denosumab 120 mg (SUT 4.2.14.C/öö): Daha önce ZOLEDRONİK ASİT KULLANMAMIŞ; kemik metastazlı meme/hormon-refrakter prostat/KHDAK VEYA kemiğin dev hücreli tümörü; ≥1 tıbbi onkoloji 6 ay rapor, tıbbi onkologca reçete. Önceden zoledronik asit kullanılmışsa kesilir. (Osteoporoz denosumab 60 mg ayrı: 4.2.17.A.)",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "lipozomal-doksorubisin",
+      "baslik": "Lipozomal doksorubisin — meme/over/Kaposi (SUT 4.2.14.C/ooo)",
+      "ilacRe": "lipozomal doksorubisin|liposomal doxorubicin|caelyx|doxil|myocet",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Lipozomal doksorubisin (SUT 4.2.14.C/ooo): Artmış kardiyak riskli metastatik meme; platin sonrası ileri over; AIDS ilişkili Kaposi (CD4 <200 + yaygın hastalık). Tıbbi onkoloji veya hematoloji rapor. Endikasyon/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "avelumab-urotelyal",
+      "baslik": "Avelumab — ürotelyal/Merkel (PD-L1) (SUT 4.2.14.C/ööö)",
+      "ilacRe": "avelumab|bavencio",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Avelumab (SUT 4.2.14.C/ööö): Ürotelyal karsinom idame (1. basamak platin ≥4 kür sonrası progresyonsuz, PD-L1(+)) VEYA Merkel hücreli karsinom; en az 1 tıbbi onkoloji 1 yıl rapor; monoterapi. Genelde YATARAK/hastanece uygulanır.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "sacituzumab-govitekan",
+      "baslik": "Sacituzumab govitekan — üçlü negatif meme (SUT 4.2.14.C/sss)",
+      "ilacRe": "sacituzumab|trodelvy",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Sacituzumab govitekan (SUT 4.2.14.C/sss): Aktif beyin metastazı yok + en az 2 BASAMAK KT (en az 1'i metastatik) almış üçlü negatif meme; ≥1 tıbbi onkoloji 6 ay rapor. <2 basamak/şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "fedratinib-miyelofibroz",
+      "baslik": "Fedratinib — miyelofibroz (ruksolitinib sonrası) (SUT 4.2.14.C/vvv)",
+      "ilacRe": "fedratinib|inrebic",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Fedratinib (SUT 4.2.14.C/vvv): Primer/post-PV/ET ikincil miyelofibroz; semptomatik masif splenomegali + DIPSS-plus orta/yüksek risk + 6 AY RUKSOLİTİNİB'e rağmen dalakta ≥%50 azalma yok + trombosit ≥50.000/Hb ≥8/nötrofil ≥1000 + nakle uygun değil. 3. basamak hematoloji 3 ay rapor. 6 ay sonra dalak/semptom düzelmezse SONLANDIRILIR.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "vinflunin-urotelyal",
+      "baslik": "Vinflunin — ileri ürotelyal kanser (SUT 4.2.14.C/ggg)",
+      "ilacRe": "vinflunin|javlor",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Vinflunin (SUT 4.2.14.C/ggg): Platin bazlı KT sonrası progresyon, ECOG 0-1, ileri/metastatik ürotelyal kanser; ≥1 tıbbi onkoloji 6 ay rapor. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "dinutuksimab-noroblastom",
+      "baslik": "Dinutuksimab beta — yüksek riskli nöroblastom (SUT 4.2.14.C/ııı)",
+      "ilacRe": "dinutuksimab|dinutuximab|qarziba|unituxin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Dinutuksimab beta (SUT 4.2.14.C/ııı): INRGSS yüksek risk, ≥1 yaş nöroblastom; idame veya relaps/refrakter şemaları. 3. basamak resmi, ≥1 ÇOCUK ONKOLOJİ/çocuk hematoloji-onkoloji 6 ay rapor; YALNIZ çocuk hematoloji-onkoloji/çocuk onkoloji reçete. Fayda görmeyende sonlandırılır.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ekulizumab-ahus-pnh-mg",
+      "baslik": "Ekulizumab — aHÜS/PNH/MG/NMOSB + meningokok aşısı zorunlu (SUT 4.2.14.C/uu)",
+      "ilacRe": "ekulizumab|eculizumab|soliris|ravulizumab|ultomiris",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Ekulizumab (SUT 4.2.14.C/uu): aHÜS (ADAMTS-13/trombositopeni/hemoliz/böbrek kriterleri), PNH (granülosit klonu >%1 + LDH >1,5 kat), jeneralize Miyastenia Gravis (AChR(+), MG-ADL ≥6, ≥2 immünosüpresan başarısız), NMOSB. ZORUNLU: tedaviden 2 hafta önce MENİNGOKOK AŞISI + Bilgilendirilmiş Olur Formu reçete ekinde. 3. basamak nefroloji/hematoloji/nöroloji raporu, birer aylık. Devam kriterleri (6 ay) sağlanmazsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "arsenik-trioksit-apl",
+      "baslik": "Arsenik trioksit — relaps APL (SUT 4.2.14.C/jj)",
+      "ilacRe": "arsenik trioksit|arsenic trioxide|trisenox",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Arsenik trioksit (SUT 4.2.14.C/jj): PML/RAR-alfa ve/veya t(15;17)(+) relaps/refrakter APL; önceki tedavi retinoid (ATRA)+kemoterapi İÇERMELİ; hematoloji SK raporu. Diğer lösemilerde KULLANILMAZ; ATRA+KT öyküsü yoksa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "karmustin",
+      "baslik": "Karmustin — beyin tümörü / lenfoma KİT (SUT 4.2.14.C/ğğ)",
+      "ilacRe": "karmustin|carmustine|bcnu|gliadel",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Karmustin (SUT 4.2.14.C/ğğ): Beyin tümörlerinde YALNIZ ≥2 basamak almış rekürrens/nüks (tıbbi onkoloji + protokol) VEYA Hodgkin/non-Hodgkin lenfoma kemik iliği nakli hazırlık rejimi (hematoloji + protokol). Bu koşullar dışında ÖDENMEZ.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "pleriksafor",
+      "baslik": "Pleriksafor — kök hücre mobilizasyonu (SUT 4.2.14.C/oo)",
+      "ilacRe": "pleriksafor|plerixafor|mozobil",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pleriksafor (SUT 4.2.14.C/oo): Otolog KHN istenen lenfoma/MM, yeterli mobilizasyon (≥2×10⁶/kg CD34+) sağlanamayan; G-CSF ile kombine; aferez merkezi olan kurum; ≥1 hematoloji 1 ay rapor; en fazla 4 GÜNLÜK doz. Mobilizasyon eşiği/4 gün aşımı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "asparaginase-erwinia",
+      "baslik": "Asparaginase erwinia — L-asparaginaz alerjisi (SUT 4.2.14.C/kkk)",
+      "ilacRe": "asparaginase erwinia|erwinia|erwinaze|crisantaspase",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Asparaginase erwinia chrysanthemi (SUT 4.2.14.C/kkk): ALL veya NHL'de L-asparaginase/pegaspargase'a bağlı CİDDİ ALERJİK/ANAFLAKTİK reaksiyon (raporda belirtilir); 3. basamak, çocuk hematoloji/onkoloji veya hematoloji 1 yıl rapor. Önceki reaksiyon kaydı/3.basamak dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "nelarabin",
+      "baslik": "Nelarabin — T-ALL/T-LBL (SUT 4.2.14.C/lll)",
+      "ilacRe": "nelarabin|nelarabine|atriance|arranon",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Nelarabin (SUT 4.2.14.C/lll): En az İKİ KT rejimine yanıtsız/tekrarlayan T-ALL ve T-LBL; erişkin/çocuk hematoloji-onkoloji 6 ay rapor. <2 önceki KT rejimi varsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "bcg-intravezikal",
+      "baslik": "BCG intravezikal — mesane kanseri (SUT 4.2.14.C/c)",
+      "ilacRe": "bcg.*intravezikal|intravezikal bcg|oncotice|bcg medac",
+      "uyari": "⚠️ KESİNTİ RİSKİ — BCG canlı intravezikal (SUT 4.2.14.C/c): Tıbbi onkoloji veya üroloji biri + tedavi protokolü + radyoloji/patoloji/sitoloji raporu + evre/risk → en fazla 1 yıl sağlık kurulu raporu, ÜROLOJİ uzmanınca reçete. Rapor/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "imiquimod-bcc",
+      "baslik": "İmiquimod — yüzeysel bazal hücreli karsinom (SUT 4.2.14.C/e)",
+      "ilacRe": "imiquimod|imikimod|aldara|zyclara",
+      "uyari": "ℹ️ NOT — İmiquimod (SUT 4.2.14.C/e): Yüzeysel bazal hücreli karsinomda; tıbbi onkoloji veya cilt hastalıkları sağlık kurulu raporu ile tüm uzmanlarca. YALNIZCA bu madde kapsamında ödenir (diğer endikasyonda kesilir).",
+      "dogrulandi": true,
+      "kaynak": "SUT 4.2.14 (DÖRDÜNCÜ BÖLÜM resmî metin, 14-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "mecasermin-laron",
+      "baslik": "Mecasermin (rhIGF-I) — Laron sendromu (SUT 4.2.6.B)",
+      "ilacRe": "mecasermin|mekasermin|increlex",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Mecasermin (SUT 4.2.6.B): Laron sendromu; ≥6 ay büyüme izlemi + boy <-3 SD + yıllık büyüme <25 persentil + serum IGF-I <-2 SD + IGFBP-3 <-1 SD + bazal/uyarılmış GH >10 mcg/L. Çocuk endokrinoloji-metabolizma kurul raporu; GH tedavisi YERİNE kullanılmaz. Epifiz kapanması/yıllık büyüme <+2 cm/boy kız 155-erkek 165 cm → sonlandırılır. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "anti-rh-immunglobulin",
+      "baslik": "Anti-Rh (anti-D) immünglobulin — doğum/düşük/ITP (SUT 4.2.27.B)",
+      "ilacRe": "anti.?rh|anti.?d immun|rho.?d|rhogam|partobulin|rhophylac",
+      "uyari": "ℹ️ NOT — Anti-Rh (anti-D) immünglobulin (SUT 4.2.27.B): Doğum sonu/düşük/küretaj/antenatal → uzman hekimlerce. Düşük doz (600 IU) yalnız düşük, küretaj ve gebeliğin 28. haftası. ITP'de IV form Rh(+) ve splenektomisiz hastada HEMATOLOJİ raporuna dayanılarak (doz+süre belirtilir). Endikasyon/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "niasin-lipid",
+      "baslik": "Niasin — lipid (statine rağmen LDL / trigliserid) (SUT 4.2.28.Ç)",
+      "ilacRe": "\\bniasin\\b|\\bniacin\\b|nikotinik asit|niaspan",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Niasin (SUT 4.2.28.Ç): ≥6 ay statine rağmen LDL >100 + DM/AKS/Mİ/inme/KAH/PAH/aort anevrizması/karotid VEYA trigliserit >500 (DM'de >200); tek başına veya fibrik asit ile kombine. İç hastalıkları veya kardiyoloji raporu → tüm hekimler. Eşik/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "mps-fabry-enzim-ek",
+      "baslik": "Elosulfaz / migalastat — MPS IVA / Fabry oral (SUT 4.2.10.B/C)",
+      "ilacRe": "elosulfaz|elosulfase|vimizim|migalastat|galafold",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Lizozomal enzim/şaperon (SUT 4.2.10): ELOSULFAZ (MPS Tip IVA): ≥2 tanı kriteri (enzim/idrar GAG/genetik) + yardımsız yer değiştiren + 6 ay+ solunum cihazına bağlı değil; çocuk metabolizma kurul 1 yıl rapor; %30 kötüleşmede sonlandırılır. MİGALASTAT (Fabry oral): yanıtlı mutasyon + ≥45 kg + ≥12 yaş; GFR <30 KULLANILMAZ; enzim tedavisiyle KOMBİNE KULLANILAMAZ; seçenekler arası <6 ayda geçiş yapılamaz. Şart dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "immunoglobulin-ivig-scig",
+      "baslik": "IVIG / SCIG (spesifik olmayan immünglobulinler) — endikasyon listesi (SUT 4.2.12.B)",
+      "ilacRe": "immunoglob|immünoglob|\\bivig\\b|\\bscig\\b|intravenoz immun|privigen|octagam|flebogamma|kiovig|hizentra|gammanorm|pentaglobin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Spesifik olmayan immünglobulin (IVIG/SCIG, SUT 4.2.12.B): YALNIZ tanımlı endikasyonlar (1 yıl rapor): primer immün yetmezlik, KLL/MM hipogamaglobulinemi+rekürren enf., ITP, Guillain-Barré (2 g/kg, 1 ay), Kawasaki, multifokal motor nöropati, KİDP, bulber MG. Her endikasyonun BRANŞI farklı (hematoloji/nöroloji/romatoloji/immünoloji). Birdshot retinokoroidopati ÖDENMEZ. IgM-zenginleştirilmiş: 3. basamak yoğun bakım septik şok (OAB ≤65, laktat ≥2). Endikasyon/branş/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "hepatit-c-daa",
+      "baslik": "Hepatit C direkt etkili antiviraller (DAA) — genotip/sirotik şema (SUT 4.2.13.3)",
+      "ilacRe": "sofosbuvir|sofosbuvir|velpatasvir|voksilaprevir|voxilaprevir|glekaprevir|glecaprevir|pibrentasvir|ledipasvir|epclusa|maviret|vosevi|harvoni|zepatier|elbasvir|grazoprevir",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Hepatit C DAA (SUT 4.2.13.3): GASTROENTEROLOJİ veya ENFEKSİYON HASTALIKLARI raporu (iç hast./çocuk yalnız reçete eder, RAPOR YAZAMAZ). HCV RNA(+) + sirotik/nonsirotik durumu + Child-Pugh B/C kanıtı + önceki tedavi/NS5A inhibitörü kullanımı raporda. Şema/süre genotip+sirotik+deneyim durumuna göre sabit (naive nonsirotik SOF/VEL/VOX veya GLE/PIB 8 hafta; dekompansede SOF/LED+ribavirin 12-24 hafta). Yanlış şema/süre/branş veya rapor eksiği kesilir (yüksek bedelli).",
+      "dogrulandi": true,
+      "kaynak": "SUT DÖRDÜNCÜ BÖLÜM resmî metin (kapsama denetimi 2026-06-16)"
+    },
+    {
+      "id": "grip-asisi-sart",
+      "baslik": "Grip (influenza) aşısı — yaş/rapor/sıklık (SUT 2.4.3.B)",
+      "ilacRe": "grip asi|grip aşı|influenza|influvac|vaxigrip|fluarix|gripp|gribuvac|grippe",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Grip aşısı (SUT 2.4.3.B): 65 YAŞ ÜSTÜ + yaşlı bakımevi/huzurevi sakinleri RAPORSUZ (belgelemeyle). Riskli gruplar SAĞLIK RAPORUYLA: gebeliğin 2./3. trimesteri, astım dahil kronik pulmoner/kardiyovasküler, diyabet dahil kronik metabolik/renal, hemoglobinopati, immün yetmezlik/immünsupresif, 6 ay-18 yaş uzun süreli asetilsalisilik asit alan çocuk. Her EYLÜL-MART döneminde BİR DEFAYA MAHSUS. Bu gruplar dışında/rapor yoksa/sezon dışı/2. kez → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 2.4.3 Koruyucu sağlık hizmetleri (İKİNCİ BÖLÜM, 6-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "pnomokok-asisi-sart",
+      "baslik": "Pnömokok (polisakkarit) aşısı — endikasyon + 5 yılda 1 (SUT 2.4.3.C)",
+      "ilacRe": "pnomokok|pnömokok|pneumococ|prevenar|pneumovax|synflorix|pnomovax|pneumo",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pnömokok polisakkarit aşısı (SUT 2.4.3.C): 65 YAŞ ÜSTÜ raporsuz, 5 YILDA BİR. 2 yaş üstü riskli grup SAĞLIK RAPORUYLA 5 yılda bir: aspleni/dalak disfonksiyonu/splenektomi, orak hücre, çölyak, immünsupresif/radyasyon, organ transplantasyonu, HIV (tüm evreler), kronik renal/nefrotik, kronik kalp, astım dahil kronik akciğer, siroz dahil kronik karaciğer, diyabet dahil kronik metabolik, hemoglobinopati, BOS sızıntısı. Endikasyon dışı/rapor yoksa/5 yıl dolmadan → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 2.4.3 Koruyucu sağlık hizmetleri (İKİNCİ BÖLÜM, 6-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "hepatit-a-asisi-sart",
+      "baslik": "Hepatit A aşısı — kronik KC / faktör + seronegatif (SUT 2.4.3.D)",
+      "ilacRe": "hepatit a asi|hepatit a aşı|havrix|avaxim|epaxal|vaqta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Hepatit A aşısı (SUT 2.4.3.D): Kronik karaciğer hastalığı VEYA pıhtılaşma faktörü konsantresi alan + Hepatit A SERONEGATİF, 1 YAŞ ÜZERİ; sağlık raporuyla tüm hekimlerce EN FAZLA YILDA 2 KEZ. Endikasyon/seronegatiflik/yaş dışı veya yılda 2'den fazla → kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT 2.4.3 Koruyucu sağlık hizmetleri (İKİNCİ BÖLÜM, 6-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ebp-disi-asi-rapor",
+      "baslik": "EBP dışı aşılar — yüksek riskli grup raporu (SUT 2.4.3.A)",
+      "ilacRe": "menenjit asi|meningokok|meningococ|nimenrix|menveo|bexsero|su cicegi|suçiçeği|varicella|varivax|hpv asi|gardasil|cervarix|zona asi|shingrix|zoster",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Genişletilmiş Bağışıklama Programı (EBP) DIŞI aşı (SUT 2.4.3.A): Yalnız SAĞLIK RAPORUYLA + sayılan yüksek riskli grupta ödenir: kronik böbrek yetmezliği, kistik fibrozis, KOAH, kanser, HIV/AIDS, splenektomi, immünsupresif tedaviye bağlı yüksek risk. Rapor yoksa/riskli grup dışında → SGK ödemez.",
+      "dogrulandi": true,
+      "kaynak": "SUT 2.4.3 Koruyucu sağlık hizmetleri (İKİNCİ BÖLÜM, 6-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-uhp-antibiyotik",
+      "baslik": "UH-P antibiyotikler — ayaktan uzman hekim / uzman raporu (SUT EK-4/E)",
+      "ilacRe": "amoksisilin.?klavulanat.*parenteral|ampisilin sulbaktam.*parenteral|sefoksitin|sefiksim|sefodizim|sefditoren|sefpodoksim|seftibuten|azitromisin.*parenteral|amikasin|netilmisin|tobramisin.*parenteral|nafsilin|rifabutin|itrakonazol(?!.*infuzyon)(?!.*solusyon)|famsiklovir|valasiklovir|zanamivir|oseltamivir|brivudin|rifaksimin|etionamid|sikloserin|protionamid|tiasetazon|amfoterisin b.*klasik|flukonazol.*parenteral",
+      "uyari": "⚠️ KESİNTİ RİSKİ — UH-P antibiyotiği (SUT EK-4/E): Ayaktan tedavide UZMAN HEKİM yazmalı VEYA uzman hekim raporuna bağlı olarak pratisyen dahil tüm hekimler; yatarak tedavide tüm hekimler. Pratisyen rapor olmadan ayaktan yazarsa kesilir. (Form önemli: çoğu etken maddenin parenteral formu UH-P, oral formu KY olabilir.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-kab-kultur",
+      "baslik": "K-AB antibiyotikler — ayaktan kültür-antibiyogram şartı (SUT EK-4/E)",
+      "ilacRe": "telitromisin|levofloksasin(?!.*parenteral)|moksifloksasin(?!.*parenteral)|moxifloksasin(?!.*parenteral)|gemifloksasin|gatifloksasin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — K-AB antibiyotiği (telitromisin/levofloksasin/moksifloksasin/gemifloksasin oral, SUT EK-4/E): PNÖMONİDE kısıtlama yok (KY). DİĞER endikasyonlarda → siprofloksasin, ofloksasin ve co-trimoksazole DİRENÇLİ olduğunu gösteren KÜLTÜR-ANTİBİYOGRAM sonucu reçeteye eklenmeli. Ayaktan kültür sonucu yoksa (pnömoni dışı) kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-hiv-antiretroviral",
+      "baslik": "HIV/AIDS antiretroviraller — EHU raporu + EHU (SUT EK-4/E 11.A)",
+      "ilacRe": "abacavir|stavudin|zalsitabin|indinavir|lamivudin|nevirapin|ritonavir|lopinavir|zidovudin|tenofovir|emtrisitabin|fosamprenavir|darunavir|etravirin|raltegravir|dolutegravir|kobisistat|elvitegravir|rilpivirin|maravirok|biktegravir|doravirin|efavirenz",
+      "uyari": "⚠️ KESİNTİ RİSKİ — HIV/AIDS antiretroviral (SUT EK-4/E 11.A): ENFEKSİYON HASTALIKLARI UZMANI (EHU) raporuna istinaden EHU'larca; EHU yoksa reçete açıklamasında belirtilerek iç hastalıkları/çocuk hastalıkları uzmanınca. Yeni ajanlar (biktegravir/doravirin/dolutegravir+lamivudin) enfeksiyon+klinik mikrobiyoloji uzmanı raporu ister. Rapor/branş dışı kesilir. (Lamivudin/tenofovir Hepatit B'de ise 4.2.13 kuralı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)",
+      "baglamRe": "hiv|aids|antiretroviral|integraz"
+    },
+    {
+      "id": "ek4e-valgansiklovir",
+      "baslik": "Valgansiklovir/gansiklovir — EHU raporu + CMV süre (SUT EK-4/E)",
+      "ilacRe": "valgansiklovir|valganciclovir|valcyte",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Valgansiklovir (SUT EK-4/E): 3 AY süreli ENFEKSİYON HASTALIKLARI UZMANI raporuna dayanılarak uzman hekimlerce. Böbrek naklinde CMV önlenmesinde transplantasyondan sonraki 10 gün içinde başlanan profilaksi EN FAZLA 100 GÜN; CMV IgM/IgG negatifse EHU raporuyla en fazla 200. güne kadar uzatılabilir. Rapor/süre dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-oseltamivir",
+      "baslik": "Oseltamivir/zanamivir — yalnız influenza (SUT EK-4/E 11.B)",
+      "ilacRe": "oseltamivir|tamiflu|zanamivir|relenza",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Oseltamivir/zanamivir (SUT EK-4/E): UH-P (uzman hekim) + YALNIZCA influenza ve avian influenza profilaksisi/tedavisinde ödenir. Bu endikasyon dışında veya pratisyen rapor olmadan yazarsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-bph-kombinasyon",
+      "baslik": "BPH ilaçları (alfuzosin/finasterid…) — üroloji raporu + kombinasyon yasağı (SUT EK-4/E 13)",
+      "ilacRe": "alfuzosin|tamsulosin|terazosin|doksazosin|silodosin|finasterid|dutasterid|serenoa repens",
+      "uyari": "⚠️ KESİNTİ RİSKİ — BPH (benign prostat hiperplazisi) ilacı (SUT EK-4/E 13): ÜROLOJİ uzmanınca VEYA üroloji raporuyla (alfa blokerler 1 yıl, finasterid/dutasterid/serenoa 6 ay) tüm hekimler. Bu etken maddelerin KOMBİNE kullanımı ÖDENMEZ (alfa bloker + 5-ARI birlikte). İstisna: hipertansiyonun eşlik ettiği BPH'de alfa bloker kombine kullanılabilir. Rapor yoksa/kombinasyon varsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)",
+      "baglamRe": "prostat|bph|hiperplazi|işeme|idrar"
+    },
+    {
+      "id": "ek4e-metilfenidat",
+      "baslik": "Metilfenidat — 25 yaş altı + psikiyatri (SUT EK-4/E 13)",
+      "ilacRe": "metilfenidat|methylphenidate|ritalin|concerta|medikinet",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Metilfenidat (SUT EK-4/E 13): Hiperaktivite ve dikkat eksikliği tedavisinde YALNIZCA 25 YAŞ ALTINDA ve PSİKİYATRİ uzmanlarınca reçete edilebilir. 25 yaş üstü veya psikiyatri dışı branş → kesilir. (Ayrıca yeşil/kırmızı reçete kuralı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-glukagon",
+      "baslik": "Glukagon — insülin kullanan + doz/branş (SUT EK-4/E 13)",
+      "ilacRe": "glukagon|glucagon|glucagen|baqsimi",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Glukagon (SUT EK-4/E 13): YALNIZCA insülin kullanan hastalarda, günlük en fazla 1 mg dozda, İÇ HASTALIKLARI veya ÇOCUK uzmanınca. Günlük 1 mg üzeri → bu uzmanlardan birinin bulunduğu en fazla 3 ay süreli sağlık kurulu raporu + en fazla 1 aylık doz. İnsülinsiz hasta/doz/branş dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-hpylori-paketi",
+      "baslik": "H. pylori eradikasyon paketi — yılda 14 gün + branş (SUT EK-4/E 19)",
+      "ilacRe": "pylori.*paket|eradikasyon paket|h\\.?\\s*pylori",
+      "uyari": "⚠️ KESİNTİ RİSKİ — H. pylori eradikasyon paketi (SUT EK-4/E 19): YILDA 14 GÜNLÜK tedaviyi geçmeyecek şekilde İÇ HASTALIKLARI ve GENEL CERRAHİ uzmanlarınca. Levofloksasinli paketlerde ayrıca: önceki amoksisilin/PPI/klaritromisin üçlü tedaviden yanıt yok + H.pylori kanıt belgesi + levofloksasine duyarlı antibiyogram e-reçete/e-raporda. Süre/branş/belge dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-fosfomisin-oral",
+      "baslik": "Fosfomisin oral — yalnız komplike olmayan sistit (SUT EK-4/E 28.1)",
+      "ilacRe": "fosfomisin(?!.*parenteral)|monurol|uromisin|uroday",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Fosfomisin oral (SUT EK-4/E 28.1): YALNIZCA yetişkin kadın/adölesan kızda akut KOMPLİKE OLMAYAN SİSTİT + yetişkin erkekte transrektal prostat biyopsisi perioperatif profilaksi, HAFTADA EN FAZLA 1 SAŞE. Bu endikasyon/sıklık dışı kesilir. (Parenteral fosfomisin → EHU.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4e-rifaksimin",
+      "baslik": "Rifaksimin — doz/endikasyon (SUT EK-4/E 22)",
+      "ilacRe": "rifaksimin|rifaximin|normix|targaxan",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Rifaksimin (SUT EK-4/E 22): UH-P. 200 mg → akut GİS enfeksiyonu, hiperamonemide ko-adjuvan, diyare baskın irritabl bağırsak sendromu. 550 mg → 18 yaş ve üzeri hastada AŞİKAR (overt) HEPATİK ENSEFALOPATİ epizod tekrarının azaltılması. Doz/endikasyon dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/E Sistemik Antimikrobik Reçeteleme Kuralları (5-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4f-demans-ilaclari",
+      "baslik": "Demans ilaçları (donepezil/galantamin/memantin/rivastigmin) — rapor (EK-4/F 6)",
+      "ilacRe": "donepezil|aricept|galantamin|galantamine|reminyl|memantin|memantine|ebixa|rivastigmin|rivastigmine|exelon",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Demans ilacı (EK-4/F): Donepezil/galantamin/memantin/rivastigmin → NÖROLOJİ, GERİATRİ, PSİKİYATRİ uzmanlarınca RAPORSUZ; bu hekimlerce düzenlenen uzman hekim raporuna dayanılarak tüm hekimlerce. Bu branşlar dışında RAPOR olmadan yazılırsa ÖDENMEZ (ayakta raporlu ilaç).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-adhd-atomoksetin-guanfasin",
+      "baslik": "Atomoksetin/guanfasin — DEHB yaş + psikiyatri kurulu (EK-4/F 15, 16.1)",
+      "ilacRe": "atomoksetin|atomoxetine|strattera|guanfasin|guanfacine|intuniv",
+      "uyari": "⚠️ KESİNTİ RİSKİ — DEHB ilacı (EK-4/F): ATOMOKSETİN → 6-25 yaş, PSİKİYATRİ uzmanlı SAĞLIK KURULU raporu (16-18 yaşta erişkin psikiyatri de). GUANFASİN → uyarıcılar uygun değil/etkisiz 6-17 yaş, psikiyatri kurul raporu. Yaş/branş/kurul raporu dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-overaktif-mesane",
+      "baslik": "Overaktif mesane ilaçları — uzman raporu + kombinasyon yasağı (EK-4/F 45)",
+      "ilacRe": "solifenasin|solifenacin|tolterodin|tolterodine|trospiyum|trospium|darifenasin|darifenacin|propiverin|fesoterodin|fesoterodine|mirabegron|oksibutinin|oxybutynin|duloksetin|duloxetine",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Overaktif mesane ilacı (EK-4/F 45): Oral oksibutinine yanıt alınamayan/tolere edemeyen hastalarda NÖROLOJİ/FTR/ÜROLOJİ/çocuk/geriatri/kadın-doğum uzman raporuyla. Duloksetin: stres üriner inkontinansta aynı branşlar. Bu etken maddelerin (mirabegron hariç) KOMBİNE kullanımı ÖDENMEZ. Rapor/kombinasyon dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)",
+      "baglamRe": "mesane|inkontinans|işeme|aşırı aktif|sıkışma|üriner"
+    },
+    {
+      "id": "ek4f-arb-rapor",
+      "baslik": "Anjiyotensin reseptör blokerleri (ARB) — rapor (EK-4/F 51)",
+      "ilacRe": "irbesartan|kandesartan|candesartan|losartan|telmisartan|valsartan|olmesartan|eprosartan|rilmeniden|rilmenidin|moksonidin|moxonidine",
+      "uyari": "⚠️ KESİNTİ RİSKİ — ARB / merkezi etkili antihipertansif (EK-4/F 51): Rapora dayanılarak ödenir (raporda doz/plan/süre belirtme zorunluluğu YOK). Diğer antihipertansiflerle kombinasyonda monoterapi ile kontrol sağlanamadığı raporda belirtilmeli. RAPORSUZ → yalnız aile hekimince ayda en fazla 1 kutu. Raporsuz fazlası kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-noac-ortopedi-profilaksi",
+      "baslik": "NOAC ortopedi VTE profilaksi (dabigatran/rivaroksaban/apiksaban) — süre limiti (EK-4/F 53,54,73)",
+      "ilacRe": "dabigatran|pradaxa|rivaroksaban|rivaroxaban|xarelto|apiksaban|apixaban|eliquis",
+      "uyari": "⚠️ KESİNTİ RİSKİ — NOAC ortopedi VTE profilaksi (EK-4/F 53/54/73): Elektif kalça/diz total eklem replasmanında DVT profilaksisi, ORTOPEDİ uzman raporuyla SÜRE SINIRLI: dabigatran diz max 10/kalça max 35 gün; rivaroksaban diz max 1 kutu/kalça max 3 kutu; apiksaban (kalça) max 1 kutu. Süre/kutu aşımı veya rapor dışı kesilir. (Atriyal fibrilasyon kullanımı 4.2.15.D ayrı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)",
+      "baglamRe": "kalça|diz|replasman|protez|ortopedi|cerrahi|tromboz profila|dvt profila|venöz tromboemboli"
+    },
+    {
+      "id": "ek4f-eplerenon",
+      "baslik": "Eplerenon — spironolakton intoleransı + LVEF (EK-4/F 58)",
+      "ilacRe": "eplerenon|eplerenone|inspra",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Eplerenon (EK-4/F 58): YALNIZCA spironolakton altında jinekomasti gelişen/tolere edemeyen + (a) akut Mİ sonrası kalp yetmezliği LVEF ≤%40 VEYA (b) kronik kalp yetmezliği NYHA II + LVEF ≤%30; KARDİYOLOJİ raporuyla. Şart/LVEF/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-fentanyl-opioid",
+      "baslik": "Fentanil transdermal/oral + hidromorfon — rapor (EK-4/F 8,46)",
+      "ilacRe": "fentanyl|fentanil|durogesic|hidromorfon|hydromorphone",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Fentanil transdermal TTS / oral-pastil + hidromorfon (EK-4/F 8,46): Ayakta SAĞLIK RAPORU ile verilir; raporsuz ödenmez. Ayrıca kırmızı/yeşil reçete kuralı geçerli.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-demir-selator",
+      "baslik": "Demir şelatörleri (deferoksamin/deferipron/deferasiroks) — hematoloji rapor (EK-4/F 29,31,47)",
+      "ilacRe": "deferoksamin|deferoxamine|desferal|deferipron|deferiprone|ferriprox|deferasiroks|deferasirox|exjade|jadenu",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Demir şelatörü (EK-4/F): Deferoksamin/deferipron → uzman hekim/hematoloji raporu. Deferasiroks → ≥1 HEMATOLOJİ uzmanlı kurul raporu, organ hasarı/riski olanlarda; karaciğer demiri <3 mg/g veya ferritin <300 µg/L olunca tedavi SONLANDIRILIR. Rapor/branş/eşik dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-narkolepsi-uyku",
+      "baslik": "Modafinil/armodafinil/sodyum oksibat — narkolepsi/uyku apnesi (EK-4/F 63,72)",
+      "ilacRe": "modafinil|modiodal|armodafinil|nuvigil|sodyum oksibat|sodium oxybate|xyrem",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Narkolepsi/uyku ajanı (EK-4/F 63/72): Modafinil/armodafinil → narkolepsi VEYA PAP'a rağmen gündüz uykululuk süren obstrüktif uyku apnesi; göğüs/nöroloji/psikiyatri uzmanı 1 yıl raporu. Sodyum oksibat → katapleksili narkolepsi, 3. basamak nöroloji kurul raporu. Endikasyon/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-pilokarpin",
+      "baslik": "Pilokarpin oral — kserostomi / Sjögren (EK-4/F 48)",
+      "ilacRe": "pilokarpin|pilocarpine|salagen",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Pilokarpin oral (EK-4/F 48): KSEROSTOMİDE radyasyon onkolojisi/tıbbi onkoloji/hematoloji/KBB uzmanı 3 ay raporu. SJÖGREN sendromunda romatoloji/immünoloji/FTR'den birinin yer aldığı 1 yıl kurul raporu. Endikasyon/branş/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-montelukast-urtiker",
+      "baslik": "Montelukast — kronik idiyopatik ürtiker (EK-4/F 62)",
+      "ilacRe": "montelukast|singulair|onceair|notta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Montelukast ürtikerde (EK-4/F 62): Antihistaminiklere dirençli kronik idiyopatik ürtiker kombine tedavisinde; alerji/immünoloji/çocuk/göğüs/iç hast./dermatoloji uzmanlarınca raporsuz, bu hekimlerce düzenlenen raporla tüm hekimler. (Astım montelukast 4.2.24 ayrı.) Rapor/endikasyon dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)",
+      "baglamRe": "ürtiker|urtiker|kurdeşen|kronik idiyopatik"
+    },
+    {
+      "id": "ek4f-adrenalin-otoenjektor",
+      "baslik": "Adrenalin oto-enjektör — immünoloji/alerji + yılda 4 (EK-4/F 67)",
+      "ilacRe": "adrenalin.*enjektor|adrenalin.*oto|epinefrin.*oto|epipen|jext|emerade",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Adrenalin oto-enjektör (EK-4/F 67): İmmünoloji/alerji, çocuk veya dermatoloji uzman raporuyla tüm uzman hekimler. YILDA 4 ENJEKTÖRDEN FAZLA kullanımda yalnız immünoloji/alerji uzmanı rapor+reçete. Acilde anafilakside acil tıp uzmanı yılda 1 kez. Rapor/sayı dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-antipsikotik-depo",
+      "baslik": "Risperidon/aripiprazol/paliperidon depo — psikiyatri kurulu (EK-4/F 39)",
+      "ilacRe": "risperidon.*depo|paliperidon|paliperidone|trevicta|xeplion|aripiprazol.*depo|abilify maintena|risperdal consta",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Aylık/3-6 aylık depo antipsikotik (EK-4/F 39): Risperidon/aripiprazol/paliperidonun 1 aylık depo formları PSİKİYATRİ uzmanlı SAĞLIK KURULU raporuyla YALNIZ psikiyatri uzmanınca. Paliperidon 3 aylık: ≥4 ay 1 aylık form sonrası stabil + 1 yıl kurul raporu. 6 aylık: belirli doz geçmişi şartı. Kurul raporu/branş/geçiş şartı dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-kt-bulanti-aprepitant-setron",
+      "baslik": "KT bulantı ilaçları (aprepitant/fosaprepitant/setronlar) — kür/kutu sınırı (EK-4/F 10,24,24.1)",
+      "ilacRe": "aprepitant|emend|fosaprepitant|palonosetron|aloxi|granisetron|kytril|ondansetron|zofer|zofran|tropisetron",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Kemoterapi bulantı-kusma ilacı (EK-4/F): Sağlık kurulu raporuyla. Setronlar (ondansetron/granisetron/tropisetron): 21 günlük kürde max 10 günlük doz; palonosetron her KT'de 7 gün için 1 flakon. APREPİTANT ile FOSAPREPİTANT BİRLİKTE kullanılmaz; kür başına en fazla 1 kutu. Kür/kutu/rapor dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-testosteron",
+      "baslik": "Testosteron — üroloji/endokrin rapor (EK-4/F 40)",
+      "ilacRe": "testosteron|testosterone|nebido|sustanon|androgel|testogel",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Testosteron (EK-4/F 40): ÜROLOJİ, ENDOKRİNOLOJİ veya çocuk cerrahisi uzmanlarınca raporsuz; bu hekimlerce düzenlenen uzman hekim raporuna dayanılarak tüm hekimlerce. Bu branşların raporu olmadan yazılırsa kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-ikatibant-haoe",
+      "baslik": "İkatibant — herediter anjiyoödem atak (EK-4/F 75)",
+      "ilacRe": "ikatibant|icatibant|firazyr",
+      "uyari": "⚠️ KESİNTİ RİSKİ — İkatibant (EK-4/F 75): ≥2 yaş, C1 esteraz inhibitörü eksikliği/fonksiyon düşüklüğü herediter anjiyoödem AKUT ATAĞINDA; ≥1 immünoloji/alerji uzmanlı 1 yıl kurul raporu (C1 inhibitör düzeyi/fonksiyonu değer olarak yazılır). 3 ayda 4 enjektörden fazla → yalnız immünoloji/alerji uzmanı reçete. Rapor/sayı dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4f-nadir-metabolik",
+      "baslik": "Nadir metabolik ilaçlar — çocuk metabolizma kurul raporu (EK-4/F 60,66,71,80,84,85 …)",
+      "ilacRe": "nitisinon|orfadin|sapropterin|kuvan|karglumik|carglumic|carbaglu|sodyum fenilbutirat|sodium phenylbutyrate|betain|betaine|cystadane|\\bbiotin\\b|kenodeoksikolik|kenodoksikolik|chenodeoxycholic|ornithin.*aspartat|l-ornitin",
+      "uyari": "⚠️ KESİNTİ RİSKİ — Nadir kalıtsal metabolik ilaç (EK-4/F): Nitisinon (tirozinemi), sapropterin (PKÜ/BH4), karglumik asit (hiperamonemi), sodyum fenilbütirat/betain (üre siklus/homosistinüri), biotin (mitokondriyal), kenodeoksikolik asit — genelde ÇOCUK METABOLİZMA/endokrin-metabolizma uzman hekim veya kurul raporu (6 ay-1 yıl) + endikasyona özgü genetik/enzim/eşik şartı. Rapor/branş/tanı dışı kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/F Ayakta raporlu ilaçlar listesi (resmî metin, okundu 2026-06-16)"
+    },
+    {
+      "id": "ek4d-tbc-kinolon-linezolid",
+      "baslik": "Kinolon / Linezolid — EK-4/D'de tüberkülozda yalnız atipik mikobakteri (A31) muaf",
+      "ilacRe": "siprofloksasin|ciprofloxacin|levofloksasin|levofloxacin|moksifloksasin|moxifloxacin|gatifloksasin|gatifloxacin|linezolid|zyvoxid|zyvox",
+      "uyari": "ℹ️ EK-4/D (1. Tüberküloz, madde 1.x): Atipik mikobakteri (A31.0/A31.1/A31.8/A31.9) tanısında kinolon (siprofloksasin/levofloksasin/moksifloksasin/gatifloksasin) ve linezolid katılım payından MUAFTIR — ancak SB Endikasyon Dışı Genelge/Kılavuza uyulur. Çoklu ilaç dirençli TBC'de bu antibiyotikler EK-4/D kapsamında. Yine de EK-4/E reçeteleme kodlarını (EHU vb.) ayrıca teyit edin.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^A31(\\.[0189])?",
+      "not": "Tüberküloz dışı kullanımda (sıradan enfeksiyon) bu EK-4/D muafiyeti GEÇMEZ; gürültü olmaması için kapsam-dışı uyariGenel eklenmedi."
+    },
+    {
+      "id": "ek4d-kanser-denosumab-c40c41",
+      "baslik": "Denosumab — kanserde EK-4/D muafiyeti yalnız C40 / C41 (kemik/eklem kıkırdağı maligniteleri)",
+      "ilacRe": "denosumab|xgeva|prolia",
+      "uyari": "ℹ️ EK-4/D (2.14 Denosumab*): Kanser grubunda denosumab katılım payından YALNIZCA C40 (ekstremite kemik/eklem kıkırdağı) ve C41 (diğer kemik/eklem kıkırdağı) ICD kodlarında muaftır. Diğer kanser ICD'lerinde bu kalemden muafiyet YOK (osteoporoz endikasyonu ayrı — bkz. SUT 4.2 KİY).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^C4[01]",
+      "uyariGenel": "⚠️ EK-4/D muafiyet kapsamı — Denosumab: kanser grubunda katılım payı muafiyeti YALNIZCA C40/C41 ICD kodlarında geçerlidir (madde 2.14). Rapor tanısı bu kapsamda değilse kanser-muafiyeti uygulanmaz."
+    },
+    {
+      "id": "ek4d-pilokarpin-kserostomi-sjogren",
+      "baslik": "Pilokarpin tablet — yalnız kserostomi (kanser) / Sjögren (konnektif doku) muaf",
+      "ilacRe": "pilokarpin|pilocarpine|salagen",
+      "uyari": "ℹ️ EK-4/D: Pilokarpin tablet katılım payından YALNIZCA (2.11) kanserde kserostomi tedavisinde VE (9.2.17) Sjögren sendromunda muaftır. Başka endikasyonda muafiyet/ödeme tartışmalıdır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "baglamRe": "kserostomi|xerostomi|agiz kurulu| agız kurulu|sjogren|sjögren",
+      "uyariGenel": "⚠️ EK-4/D — Pilokarpin tablet: muafiyet yalnız kserostomi (kanser, 2.11) ve Sjögren sendromunda (9.2.17). Tanı bu kapsamda değilse muafiyet uygulanmaz."
+    },
+    {
+      "id": "ek4d-potasyum-sitrat-tas",
+      "baslik": "Potasyum sitrat — yalnız renal tübüler asidoz (N25.8/.9) veya rekürren taş (N20.0/.1) muaf",
+      "ilacRe": "potasyum sitrat|potassium citrate|urocit|k-sitrat|kalinor",
+      "uyari": "ℹ️ EK-4/D (3.20 Potasyum sitrat): Katılım payından muafiyet YALNIZCA N25.8/N25.9 (kalsiyum taşlı renal tübüler asidoz) VEYA N20.0/N20.1 (en az bir kez ESWL/cerrahi uygulanmış, idrar pH<6,5 olan rekürren böbrek taşı) tanısında geçerlidir. Diğer tanılarda muafiyet yok.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(N25\\.[89]|N20\\.[01])",
+      "uyariGenel": "⚠️ EK-4/D — Potasyum sitrat: muafiyet yalnız N25.8/N25.9 veya N20.0/N20.1 (girişim geçirmiş rekürren taş, pH<6,5). Rapor tanısı/şartı tutmuyorsa katılım payı alınır."
+    },
+    {
+      "id": "ek4d-tolvaptan-adpkd",
+      "baslik": "Tolvaptan — EK-4/D'de böbrek grubunda yalnız ADPKD tanısında muaf",
+      "ilacRe": "tolvaptan|jinarc|samsca",
+      "uyari": "ℹ️ EK-4/D (3.22 Tolvaptan*): Böbrek hastalıkları grubunda katılım payı muafiyeti YALNIZCA ADPKD (otozomal dominant polikistik böbrek, Q61.2 vb.) tanısında geçerlidir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^Q61",
+      "uyariGenel": "⚠️ EK-4/D — Tolvaptan: böbrek grubunda muafiyet YALNIZCA ADPKD (Q61) tanısında. Hiponatremi vb. diğer endikasyonda bu muafiyet geçmez."
+    },
+    {
+      "id": "ek4d-sgd-zirkonyum-kby",
+      "baslik": "Sodyum zirkonyum siklosilikat — yalnız Evre 4/5 KBH (prediyaliz) muaf",
+      "ilacRe": "sodyum zirkonyum|zirkonyum siklosilikat|zirconium cyclosilicate|lokelma",
+      "uyari": "ℹ️ EK-4/D (3.23): Sodyum zirkonyum siklosilikat katılım payından YALNIZCA Evre 4 KBH veya Evre 5 KBH prediyaliz hastalarında (N18.4/N18.5) muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^N18\\.[45]",
+      "uyariGenel": "⚠️ EK-4/D — Sodyum zirkonyum siklosilikat: muafiyet yalnız Evre 4/5 KBH prediyaliz. Tanı evresi tutmuyorsa katılım payı alınır."
+    },
+    {
+      "id": "ek4d-sglt2-kby-n18n19",
+      "baslik": "Dapagliflozin / Empagliflozin — böbrek grubunda muafiyet yalnız N18-N19",
+      "ilacRe": "dapagliflozin|forziga|forxiga|empagliflozin|jardiance",
+      "uyari": "ℹ️ EK-4/D (3.24/3.25, yür. 16/04/2026): Dapagliflozin ve empagliflozin böbrek hastalıkları grubunda katılım payından YALNIZCA N18-N19 (KBH/böbrek yetmezliği) tanı kodlarında muaftır. (Diyabet/kalp yetmezliği endikasyonları ayrı SUT maddeleri — 4.2.38 / 4.x.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^N1[89]"
+    },
+    {
+      "id": "ek4d-karnitin-muafiyet",
+      "baslik": "Karnitin (L-karnitin) — yalnız hemodiyaliz veya belirli metabolik tanılarda muaf",
+      "ilacRe": "\\bkarnitin\\b|l-karnitin|levokarnitin|carnitine|carnitene",
+      "uyari": "ℹ️ EK-4/D: Karnitin katılım payından YALNIZCA (3.18) hemodiyaliz uygulanan hastalarda VE (15.4.1.7) E71.1 / E72.3 ile primer karnitin yetmezliğinde muaftır. Diğer durumlarda muafiyet yok.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "baglamRe": "hemodiyaliz|hemodializ|diyaliz|primer karnitin|e71\\.1|e72\\.3"
+    },
+    {
+      "id": "ek4d-iloprost-form",
+      "baslik": "İloprost — PAH'ta yalnız inhaler form / sistemik sklerozda IV form muaf",
+      "ilacRe": "iloprost|ilomedin|ventavis",
+      "uyari": "ℹ️ EK-4/D: İloprost trometamol katılım payından (4.10.4) pulmoner hipertansiyonda YALNIZCA İNHALER formunda; (9.2.24) sistemik sklerozda (dijital ülser dahil) İNTRAVENÖZ formunda muaftır. Form/endikasyon eşleşmezse muafiyet tartışmalı.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4d-kah-antikoagulan",
+      "baslik": "Oral antikoagülan — koroner arter hastalığında muafiyet yalnız belirli ICD",
+      "ilacRe": "varfarin|warfarin|coumadin|dabigatran|pradaxa|rivaroksaban|rivaroxaban|xarelto|apiksaban|apixaban|eliquis|edoksaban|edoxaban|lixiana",
+      "uyari": "ℹ️ EK-4/D (4.2.7): Koroner arter hastalığı grubunda antikoagülanlar katılım payından YALNIZCA I20.0, I25.2-I25.5 ve Z95.1-Z95.9 kodlarında muaftır. (Atriyal fibrilasyon I48/I49.5 ayrı madde 4.3.3'te muaf — NOAC ödeme şartı SUT 4.2.15.D'de.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(I20\\.0|I25\\.[2345]|Z95\\.[1-9])"
+    },
+    {
+      "id": "ek4d-enteral-karaciger",
+      "baslik": "Enteral beslenme — kronik karaciğerde yalnız K72/K74 kodlarında muaf",
+      "ilacRe": "enteral|\\bmama\\b|fresubin|nutridrink|nutrison|ensure|resource|fortimel",
+      "uyari": "ℹ️ EK-4/D (6.4.5): Kronik karaciğer hastalıkları grubunda enteral beslenme ürünleri katılım payından YALNIZCA K72 ve K74 (ve alt kodları) tanısında muaftır. (Genel malnütrisyon muafiyet şartı için SUT 4.2.8.A ayrıca aranır.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^K7[24]"
+    },
+    {
+      "id": "ek4d-buyume-hormonu-muafiyet",
+      "baslik": "Büyüme hormonu (somatropin) — EK-4/D muafiyeti tanıya özgü",
+      "ilacRe": "somatropin|buyume hormonu|büyüme hormonu|genotropin|norditropin|saizen|omnitrope|humatrope|nutropin|growject",
+      "uyari": "ℹ️ EK-4/D — Büyüme hormonu katılım payı muafiyeti tanıya özgüdür: hipofiz yetmezliği (7.1.1), puberte prekoks öncesi boy kısalığı, Turner sendromu (7.10, Q96), yavaş fetal büyüme (7.11, P05), Prader-Willi (15.21, Q87.1 — yalnız PWS) ve KBY'ye bağlı büyüme bozukluğu (3.21). İlgili tanı + SUT 4.2.6.A rapor şartları yoksa muafiyet/ödeme kesilir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4d-deferasiroks-muafiyet",
+      "baslik": "Demir şelatörü (deferasiroks) — transfüzyona bağlı demir yüklemesinde yalnız belirli ICD muaf",
+      "ilacRe": "deferasiroks|exjade|jadenu|deferipron|deferiprone|ferriprox|desferrioksamin|deferoksamin|desferal",
+      "uyari": "ℹ️ EK-4/D (8.2.2 Şelatörler*): Deferasiroks kan transfüzyonuna bağlı kronik demir yüklemesinde katılım payından YALNIZCA D46, D47.1, D57, D58, D61 kodlarında ve Talasemi (D56) tedavisinde, EK-4/F hükümlerine göre muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(D46|D47\\.1|D5[678]|D61)",
+      "uyariGenel": "⚠️ EK-4/D — Demir şelatörü (deferasiroks): muafiyet yalnız D46/D47.1/D56/D57/D58/D61 (transfüzyona bağlı demir yükü). Tanı bu kapsamda değilse EK-4/D muafiyeti geçmez."
+    },
+    {
+      "id": "ek4d-elapegademase-d81",
+      "baslik": "Elapegademase — yalnız ADA-SCID (D81.1/.3/.8/.9) muaf",
+      "ilacRe": "elapegademase|revcovi",
+      "uyari": "ℹ️ EK-4/D (8.1.14.1.1): Elapegademase katılım payından YALNIZCA D81.1, D81.3, D81.8, D81.9 (ADA eksikliği/kombine immün yetmezlik) tanılarında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^D81\\.[1389]",
+      "uyariGenel": "⚠️ EK-4/D — Elapegademase: muafiyet yalnız D81.1/.3/.8/.9. Tanı tutmuyorsa muafiyet uygulanmaz."
+    },
+    {
+      "id": "ek4d-tocilizumab-abatacept-ra",
+      "baslik": "Tocilizumab / Abatacept — yalnız RA (9.1.5) ± temporal arteritis muaf",
+      "ilacRe": "tosilizumab|tocilizumab|actemra|roactemra|abatasept|abatacept|orencia",
+      "uyari": "ℹ️ EK-4/D: Tocilizumab (9.2.22) yalnız romatoid artrit (9.1.5: M05/M06/M08.0/M08.2/M08.3) ve temporal arteritte (M31.6); Abatacept (9.2.23) yalnız RA'da katılım payından muaftır. Başka konnektif doku tanısında bu kalemler muaf değildir.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(M05|M06|M08\\.[023]|M35\\.[013]|M31\\.6)",
+      "uyariGenel": "⚠️ EK-4/D — Tocilizumab/Abatacept: muafiyet konnektif doku grubunda yalnız RA (M05/M06/M08) ± temporal arterit (M31.6) ile sınırlı."
+    },
+    {
+      "id": "ek4d-jak-konnektif",
+      "baslik": "JAK inhibitörleri (tofasitinib/barisitinib/upadasitinib) — konnektif dokuda ICD'ye bağlı muaf",
+      "ilacRe": "tofasitinib|tofacitinib|xeljanz|barisitinib|baricitinib|olumiant|upadasitinib|upadacitinib|rinvoq",
+      "uyari": "ℹ️ EK-4/D: Tofasitinib (9.2.27) RA/AS/PsA; Barisitinib (9.2.30) yalnız RA; Upadasitinib (9.2.33) temporal arterit/RA/AS/PsA ICD kodlarında katılım payından muaftır. Kapsam-dışı romatolojik tanıda muafiyet yok (ayrıca anti-TNF deneme şartı + SUT 4.2.1 rapor aranır).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(M05|M06|M08\\.[023]|M45|M07\\.[03]|M31\\.6)"
+    },
+    {
+      "id": "ek4d-il17-il12-psoriatik-as",
+      "baslik": "Sekukinumab / İksekizumab / Ustekinumab — PsA / AS / psoriazis ICD'sine bağlı muaf",
+      "ilacRe": "sekukinumab|secukinumab|cosentyx|iksekizumab|ixekizumab|taltz|ustekinumab|stelara",
+      "uyari": "ℹ️ EK-4/D: Sekukinumab (9.2.29) PsA (M07.0/M07.3) + AS (M45); İksekizumab (9.2.31) PsA; Ustekinumab (9.2.28) PsA katılım payından muaftır. Cilt grubunda (13.1.11) ustekinumab YALNIZCA psoriazis vulgariste (L40.0) muaf. Kapsam-dışı tanıda muafiyet yok.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(M07\\.[03]|M45|L40\\.0)"
+    },
+    {
+      "id": "ek4d-apremilast-psa",
+      "baslik": "Apremilast — konnektif dokuda yalnız psoriatik artrit (9.1.6.4) muaf",
+      "ilacRe": "apremilast|otezla",
+      "uyari": "ℹ️ EK-4/D (9.2.32): Apremilast konnektif doku grubunda katılım payından YALNIZCA psoriatik artrit (M07.0/M07.3) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^M07\\.[03]"
+    },
+    {
+      "id": "ek4d-canakinumab-konnektif",
+      "baslik": "Canakinumab — konnektif dokuda yalnız M06.1 / M08.0 muaf",
+      "ilacRe": "kanakinumab|canakinumab|ilaris",
+      "uyari": "ℹ️ EK-4/D (9.2.26): Canakinumab konnektif doku grubunda katılım payından YALNIZCA M06.1 (erişkin Still) ve M08.0 (juvenil RA) kodlarında muaftır. (FMF/CAPS/periyodik ateş muafiyeti ayrı maddelerde — 6.2 / 15.13 / 15.16.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(M06\\.1|M08\\.0)"
+    },
+    {
+      "id": "ek4d-ivig-kawasaki",
+      "baslik": "IV İmmünglobulin — konnektif doku grubunda yalnız Kawasaki'de muaf",
+      "ilacRe": "immunglobulin|immünglobulin|ivig|privigen|octagam|flebogamma|kiovig|intratect|gamunex",
+      "uyari": "ℹ️ EK-4/D (9.2.15): IV immünglobulinler konnektif doku grubunda katılım payından YALNIZCA Kawasaki hastalığında (M30.3) muaftır. (IVIG'in diğer endikasyon muafiyetleri başka gruplarda; ödeme şartı SUT 4.2.12.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^M30\\.3"
+    },
+    {
+      "id": "ek4d-noropatik-agri-icd",
+      "baslik": "Gabapentin / Pregabalin / Duloksetin / Alfa lipoik asit — nöropatik ağrıda yalnız G59.0 / G63.2 muaf",
+      "ilacRe": "gabapentin|neurontin|gabateva|pregabalin|lyrica|duloksetin|duloxetine|cymbalta|alfa lipoik|alpha lipoic|tiyoktik asit|thioctic",
+      "uyari": "ℹ️ EK-4/D (10.12 Nöropatik ağrı): Gabapentin ve pregabalin YALNIZCA G59.0 ve G63.2; duloksetin ve alfa lipoik asit YALNIZCA G63.2 (diyabetik nöropati) ICD kodlarında katılım payından muaftır. Diğer ağrı tanılarında nöropatik-ağrı muafiyeti geçmez.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(G59\\.0|G63\\.[12])",
+      "uyariGenel": "⚠️ EK-4/D — Nöropatik ağrı muafiyeti: gabapentin/pregabalin yalnız G59.0/G63.2, duloksetin/alfa lipoik yalnız G63.2 ile geçerli. Tanı bu kodlarda değilse katılım payı alınır."
+    },
+    {
+      "id": "ek4d-ms-alemtuzumab-kladribin",
+      "baslik": "Alemtuzumab / Kladribin — MS grubunda yalnız G35 muaf",
+      "ilacRe": "alemtuzumab|lemtrada|kladribin|cladribine|mavenclad",
+      "uyari": "ℹ️ EK-4/D (10.5): Demiyelinizan hastalıklar grubunda alemtuzumab ve kladribin katılım payından YALNIZCA G35 (multipl skleroz) ICD kodunda muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^G35",
+      "uyariGenel": "⚠️ EK-4/D — Alemtuzumab/Kladribin: MS muafiyeti yalnız G35. Lökemi/diğer endikasyonda bu muafiyet geçmez."
+    },
+    {
+      "id": "ek4d-botulinum-spastisite",
+      "baslik": "Botulinum toksin A — spastisitede yalnız fokal spastisitede muaf",
+      "ilacRe": "botulinum|botulismus toksin|botoks|botox|dysport|xeomin|abobotulinum|onabotulinum|incobotulinum",
+      "uyari": "ℹ️ EK-4/D: Botulinum toksini A katılım payından (10.11) YALNIZCA fokal spastisitede; (10.3.2) distoni/hemifasyal spazm; (10.9) serebral palside muaftır. Genel spastisite/kozmetik vb. kapsam dışıdır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "baglamRe": "fokal spastisite|fokal|distoni|hemifasyal|serebral palsy|serebral palsi"
+    },
+    {
+      "id": "ek4d-demans-antipsikotik-g30",
+      "baslik": "Antipsikotikler — demansta yalnız G30 ve alt kodlarında endikasyon uyumu",
+      "ilacRe": "ketiapin|quetiapine|seroquel|risperidon|risperidone|risperdal|olanzapin|olanzapine|zyprexa|aripiprazol|aripiprazole|abilify|ketiyapin",
+      "uyari": "ℹ️ EK-4/D (10.7 / 11.2): Demans grubunda antipsikotikler katılım payından muafiyette G30 ve alt kodlarında ENDİKASYON UYUMU aranır (atipik antipsikotik demansta psikiyatri/nöroloji/geriatri raporu — SUT 4.2.2). Endikasyon dışı kullanımda muafiyet/ödeme itiraza açıktır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^G30"
+    },
+    {
+      "id": "ek4d-otizm-aripiprazol-melatonin",
+      "baslik": "Aripiprazol / Melatonin — otizm (F84.0) ve ilişkili sendromlarda muaf",
+      "ilacRe": "aripiprazol|aripiprazole|abilify|melatonin|circadin|melatonine",
+      "uyari": "ℹ️ EK-4/D (11.6/11.7): Çocukluk otizminde (F84.0) aripiprazol* ve melatonin*; Smith-Magenis sendromunda (Q93.5) melatonin* katılım payından muaftır (endikasyon uyumu aranır).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(F84\\.0|Q93\\.5)"
+    },
+    {
+      "id": "ek4d-adalimumab-uveit",
+      "baslik": "Adalimumab — göz grubunda yalnız üveit (H20) muaf",
+      "ilacRe": "adalimumab|humira|hyrimoz|amgevita|imraldi|hulio",
+      "uyari": "ℹ️ EK-4/D (12.2.3): Göz hastalıkları grubunda adalimumab katılım payından YALNIZCA kronik/nükseden üveit (H20.1/H20.8 vb.) tanısında muaftır. (Romatolojik/dermatolojik/GİS endikasyonlar ayrı gruplarda; ödeme şartı SUT 4.2.1.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^H20"
+    },
+    {
+      "id": "ek4d-cilt-biyolojik-psoriazis-vulgaris",
+      "baslik": "TNF / Ustekinumab / Guselkumab / Risankizumab — ciltte yalnız psoriazis vulgariste muaf",
+      "ilacRe": "guselkumab|tremfya|risankizumab|skyrizi|infliksimab|infliximab|remicade|etanersept|etanercept|enbrel|sertolizumab|certolizumab|cimzia|golimumab|simponi",
+      "uyari": "ℹ️ EK-4/D (13.1.6/13.1.11/13.1.15/13.1.16): Cilt grubunda TNF-alfa blokerleri, ustekinumab, guselkumab ve risankizumab katılım payından YALNIZCA psoriazis VULGARİS (L40.0) tanısında muaftır. Diğer psoriazis tipleri/cilt tanılarında bu muafiyet geçmez.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^L40\\.0",
+      "uyariGenel": "⚠️ EK-4/D — Cilt biyolojikleri (TNF/ustekinumab/guselkumab/risankizumab): muafiyet yalnız psoriazis vulgaris (L40.0). Tanı tutmuyorsa katılım payı/itiraz riski."
+    },
+    {
+      "id": "ek4d-hiv-z206-profilaksi",
+      "baslik": "HIV antiviralleri — Z20.6 (temas/profilaksi) ile yalnız 1 aylık doz + çocuk",
+      "ilacRe": "antiretroviral|tenofovir|emtrisitabin|emtricitabine|dolutegravir|biktegravir|bictegravir|truvada|descovy|biktarvy|tivicay|raltegravir|isentress|lamivudin",
+      "uyari": "ℹ️ EK-4/D (14.2.1, yür. 03/12/2025): HIV antiviralleri Z20.6 (HIV temas/maruziyet) koduyla katılım payından muafiyette YALNIZCA BİR AYLIK dozda ve ÇOCUK hastalar için ödenir. Erişkinde/uzun dozda Z20.6 ile ödenmez (B20-B24 tanılı AIDS tedavisi ayrı).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^Z20\\.6"
+    },
+    {
+      "id": "ek4d-daratumumab-amiloidoz-sc",
+      "baslik": "Daratumumab — amiloidozda yalnız SC (subkutan) formu muaf",
+      "ilacRe": "daratumumab|darzalex",
+      "uyari": "ℹ️ EK-4/D (15.1): Amiloidozis tedavisinde daratumumab katılım payından YALNIZCA SC (subkutan) formunda muaftır. IV form amiloidozda bu kalemden muaf değildir (multiple miyelom endikasyonu ayrı — 2.20).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "baglamRe": "amiloid|amyloid|e85"
+    },
+    {
+      "id": "ek4d-tafamidis-amiloidoz",
+      "baslik": "Tafamidis — yalnız amiloidoz (E85) muaf",
+      "ilacRe": "tafamidis|vyndaqel|vynmac",
+      "uyari": "ℹ️ EK-4/D (15.1): Tafamidis/tafamidis meglumin katılım payından amiloidozis (E85, transtiretin amiloid kardiyomiyopati) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^E85"
+    },
+    {
+      "id": "ek4d-nadir-metabolik-icd",
+      "baslik": "Nadir metabolik ilaçlar — EK-4/D 15.4'te tanıya kilitli muafiyet",
+      "ilacRe": "nitisinon|orfadin|metreleptin|myalepta|kolik asit|cholic acid|orphacol|kolbam|alfa-1-proteinaz|alpha-1|prolastin|respreeza|sodyum fenilbutirat|sodium phenylbutyrate|betain|betaine|cystadane|migalastat|galafold|vestronidase|mepsevii",
+      "uyari": "ℹ️ EK-4/D (15.4.1) — Nadir kalıtsal metabolik ilaçlarda muafiyet TANIYA KİLİTLİDİR: Nitisinon yalnız E70.2 (tirozinemi); Metreleptin yalnız E88.1 (konjenital lipodistrofi/leptin eksikliği); Kolik asit yalnız E88.8/E88.9 (safra asidi metabolizma bozukluğu) ve Zellweger (Q87.8); Alfa-1-proteinaz inhibitörü yalnız E88.0; Vestronidase alfa yalnız E76.2 (MPS VII); Migalastat (Fabry). İlgili ICD dışında muafiyet uygulanmaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4d-ketojenik-mama-icd",
+      "baslik": "Ketojenik tıbbi mama — yalnız belirli epilepsi/metabolik ICD'lerde muaf",
+      "ilacRe": "ketojenik|ketogenic|ketocal|ketogen",
+      "uyari": "ℹ️ EK-4/D: Ketojenik tıbbi mama katılım payından (10.4) YALNIZCA G40 (dirençli epilepsi) ve (15.4.1.6) E74.0/E74.4/E74.9 (glikojen depo, piruvat dehidrogenaz, GLUT-1 eksikliği) tanılarında, EK-4/F madde 61 ilkelerine göre muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(G40|E74\\.[049]|E71\\.3)"
+    },
+    {
+      "id": "ek4d-everolimus-tuberoskleroz",
+      "baslik": "Everolimus — tuberoskleroz endikasyonunda muafiyet Q85.1",
+      "ilacRe": "everolimus|afinitor|votubia|certican",
+      "uyari": "ℹ️ EK-4/D (15.17): Everolimus tuberoskleroz (Q85.1) tanısında katılım payından muaftır. (Onkoloji/transplant endikasyonları ayrı maddeler — 2.x / nakil.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^Q85\\.1"
+    },
+    {
+      "id": "ek4d-pentosan-interstisyel-sistit",
+      "baslik": "Pentosan polisülfat sodyum — yalnız kronik interstisyel sistit (N30.1) muaf",
+      "ilacRe": "pentosan polisulfat|pentosan polysulfate|elmiron",
+      "uyari": "ℹ️ EK-4/D (15.20): Pentosan polisülfat sodyum katılım payından YALNIZCA kronik interstisyel sistit (N30.1) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^N30\\.1"
+    },
+    {
+      "id": "ek4d-herediter-anjioodem",
+      "baslik": "Herediter anjioödem ilaçları — yalnız HAÖ (E88.0) muaf",
+      "ilacRe": "icatibant|firazyr|ecallantide|kalbitor|lanadelumab|takhzyro|danazol|traneksamik|tranexamic",
+      "uyari": "ℹ️ EK-4/D (15.4.3): Herediter anjioödem grubunda danazol*, traneksamik asit*, icatibant*, ecallantide*, lanadelumab* katılım payından E88.0 (herediter anjioödem) tanısında muaftır. (Traneksamik asidin diğer kanama endikasyonları bu muafiyet kapsamı dışındadır.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "baglamRe": "anjioodem|anjioödem|anjiyoodem|herediter anjio|hae|e88\\.0"
+    },
+    {
+      "id": "ek4d-overaktif-mesane-norojenik",
+      "baslik": "Antimuskarinik / Mirabegron — nörojenik mesanede (N31) muaf",
+      "ilacRe": "tolterodin|tolterodine|oksibutinin|oxybutynin|trospiyum|trospium|propiverin|darifenasin|darifenacin|solifenasin|solifenacin|fesoterodin|fesoterodine|mirabegron|betmiga",
+      "uyari": "ℹ️ EK-4/D (15.11): Nörojenik mesane (N31) tanısında overaktif mesane ilaçları (tolterodin/oksibutinin/trospiyum/propiverin/darifenasin/solifenasin/fesoterodin/mirabegron) katılım payından muaftır. (İdiyopatik aşırı aktif mesanenin RAPOR şartı için EK-4/F ayrıca aranır.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^N31"
+    },
+    {
+      "id": "ek4d-antikoagulan-disritmi-ara-nakil",
+      "baslik": "Oral antikoagülan — disritmi (I48/I49.5) / kapak (I34.2 vb.) / organ nakli dışında EK-4/D'de muaf değil",
+      "ilacRe": "varfarin|warfarin|coumadin|dabigatran|pradaxa|rivaroksaban|rivaroxaban|xarelto|apiksaban|apixaban|eliquis|edoksaban|edoxaban|lixiana",
+      "uyari": "ℹ️ EK-4/D — Antikoagülan muafiyeti kalp-damar grubunda ALT-TANIYA bağlıdır: disritmide (4.3.3) yalnız I48/I49.5; ARA-kapak hastalığında (4.7.4) yalnız I34.2/I36.0/I36.2/I39/I05/I07; pulmoner tromboembolide (4.12.1) I26; periferik/serebral damarda (4.4.2) G46/I63/I65-66/I67.0/I69/I71.2/.4/.6/.9/I72/I74/I79.0/I82/I87; organ-doku naklinde (3.16) Z94. Bu kodlar dışında kalp-damar muafiyeti uygulanmaz (NOAC ödeme şartı SUT 4.2.15.D).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(I48|I49\\.5|I34\\.2|I36\\.[02]|I39|I05|I07|I26|G46|I63|I6[56]|I67\\.0|I69|I71\\.[2469]|I72|I74|I79\\.0|I82|I87|Z94)"
+    },
+    {
+      "id": "ek4d-pah-vazodilatatorler",
+      "baslik": "PAH ilaçları (bosentan/ambrisentan/sildenafil/tadalafil/riosiguat vb.) — yalnız pulmoner HT (I27) muaf",
+      "ilacRe": "bosentan|tracleer|ambrisentan|volibris|masitentan|macitentan|opsumit|sildenafil|revatio|tadalafil|adcirca|riosiguat|riociguat|adempas|seleksipag|selexipag|uptravi|epoprostenol|treprostinil|trepostenil",
+      "uyari": "ℹ️ EK-4/D (4.10): Pulmoner hipertansiyon (I27.0/I27.2) tanısında bosentan*/ambrisentan*/masitentan*/sildenafil*/tadalafil*/riosiguat*/seleksipag*/epoprostenol*/treprostinil* katılım payından muaftır (endikasyon uyumu + SUT 4.2.30 rapor). NOT: bosentan ayrıca (9.2.25) sistemik skleroza bağlı dijital ülserde; iloprost IV (9.2.24) sistemik sklerozda muaf.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^I27\\.[02]"
+    },
+    {
+      "id": "ek4d-astim-tiotropium-haric",
+      "baslik": "Astımda tiotropium — EK-4/D antikolinerjik muafiyetinin DIŞINDA",
+      "ilacRe": "tiotropium|spiriva|braltus|tiogiva|srivasso",
+      "uyari": "⚠️ EK-4/D (5.1.2.3): Astım (J45) grubunda antikolinerjikler katılım payından muaf AMA TİOTROPİUM AÇIKÇA HARİÇ tutulmuştur. Astım tanısıyla tiotropium bu muafiyetten yararlanamaz (KOAH endikasyonu ayrı — J44).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^J45"
+    },
+    {
+      "id": "ek4d-bronsektazi-bronkodilatator-kombine-haric",
+      "baslik": "Bronşektazide bronkodilatör — kombine formlar muafiyet DIŞINDA",
+      "ilacRe": "salbutamol|salbutol|ventolin|formoterol|salmeterol|seretide|symbicort|foster|formodual|relvar|budesonid.*formoterol|flutikazon.*salmeterol",
+      "uyari": "⚠️ EK-4/D (5.4.3): Bronşektazi (J47) grubunda bronkodilatörler katılım payından muaf AMA KOMBİNE ŞEKİLLERİ HARİÇ tutulmuştur. İKS+LABA gibi kombine inhalerler bu muafiyetten yararlanamaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^J47"
+    },
+    {
+      "id": "ek4d-sargramostim-pap",
+      "baslik": "Sargramostim — yalnız J84.0 (pulmoner alveolar proteinozis) muaf",
+      "ilacRe": "sargramostim|leukine",
+      "uyari": "ℹ️ EK-4/D (5.3.5): Sargramostim katılım payından YALNIZCA J84.0 ICD kodu ile Pulmoner Alveolar Proteinozis tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^J84\\.0"
+    },
+    {
+      "id": "ek4d-vosoritide-akondroplazi",
+      "baslik": "Vosoritide — yalnız akondroplazi tanısında muaf",
+      "ilacRe": "vosoritide|voxzogo",
+      "uyari": "ℹ️ EK-4/D (7.5.2.5): Vosoritide katılım payından YALNIZCA akondroplazi (Q77.4) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^Q77\\.4",
+      "uyariGenel": "⚠️ EK-4/D — Vosoritide: muafiyet yalnız akondroplazi (Q77.4). Tanı tutmuyorsa muafiyet uygulanmaz."
+    },
+    {
+      "id": "ek4d-linezolid-diyabetik-ayak",
+      "baslik": "Linezolid — diyabette yalnız diyabetik ayak (E10.6/E11.6/E13.6/E14.6) + EK-4/G koşulu muaf",
+      "ilacRe": "linezolid|zyvoxid|zyvox",
+      "uyari": "ℹ️ EK-4/D (7.2.1.5): Diyabet grubunda linezolid katılım payından YALNIZCA E10.6/E11.6/E13.6/E14.6 (diyabetik ayak/komplikasyonlu) kodlarında ve EK-4/G madde 4.1 koşullarında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^E1[0134]\\.6"
+    },
+    {
+      "id": "ek4d-imatinib-hipereozinofilik-mastositoz",
+      "baslik": "İmatinib — EK-4/D'de hipereozinofilik send. (D72.1) ve sistemik mastositoz (Q82.2) muaf",
+      "ilacRe": "imatinib|glivec|gleevec|imatis|imatinil",
+      "uyari": "ℹ️ EK-4/D: İmatinib katılım payından (8.1.19.1) hipereozinofilik sendrom (D72.1) ve (13.12.1) sistemik mastositoz (Q82.2) tanılarında muaftır. (KML/GİST onkoloji endikasyonu ayrı — SUT 4.2.14 + EK-4/D 2.x.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(D72\\.1|Q82\\.2)"
+    },
+    {
+      "id": "ek4d-nintedanib-konnektif-skleroz",
+      "baslik": "Nintedanib — konnektif dokuda yalnız progressif sistemik skleroz (9.1.10) muaf",
+      "ilacRe": "nintedanib|ofev|vargatef",
+      "uyari": "ℹ️ EK-4/D (9.2.34): Konnektif doku grubunda nintedanib katılım payından YALNIZCA progressif sistemik sklerozda (M34.0) muaftır. (İPF/J84 ve onkoloji endikasyonları ayrı.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^M34\\.0"
+    },
+    {
+      "id": "ek4d-bosentan-iloprost-skleroz-ulser",
+      "baslik": "Bosentan / IV iloprost — sistemik skleroza bağlı dijital ülserde muaf",
+      "ilacRe": "bosentan|tracleer",
+      "uyari": "ℹ️ EK-4/D (9.2.25): Bosentan konnektif doku grubunda katılım payından YALNIZCA sistemik skleroza bağlı dijital ülserde (M34) muaftır (IV iloprost da 9.2.24 ile aynı endikasyonda). PAH endikasyonu ayrı (4.10/I27).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^M34"
+    },
+    {
+      "id": "ek4d-rituksimab-pemfigus",
+      "baslik": "Rituksimab — EK-4/D'de RA (M05/M06) ve pemfigus (L10) muaf",
+      "ilacRe": "rituksimab|rituximab|mabthera|truxima|rixathon|reditux",
+      "uyari": "ℹ️ EK-4/D: Rituksimab katılım payından (9.2.18) romatoid artritte (M05/M06) ve (13.3.3) pemfiguste (L10) muaftır. (Lenfoma/lösemi onkoloji endikasyonu ayrı — SUT 4.2.14.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(M05|M06|L10)"
+    },
+    {
+      "id": "ek4d-immunsupresif-endikasyon-uyumu-aranmaz",
+      "baslik": "Klasik immünsupresifler — kanser/IBD/konnektif/MS gruplarında endikasyon uyumu ARANMAZ",
+      "ilacRe": "azatiopurin|azathioprin|imuran|siklosporin|cyclosporin|sandimmun|siklofosfamid|cyclophosphamid|endoxan|klorambusil|chlorambucil|leukeran|metotreksat|methotrexat|metoject",
+      "uyari": "ℹ️ EK-4/D bilgi (2.4 / 6.3.1 / 8.2.11 / 9.x / 10.x): Azatioprin, siklosporin, siklofosfamid, klorambusil, metotreksat ve kortikosteroidlerde kanser, inflamatuar barsak, konnektif doku ve MS gruplarında ENDİKASYON UYUMU ARANMAZ — bu gruplara giren tanıda endikasyon dışı gerekçesiyle kesinti yapılMAZ (SB endikasyon dışı genelge/kılavuz saklı).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4d-sma-nusinersen-risdiplam",
+      "baslik": "Nusinersen / Risdiplam — yalnız spinal musküler atrofi (G12.0/G12.1/G12.9) muaf",
+      "ilacRe": "nusinersen|spinraza|risdiplam|evrysdi|onasemnogen|zolgensma",
+      "uyari": "ℹ️ EK-4/D (10.2.3): Nusinersen sodyum* ve risdiplam* katılım payından YALNIZCA spinal musküler atrofi (G12.0/G12.1/G12.9) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^G12\\.[019]",
+      "uyariGenel": "⚠️ EK-4/D — Nusinersen/Risdiplam: muafiyet yalnız SMA (G12.0/.1/.9). Tanı tutmuyorsa muafiyet uygulanmaz."
+    },
+    {
+      "id": "ek4d-tetrabenazin-huntington",
+      "baslik": "Tetrabenazin — yalnız Huntington hastalığı (G10) muaf",
+      "ilacRe": "tetrabenazin|tetrabenazine|nitoman|xenazine",
+      "uyari": "ℹ️ EK-4/D (10.14): Tetrabenazin katılım payından YALNIZCA Huntington hastalığı (G10) tanısında muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^G10"
+    },
+    {
+      "id": "ek4d-kenodeoksikolik-idebenon-ctx",
+      "baslik": "Kenodeoksikolik asit / İdebenon — serebrotendinöz ksantomatozis (G11.9) / Friedreich (G11.1)",
+      "ilacRe": "kenodeoksikolik|chenodeoxycholic|kenodal|idebenon|sovrima",
+      "uyari": "ℹ️ EK-4/D (10.1.4): Kenodeoksikolik asit* serebrotendinöz ksantomatoziste (G11.9), idebenon* Friedreich ataksisi (G11.1) ve serebrotendinöz ksantomatoziste (EK-4/F madde 59 kapsamında) katılım payından muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^G11\\.[19]"
+    },
+    {
+      "id": "ek4d-asitretin-darier-ev",
+      "baslik": "Asitretin — Darier (Q82.8) ve epidermodisplazi verruciformis (B07.8) muaf",
+      "ilacRe": "asitretin|acitretin|neotigason|acnetrex.*oral",
+      "uyari": "ℹ️ EK-4/D: Asitretin* katılım payından (13.11.1) Darier hastalığı (Q82.8) ve (13.9) epidermodisplazi verruciformiste (B07.8) muaftır. (Psoriazis endikasyonu ayrı — L40.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(Q82\\.8|B07\\.8)"
+    },
+    {
+      "id": "ek4d-sistemik-antifungal-form",
+      "baslik": "Sistemik mantar enfeksiyonunda antifungal — yalnız parenteral/oral form muaf",
+      "ilacRe": "flukonazol|fluconazole|itrakonazol|itraconazole|vorikonazol|voriconazole|posakonazol|posaconazole|amfoterisin|amphotericin|kaspofungin|caspofungin|anidulafungin|mikafungin|micafungin|izavukonazol|isavuconazole",
+      "uyari": "ℹ️ EK-4/D (14.3.1): Sistemik mantar enfeksiyonu (B37-B47) tanısında antifungaller katılım payından YALNIZCA PARENTERAL veya ORAL formlarında muaftır (topikal formlar bu muafiyet dışında). Reçeteleme kodları için EK-4/E / SUT 4.2.23 ayrıca aranır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^B(3[7-9]|4[0-7])"
+    },
+    {
+      "id": "ek4d-palivizumab-rsv",
+      "baslik": "Palivizumab — yalnız RSV immünizasyonu (B97.4) muaf",
+      "ilacRe": "palivizumab|synagis",
+      "uyari": "ℹ️ EK-4/D (15.12): Palivizumab* katılım payından YALNIZCA RSV enfeksiyonundan korunma için immünizasyonda (B97.4) muaftır (SUT prematüre/risk kriterleri ayrıca aranır).",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^B97\\.4"
+    },
+    {
+      "id": "ek4d-cftr-modulator-kistik-fibrozis",
+      "baslik": "CFTR modülatörü (elexacaftor/tezacaftor/ivacaftor) — yalnız kistik fibrozis (E84) muaf",
+      "ilacRe": "elexacaftor|tezacaftor|ivacaftor|kaftrio|trikafta|kalydeco|symkevi|orkambi|lumacaftor",
+      "uyari": "ℹ️ EK-4/D (15.5): Kistik fibroziste (E84) elexacaftor/tezacaftor/ivacaftor* ile A,D,E,K vitamin+mineral kombine* ve özel formüllü besleyiciler* katılım payından muaftır.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^E84",
+      "uyariGenel": "⚠️ EK-4/D — CFTR modülatörü: muafiyet yalnız kistik fibrozis (E84). Tanı tutmuyorsa muafiyet uygulanmaz."
+    },
+    {
+      "id": "ek4d-nadir-metabolik-tani-kilitli-2",
+      "baslik": "Nadir metabolik ilaçlar (sodium benzoate/LNNA/sisteamin/karglumik) — tanıya kilitli muaf",
+      "ilacRe": "sodyum benzoat|sodium benzoate|large neutral amino|lnaa|sisteamin|merkaptamin|mercaptamine|cystagon|procysbi|karglumik|carglumic|carbaglu|hidroksibutirik|hydroxybutyric|sodyum dikloroasetat",
+      "uyari": "ℹ️ EK-4/D (15.4.1) — Tanıya kilitli nadir metabolik ilaçlar: Sodium benzoate yalnız E72.2 (üre siklus/glisin bozukluğu); LNNA (büyük nötr aminoasitler) yalnız E70.0 (klasik fenilketonüri); Sisteamin/merkaptamin sistinoziste; Hydroxybutyric acid E74.0 (glikojen depo tip 3) ve E71.3; Karglumik asit hiperamonemide (NAGS yetmezliği). İlgili ICD dışında muafiyet uygulanmaz.",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)"
+    },
+    {
+      "id": "ek4d-otoinflamatuar-il1-blokeri",
+      "baslik": "IL-1 blokerleri (anakinra/canakinumab) — FMF/CAPS/periyodik ateş gruplarında muaf",
+      "ilacRe": "anakinra|kineret|kanakinumab|canakinumab|ilaris",
+      "uyari": "ℹ️ EK-4/D: Anakinra* ve canakinumab* katılım payından (6.2 FMF E85.0), (15.13 ailesel oto-inflamatuar CAPS/NOMID/Muckle-Wells E85.0/L50.8) ve (15.16 periyodik ateş R50.9) gruplarında muaftır. (Konnektif doku M06.1/M08.0 ayrı kuralda.)",
+      "dogrulandi": true,
+      "kaynak": "SUT EK-4/D Hasta Katılım Payından Muaf İlaçlar Listesi (resmî metin, 12-ajan tam tarama 2026-06-16)",
+      "taniKoduRe": "^(E85\\.0|L50\\.8|R50\\.9)"
     }
   ]
 }
