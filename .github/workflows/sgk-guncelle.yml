@@ -38,6 +38,21 @@ jobs:
           SGK_EK4D_URL: ${{ secrets.SGK_EK4D_URL }}
         run: node scripts/sgk-veri-cek.mjs
 
+      - name: Veriyi imzala (Ed25519)
+        # IMZA_ZORUNLU=true olan uygulamalar imzasız/sahte veriyi REDDEDER. Her yayımdan
+        # önce JSON'ları imzala → .sig üret. Secret yoksa imzasız geçer (geçiş modu uyarısı).
+        env:
+          IMZA_ANAHTAR_PEM: ${{ secrets.IMZA_ANAHTAR_PEM }}
+        run: |
+          if [ -z "$IMZA_ANAHTAR_PEM" ]; then
+            echo "::warning::IMZA_ANAHTAR_PEM secret yok — veri IMZASIZ yayimlanacak. IMZA_ZORUNLU=true surumler bunu reddeder!"
+          else
+            for f in sgk-data/*.json; do
+              node scripts/imzala.mjs "$f"
+            done
+            echo "Veri imzalandi (.sig dosyalari guncel)."
+          fi
+
       - name: Değişiklik varsa commit'le
         run: |
           if [ -n "$(git status --porcelain sgk-data/)" ]; then
@@ -46,7 +61,7 @@ jobs:
             git add sgk-data/
             git commit -m "SGK veri güncellemesi: $(date +%Y-%m-%d)"
             git push
-            echo "Yeni veri yayımlandı."
+            echo "Yeni veri yayımlandı (imzalı)."
           else
             echo "Değişiklik yok."
           fi
