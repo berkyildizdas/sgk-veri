@@ -1,0 +1,31 @@
+name: Test Mail (gecici)
+
+# TEK SEFERLIK test: MAIL_USERNAME/MAIL_PASSWORD secret'lari dogru mu diye
+# info@eczaist.com'a test maili atar. Dogrulandiktan sonra bu dosya SILINIR.
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test e-postasi gonder
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: Eczasist SUT Bot <${{ secrets.MAIL_USERNAME }}>
+          to: info@eczaist.com
+          subject: "Eczasist SUT bildirim testi - calisiyor"
+          body: |
+            Bu bir TEST e-postasidir.
+
+            Eczasist SUT degisiklik bildirim sistemi calisiyor. Bu maili aldiysan
+            app password dogru ve sistem hazir demektir.
+
+            SGK yeni SUT tebligi yayinladiginda bu adrese otomatik bildirim gelecek.
+
+            (Bu test workflow'u silinecek.)
