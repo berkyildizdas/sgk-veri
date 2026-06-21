@@ -89,3 +89,31 @@ jobs:
           Bu Issue otomatik açıldı (günlük SUT izleme). İşlem bitince kapat." \
             --assignee berkyildizdas \
           || echo "Issue açılamadı (izin?), workflow loguna bak."
+
+      # SUT değişince info@eczaist.com'a DİREKT e-posta (GitHub Issue'ya ek).
+      # Gerekli secret'lar: MAIL_USERNAME (gönderen Gmail adresi), MAIL_PASSWORD (Gmail UYGULAMA şifresi).
+      - name: SUT değiştiyse e-posta bildir
+        if: steps.cek.outputs.sut_degisti == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: Eczasist SUT Bot <${{ secrets.MAIL_USERNAME }}>
+          to: info@eczaist.com
+          subject: "⚠️ SGK yeni SUT tebliği yayımladı: ${{ steps.cek.outputs.sut_yeni_tarih }}"
+          body: |
+            SGK Sağlık Uygulama Tebliği güncellendi (otomatik günlük SUT izleme).
+
+            Önceki sürüm: ${{ steps.cek.outputs.sut_eski_tarih }}
+            Yeni sürüm:   ${{ steps.cek.outputs.sut_yeni_tarih }}
+            Kaynak: https://www.sgk.gov.tr/Duyuru
+
+            Yapılacaklar:
+            1. Lokal SUT metnini tazele.
+            2. Eşik/kural değişikliklerini gözden geçir (EK-4/A, D, E, F, G dahil — SUT değişince hepsi etkilenebilir).
+            3. SUT_DOGRULAMA_SURUMU değerini güncelle, yeni exe yayımla.
+
+            Bu e-posta GitHub Actions günlük SUT izlemesinden otomatik gönderildi.
