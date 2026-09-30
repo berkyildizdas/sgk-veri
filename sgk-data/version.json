@@ -11,16 +11,16 @@
     "degisim_tarihi": "2026-06-09"
   },
   "skrs": {
-    "hash": "fc1ce38021418a82",
-    "kaynak_url": "https://titck.gov.tr/storage/Archive/2026/dynamicModulesAttachment/AKLST0222.09.2026skrserecetilacvedigerfarmasotikurunler_e5c88214-4cea-4355-b82c-499b44da5a73.xlsx",
-    "kontrol_tarihi": "2026-09-24",
-    "kayit_sayisi": 248,
-    "degisim_tarihi": "2026-09-24"
+    "hash": "059fad63544cfc7d",
+    "kaynak_url": "https://titck.gov.tr/storage/Archive/2026/dynamicModulesAttachment/AKLST0229.09.2026skrserecetilacvedigerfarmasotikurunler_b3f0b424-5425-4875-b933-a70664c2cff4.xlsx",
+    "kontrol_tarihi": "2026-09-30",
+    "kayit_sayisi": 253,
+    "degisim_tarihi": "2026-09-30"
   },
   "sut": {
     "degisiklik_tarihi": "2026-08-29",
     "baslik": "29/08/2026 SUT Değişiklik Tebliği",
-    "kontrol_tarihi": "2026-09-24",
+    "kontrol_tarihi": "2026-09-30",
     "kaynak_url": "https://www.sgk.gov.tr/Duyuru"
   }
 }
